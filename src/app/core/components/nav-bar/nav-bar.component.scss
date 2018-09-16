@@ -24,4 +24,20 @@
     &:last-child{
         border-right: 1px solid #d6d6d6;
     }
+
+    &:hover {
+        .nav-item-title {
+            color: #4d4c4b;
+        }
+        > ul {
+            display: block;
+        }
+    }
+}
+ 
+
+.dropdown-menu {
+    position: absolute;
+    left: auto;
+    font-size: 12px;
 }
