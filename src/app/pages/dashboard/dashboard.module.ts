@@ -9,11 +9,13 @@ import { InvoiceCountSummaryComponent } from './invoice-count-summary/invoice-co
 import { InvoiceAmountSummaryComponent } from './invoice-amount-summary/invoice-amount-summary.component';
 import { SalesInvoiceDueComponent } from './sales-invoice-due/sales-invoice-due.component';
 import { PurchaseInvoiceDueComponent } from './purchase-invoice-due/purchase-invoice-due.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ],
   declarations: [DashboardBaseComponent, AccountSummaryComponent, TotalInvoiceComponent, InvoiceSummaryComponent, InvoiceCountSummaryComponent, InvoiceAmountSummaryComponent, SalesInvoiceDueComponent, PurchaseInvoiceDueComponent]
 })

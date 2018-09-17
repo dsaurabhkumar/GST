@@ -1,0 +1,19 @@
+$xs-screen: 320px;
+$sm-screen: 480px;
+$md-screen: 768px;
+$lg-screen: 992px;
+$xl-screen: 1200px;
+
+.widget-heading {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #d6d6d6;
+    background: #f2efea;
+    h3 {
+        display: inline-block;
+        font-size: 14px;
+        color: #525252;
+        line-height: 18px;
+        }
+    }

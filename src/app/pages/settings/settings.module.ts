@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { SettingsRoutingModule } from './settings-routing.module';
 import { SettingsBaseComponent } from './settings-base/settings-base.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SettingsRoutingModule
+    SettingsRoutingModule,
+    SharedModule
   ],
   declarations: [SettingsBaseComponent]
 })

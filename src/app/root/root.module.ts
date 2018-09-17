@@ -7,6 +7,7 @@ import { CoreModule } from '../core/core.module';
 import { RootRoutingModule } from './root-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardBaseComponent } from '../pages/dashboard/dashboard-base/dashboard-base.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DashboardBaseComponent } from '../pages/dashboard/dashboard-base/dashbo
   imports: [
     BrowserModule,
     CoreModule,
+    SharedModule,
     // DashboardModule,
     RootRoutingModule
   ],
