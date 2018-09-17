@@ -21,13 +21,27 @@ export const ROUTES = {
             route: 'transport',
             name: 'Transport',
             absoluteRoute: '/transport',
-            module: '../pages/transport/transport.module#TransportModule'
+            module: '../pages/transport/transport.module#TransportModule',
+            children: {
+                transportCharges: {
+                    route: 'transportCharges',
+                    name: 'TransportCharges',
+                    absoluteRoute: '/transport/transportCharges'
+                }
+            }
         },
         products : {
             route: 'products',
             name: 'Products',
             absoluteRoute: '/products',
-            module: '../pages/products/products.module#ProductsModule'
+            module: '../pages/products/products.module#ProductsModule',
+            children: {
+                stock: {
+                    route: 'stock',
+                    name: 'Stock',
+                    absoluteRoute: '/products/stock'
+                }
+            }
         },
         saleInvoice: {
             route: 'saleInvoice',
@@ -51,7 +65,34 @@ export const ROUTES = {
             route: 'otherDocs',
             name: 'OtherDocs',
             absoluteRoute: '/otherDocs',
-            module: '../pages/other-documents/other-documents.module#OtherDocumentsModule'
+            module: '../pages/other-documents/other-documents.module#OtherDocumentsModule',
+            children: {
+                quotation: {
+                    route: 'quotation',
+                    name: 'Quotation',
+                    absoluteRoute: '/otherDocs/quotation'
+                },
+                proformaInvoice: {
+                    route: 'proforma-invoice',
+                    name: 'Proforma-invoice',
+                    absoluteRoute: '/otherDocs/proforma-invoice'
+                },
+                purchaseOrder: {
+                    route: 'purchase-order',
+                    name: 'Purchase-order',
+                    absoluteRoute: '/otherDocs/purchase-order'
+                },
+                creditNote: {
+                    route: 'credit-note',
+                    name: 'Credit-note',
+                    absoluteRoute: '/otherDocs/credit-note'
+                },
+                debitNote: {
+                    route: 'debit-note',
+                    name: 'Debit-note',
+                    absoluteRoute: '/otherDocs/debit-note'
+                }
+            }
         },
         exports: {
             route: 'exports',
@@ -75,6 +116,44 @@ export const ROUTES = {
             route: 'report',
             name: 'Report',
             absoluteRoute: '/report',
-            module: '../pages/report/report.module#ReportModule'
+            module: '../pages/report/report.module#ReportModule',
+            children: {
+                purchase: {
+                    route: 'purchase',
+                    name: 'Purchase',
+                    absoluteRoute: '/report/purchase'
+                },
+                inwardPayment: {
+                    route: 'inward-payment',
+                    name: 'Inward-payment',
+                    absoluteRoute: '/report/inward-payment'
+                },
+                outwardPayment: {
+                    route: 'outward-payment',
+                    name: 'Outward-payment',
+                    absoluteRoute: '/report/outward-payment'
+                },
+                companyLedger: {
+                    route: 'company-ledger',
+                    name: 'Company-ledger',
+                    absoluteRoute: '/report/company-ledger'
+                },
+                dailyExpense: {
+                    route: 'daily-expense',
+                    name: 'Daily-expense',
+                    absoluteRoute: '/report/daily-expense'
+                },
+                salesProductReport: {
+                    route: 'sales-product-report',
+                    name: 'Sales-product-report',
+                    absoluteRoute: '/report/sales-product-report'
+                },
+                purchaseProductReport: {
+                    route: 'purchase-product-report',
+                    name: 'Purchase-product-report',
+                    absoluteRoute: '/report/purchase-product-report'
+                }
+
+            }
         }
     }

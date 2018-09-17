@@ -1,19 +1,19 @@
 <nav class="navbar row m-0 navbar-expand bg-white p-0">
   <ul class="navbar-nav col-12 text-center">
     <li class="nav-item">
-      <a class="nav-link" href="javascript:void(0)" routerLink="/dashboard">
+      <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.dashboard.absoluteRoute}}">
         <div class="nav-item-image"></div>
         <div class="nav-item-title"><strong>Dashboard</strong></div>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="javascript:void(0)" routerLink="/settings">
+      <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.settings.absoluteRoute}}">
         <div class="nav-item-image"></div>
         <div class="nav-item-title"><strong>Settings</strong></div>
       </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/customers">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.customers.absoluteRoute}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Customers</strong></div>
         </a>
@@ -25,8 +25,8 @@
           </a>
         <!-- submenu -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/transport">Transport</a></li>
-            <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/transport/transportCharges">Transport Charges</a></li>
+            <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.transport.absoluteRoute}}">Transport</a></li>
+            <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.transport.children.transportCharges.absoluteRoute}}">Transport Charges</a></li>
           </ul>
         <!-- dropdown ends here -->
     </li>
@@ -37,47 +37,47 @@
         </a>
         <!-- submenu -->
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/products">Products</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/products/stock">Stock</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.products.absoluteRoute}}">Products</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.products.children.stock.absoluteRoute}}">Stock</a></li>
         </ul>
         <!-- dropdown ends here -->
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/saleInvoice">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.saleInvoice.absoluteRoute}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Sale Invoice</strong></div>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/purchaseInvoice">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.purchaseInvoice.absoluteRoute}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Purchace Invoice</strong></div>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/dailyExpense">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.dailyExpense.absoluteRoute}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Daily Expense</strong></div>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/otherDocs">
+        <a class="nav-link" href="javascript:void(0)">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Other Documents</strong></div>
         </a> 
         <!-- submenu -->
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs">Delivery Challan</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs/quotation">Quotation</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs/proforma-invoice">Proforma Invoice</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs/purchase-order">Purchase Order</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs/credit-note">Credit Note</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/otherDocs/debit-note">Debit Note</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.absoluteRoute}}">Delivery Challan</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.children.quotation.absoluteRoute}}">Quotation</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.children.proformaInvoice.absoluteRoute}}">Proforma Invoice</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.children.purchaseOrder.absoluteRoute}}">Purchase Order</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.children.creditNote.absoluteRoute}}">Credit Note</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.otherDocs.children.debitNote.absoluteRoute}}">Debit Note</a></li>
         </ul>
         <!-- dropdown ends here -->
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/exports">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.exports}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Exports</strong></div>
         </a>
@@ -89,12 +89,12 @@
         </a>
         <!-- submenu -->
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/gstReturn">GSTR-1</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.gstReturn.absoluteRoute}}">GSTR-1</a></li>
         </ul>
         <!-- dropdown ends here -->
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)" routerLink="/paymnetReceipt">
+        <a class="nav-link" href="javascript:void(0)" routerLink="{{ROUTES.paymentReceipt.absoluteRoute}}">
           <div class="nav-item-image"></div>
           <div class="nav-item-title"><strong>Payment Receipt</strong></div>
         </a>
@@ -106,14 +106,14 @@
         </a>
         <!-- submenu -->
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report">Sales</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/purchase">Purchase</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/inward-payment">Inward Payment</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/outward-payment">Outward Payment</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/company-ledger">Company Ledger</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/daily-expense">Daily Expense</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/sales-product-report">Sales Product Report</a></li>
-          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="/report/purchase-product-report">Purchase Product Report</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.absoluteRoute}}">Sales</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.purchase.absoluteRoute}}">Purchase</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.inwardPayment.absoluteRoute}}">Inward Payment</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.outwardPayment.absoluteRoute}}">Outward Payment</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.companyLedger.absoluteRoute}}">Company Ledger</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.dailyExpense.absoluteRoute}}">Daily Expense</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.salesProductReport.absoluteRoute}}">Sales Product Report</a></li>
+          <li><a class="dropdown-item" href="javascript:void(0)" routerLink="{{ROUTES.report.children.purchaseProductReport.absoluteRoute}}">Purchase Product Report</a></li>
         </ul>
         <!-- dropdown ends here -->
     </li>
