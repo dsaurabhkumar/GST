@@ -21,6 +21,9 @@
 .nav-item {
     flex: 1;
     border-left: 1px solid  #d6d6d6;
+    .dropdown-menu {
+        margin: 0;
+    }
     &:last-child{
         border-right: 1px solid #d6d6d6;
     }
