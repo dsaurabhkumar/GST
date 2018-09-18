@@ -5,7 +5,7 @@
   <div class="google-ads">
   <app-google-ads></app-google-ads>
   </div>
-  <div class="row">
+  <div class="row mb-4">
     <div class="col-6">
         <app-account-summary></app-account-summary>
     </div>
@@ -13,10 +13,10 @@
         <app-total-invoice></app-total-invoice>
     </div>
   </div>
-  <div>
+  <div class="mb-4">
     <app-invoice-summary></app-invoice-summary>
   </div>
-  <div class="row">
+  <div class="row mb-4">
       <div class="col-6">
           <app-invoice-count-summary></app-invoice-count-summary>
       </div>
@@ -24,10 +24,12 @@
           <app-invoice-amount-summary></app-invoice-amount-summary>
       </div>
     </div>
+    <div class="mb-4">
+        <app-sales-invoice-due></app-sales-invoice-due>
+    </div>
+    <div>
+        <app-purchase-invoice-due></app-purchase-invoice-due>
+    </div>
 </div>
-
-<!-- 
-<app-gst-widget-container [headingContent]="'Sales Invoice Due'"></app-gst-widget-container>
-<app-gst-widget-container [headingContent]="'Purchase Invoice Due'"></app-gst-widget-container> -->
 
 

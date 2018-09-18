@@ -1,5 +1,8 @@
 .total-invoice {
     border: 1px solid #d6d6d6;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px
 }
 .widget-content-rightBorder {
     border-right: 1px solid #CCC;
@@ -12,6 +15,11 @@
     line-height: 27px;
     font-size: 18px;
 }
-.nav-item-image {
+.fa {
     line-height: 40px;
+    color:#b2afaa;
+    font-size: 30px;
+    &:hover {
+        color:#00ba8b;
+    }
 }
