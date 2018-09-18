@@ -8,6 +8,7 @@ import { RootRoutingModule } from './root-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardBaseComponent } from '../pages/dashboard/dashboard-base/dashboard-base.component';
 import { SharedModule } from '@app/shared/shared.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from '@app/shared/shared.module';
     CoreModule,
     SharedModule,
     // DashboardModule,
-    RootRoutingModule
+    RootRoutingModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [RootComponent]
