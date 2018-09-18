@@ -28,5 +28,14 @@
 
 .content-wrap {
     font-size: 14px;
+    >div {
+        &:first-child {
+            border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+            border-bottom-right-radius: 5px;
+        }
+    }
+    
 }
 

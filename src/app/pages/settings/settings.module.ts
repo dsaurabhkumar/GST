@@ -8,6 +8,7 @@ import { MembershipDetailsComponent } from '@app/pages/settings/membership-detai
 import { OrganisationDetailsComponent } from './organisation-details/organisation-details.component';
 import { InvoiceOptionsComponent } from './invoice-options/invoice-options.component';
 import { InventoryOptionsComponent } from './inventory-options/inventory-options.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { InventoryOptionsComponent } from './inventory-options/inventory-options
     SettingsRoutingModule,
     SharedModule
   ],
-  declarations: [SettingsBaseComponent, MembershipDetailsComponent, OrganisationDetailsComponent, InvoiceOptionsComponent, InventoryOptionsComponent]
+  declarations: [SettingsBaseComponent, MembershipDetailsComponent, OrganisationDetailsComponent, InvoiceOptionsComponent, InventoryOptionsComponent, UserDetailsComponent]
 })
 export class SettingsModule { }
