@@ -1,9 +1,26 @@
 <!-- <p>
   dashboard-base works!
 </p> -->
+<div class="dashboard">
+  <div class="google-ads">
+  <app-google-ads></app-google-ads>
+  </div>
+  <div class="row">
+    <div class="col-6">
+        <app-account-summary></app-account-summary>
+    </div>
+    <div  class="col-6">
+        <app-total-invoice></app-total-invoice>
+    </div>
 
-<div class="dashboard-ads">
-
+  </div>
 </div>
 
-<app-gst-widget-container [headingContent]="'Account Summary'"></app-gst-widget-container>
+<!-- 
+<app-gst-widget-container [headingContent]="'Invoice Summary'"></app-gst-widget-container>
+<app-gst-widget-container [headingContent]="'Invoice Count Summary'"></app-gst-widget-container>
+<app-gst-widget-container [headingContent]="'Invoice Amount Summary'"></app-gst-widget-container>
+<app-gst-widget-container [headingContent]="'Sales Invoice Due'"></app-gst-widget-container>
+<app-gst-widget-container [headingContent]="'Purchase Invoice Due'"></app-gst-widget-container> -->
+
+
