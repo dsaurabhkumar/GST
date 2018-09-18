@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GstWidgetContainerComponent implements OnInit {
 
   @Input() headingContent:string= "Default Heading";
+  @Input() subHeadingContent;
 
   constructor() { }
 
