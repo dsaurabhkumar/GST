@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+$xs-screen: 320px;
+$sm-screen: 480px;
+$md-screen: 768px;
+$lg-screen: 992px;
+$xl-screen: 1200px;/* You can add global styles to this file, and also import other style files */
+
 .nav-item-image {
     width: 15px;
     height: 15px;
@@ -39,12 +44,29 @@
     
 }
 
-.btn {
-    box-shadow: inset 0px 1px 0px #ffffff1a, 0px 1px 2px #0000001a;
-    background: #f6f4f485;
-    padding: 2px 12px;
-    border: 1px solid #0000001a;
-    &:active {
-        background: #e0dfdf;
+.widget-heading {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #d6d6d6;
+    background: linear-gradient(#f9f6f1 0%, #f2efea 100%);
+    h3 {
+        display: inline-block;
+        font-size: 14px;
+        color: #525252;
+        line-height: 18px;
+        }
+    .fa {
+        margin-left: 15px;
+        }
     }
-}
+
+// .btn {
+//     box-shadow: inset 0px 1px 0px #ffffff1a, 0px 1px 2px #0000001a;
+//     background: #f6f4f485;
+//     padding: 2px 12px;
+//     border: 1px solid #0000001a;
+//     &:active {
+//         background: #e0dfdf;
+//     }
+// }
