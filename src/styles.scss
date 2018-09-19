@@ -41,10 +41,10 @@
 
 .btn {
     box-shadow: inset 0px 1px 0px #ffffff1a, 0px 1px 2px #0000001a;
-    background: white;
+    background: #f6f4f485;
     padding: 2px 12px;
     border: 1px solid #0000001a;
     &:active {
-        background: #a5a4a4;
+        background: #e0dfdf;
     }
 }
