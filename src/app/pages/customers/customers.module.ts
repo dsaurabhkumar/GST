@@ -7,11 +7,13 @@ import { SearchCustomerVendorComponent } from './search-customer-vendor/search-c
 import { CustomerVendorListComponent } from './customer-vendor-list/customer-vendor-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import { ImportCustomersComponent } from './import-customers/import-customers.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    CustomersRoutingModule
+    CustomersRoutingModule,
+    SharedModule
   ],
   declarations: [CustomersBaseComponent, SearchCustomerVendorComponent, CustomerVendorListComponent, AddNewComponent, ImportCustomersComponent]
 })

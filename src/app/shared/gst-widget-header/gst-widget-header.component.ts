@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-gst-widget-container',
-  templateUrl: './gst-widget-container.component.html',
-  styleUrls: ['./gst-widget-container.component.scss']
+  selector: 'app-gst-widget-header',
+  templateUrl: './gst-widget-header.component.html',
+  styleUrls: ['./gst-widget-header.component.scss']
 })
 export class GstWidgetContainerComponent implements OnInit {
 
