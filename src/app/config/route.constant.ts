@@ -9,7 +9,30 @@ export const ROUTES = {
             route: 'settings',
             name: 'Settings',
             absoluteRoute: '/settings',
-            module: '../pages/settings/settings.module#SettingsModule'
+            module: '../pages/settings/settings.module#SettingsModule',
+            children : {
+                organisation: {
+                    editOrganisation: {
+                        route: 'edit-organisation',
+                        name: 'Edit-organisation',
+                        absoluteRoute: '/settings/edit-organisation'
+                    }
+                },
+                user: {
+                    editUser: {
+                        route: 'edit-user',
+                        name: 'Edit-user',
+                        absoluteRoute: '/settings/edit-user'
+                    }
+                },
+                invoice: {
+                    editInvoice: {
+                        route: 'edit-invoice',
+                        name: 'Edit-invoice',
+                        absoluteRoute: '/settings/edit-invoice'
+                    }
+                }
+            }
         },
         customers: {
             route: 'customers',

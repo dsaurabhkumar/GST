@@ -9,6 +9,9 @@ import { OrganisationDetailsComponent } from './organisation-details/organisatio
 import { InvoiceOptionsComponent } from './invoice-options/invoice-options.component';
 import { InventoryOptionsComponent } from './inventory-options/inventory-options.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
+import { EditOrganisationComponent } from './edit-organisation/edit-organisation.component';
 
 @NgModule({
   imports: [
@@ -16,6 +19,6 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SettingsRoutingModule,
     SharedModule
   ],
-  declarations: [SettingsBaseComponent, MembershipDetailsComponent, OrganisationDetailsComponent, InvoiceOptionsComponent, InventoryOptionsComponent, UserDetailsComponent]
+  declarations: [SettingsBaseComponent, MembershipDetailsComponent, OrganisationDetailsComponent, InvoiceOptionsComponent, InventoryOptionsComponent, UserDetailsComponent, EditUserComponent, EditInvoiceComponent, EditOrganisationComponent]
 })
 export class SettingsModule { }
