@@ -11,8 +11,9 @@
         <div class="form-group row">
             <label for="inputCompanyType" class="col-2 col-form-label">Your Company Type </label>
             <div class="col-5">
-                <!-- <input type="text" class="form-control form-control-sm" id="inputPassword" > --> 
-                DROPDOWN LIST
+                <select name="" id="" class="form-control form-control-sm">
+                    <option value="" *ngFor='let ct of companyType'>{{ct}}</option>
+                </select>
             </div>
         </div>
         <div class="form-group row">
@@ -48,9 +49,8 @@
         <div class="form-group row">
             <label for="inputState" class="col-2 col-form-label">State </label>
             <div class="col-5">
-                <!-- <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Password"> -->
-                DROPDOWN
-                <select name="" id="">
+                <select name="" id="" class="form-control form-control-sm">
+                    <option value="">Select State</option>
                     <option value="" *ngFor="let state of states">{{state}}</option>
                 </select>
             </div>
@@ -61,6 +61,10 @@
                 <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Enter your city">
             </div>
         </div>
-       
+        <div class="btnContainer">
+            <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+            <app-button [btnText]="'Back'" (click)="backToSettings()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+        </div>
+
     </form>
 </div>
