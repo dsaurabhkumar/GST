@@ -17,9 +17,6 @@
     <div class="col-1"> Delhi </div>
     <div class="col-1"> Delhi </div>
     <div class="col-1">
-      <button type='button' class="btn" (click)="editOrgDetails()">
-        <i class="btn-icon-only fa fa-edit"> </i>
-        Edit
-      </button>
+      <app-button [btnText]="'Edit'" [btnIcon]="'edit'"  (click)="editOrgDetails()" [btnClass]="'btn btn-secondary'"></app-button>
     </div>
   </div>

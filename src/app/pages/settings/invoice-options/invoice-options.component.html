@@ -15,9 +15,10 @@
     <div class="col-3"> Terms & Condition </div>
     <div class="col-1"> Logo </div>
     <div class="col-1">
-      <button type="button" class="btn" (click)="editInvoice()">
+      <!-- <button type="button" class="btn" (click)="editInvoice()">
           <i class="btn-icon-only fa fa-edit"> </i>
           Edit
-      </button>
+      </button> -->
+      <app-button [btnText]="'Edit'" [btnIcon]="'edit'"  (click)="editInvoice()" [btnClass]="'btn btn-secondary'"></app-button>
     </div>
   </div>

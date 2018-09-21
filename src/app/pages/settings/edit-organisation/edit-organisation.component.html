@@ -1,2 +1,66 @@
 <app-google-ads></app-google-ads>
 <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Edit Organisation Details'"></app-gst-widget-header>
+<div class="edit-container">
+    <form>
+        <div class="form-group row">
+            <label for="companyName" class="col-2 col-form-label">Your Company Name*</label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="companyName" placeholder="Enter your company name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputCompanyType" class="col-2 col-form-label">Your Company Type </label>
+            <div class="col-5">
+                <!-- <input type="text" class="form-control form-control-sm" id="inputPassword" > --> 
+                DROPDOWN LIST
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPan" class="col-2 col-form-label">PAN Number </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputPan" placeholder="Enter you PAN number">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputGst" class="col-2 col-form-label">GSTIN </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputGst" placeholder="Enter your gst no">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputAddress1" class="col-2 col-form-label">Address Line 1* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputAddress1" placeholder="Enter address line 1">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputAddress2" class="col-2 col-form-label">Address Line 2 </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputAddress2" placeholder="Enter address line 2">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPinCode" class="col-2 col-form-label">PinCode* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputPinCode" placeholder="Enter your pincode">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputState" class="col-2 col-form-label">State </label>
+            <div class="col-5">
+                <!-- <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Password"> -->
+                DROPDOWN
+                <select name="" id="">
+                    <option value="" *ngFor="let state of states">{{state}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputCity" class="col-2 col-form-label">City* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputCity" placeholder="Enter your city">
+            </div>
+        </div>
+       
+    </form>
+</div>

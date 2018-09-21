@@ -13,9 +13,10 @@
       <div class="col-3"> niket03@gmail.com </div>
       <div class="col-2"> ******** </div>
       <div class="col-1">
-        <button type="button" class="btn" (click)="editUser()">
+        <!-- <button type="button" class="btn" (click)="editUser()">
             <i class="btn-icon-only fa fa-edit"> </i>
             Edit
-        </button>
+        </button> -->
+        <app-button [btnText]="'Edit'" [btnIcon]="'edit'"  (click)="editUser()" [btnClass]="'btn btn-secondary'"></app-button>
       </div>
   </div>
