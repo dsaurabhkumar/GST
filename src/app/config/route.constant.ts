@@ -38,7 +38,16 @@ export const ROUTES = {
             route: 'customers',
             name: 'Customers',
             absoluteRoute: '/customers',
-            module: '../pages/customers/customers.module#CustomersModule'
+            module: '../pages/customers/customers.module#CustomersModule',
+            children : {
+                customerComp: {
+                    addNewDetails: {
+                        route: 'add-new-customer',
+                        name: 'Add-new-customer',
+                        absoluteRoute: '/customers/add-new-customer'
+                    }
+                }
+            }
         },
         transport: {
             route: 'transport',
