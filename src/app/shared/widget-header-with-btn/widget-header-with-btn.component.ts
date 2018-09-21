@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from '@app/config/route.constant';
 
 @Component({
   selector: 'app-widget-header-with-btn',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetHeaderWithBtnComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
+  
+  addNewCustomer(){
+    this._router.navigate([ROUTES.customers.children.customerComp.addNewDetails.absoluteRoute]);
+  }
+
 
 }
