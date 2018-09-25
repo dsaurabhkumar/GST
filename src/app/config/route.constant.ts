@@ -46,11 +46,11 @@ export const ROUTES = {
                         name: 'Add-new-customer',
                         absoluteRoute: '/customers/add-new-customer'
                     },
-                    importCustomer: {
-                        route: 'import-customers',
-                        name: 'Import-customer',
-                        absoluteRoute: '/customers/import-customers'
-                    }
+                    // importCustomer: {
+                    //     route: 'import-customers',
+                    //     name: 'Import-customer',
+                    //     absoluteRoute: '/customers/import-customers'
+                    // }
                 }
             }
         },
