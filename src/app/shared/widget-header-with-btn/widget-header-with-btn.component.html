@@ -12,5 +12,6 @@
         <app-button [btnText]="'Add New'" (click)="addNewCustomer()" [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
         <app-button [btnText]="'Import Customers'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
 
+        <ng-content></ng-content>
     </div>
 </div>

@@ -46,11 +46,6 @@ export const ROUTES = {
                         name: 'Add-new-customer',
                         absoluteRoute: '/customers/add-new-customer'
                     },
-                    // importCustomer: {
-                    //     route: 'import-customers',
-                    //     name: 'Import-customer',
-                    //     absoluteRoute: '/customers/import-customers'
-                    // }
                 }
             }
         },
@@ -64,6 +59,11 @@ export const ROUTES = {
                     route: 'transportCharges',
                     name: 'TransportCharges',
                     absoluteRoute: '/transport/transportCharges'
+                },
+                addNewTransport: {
+                    route: 'add-new-transport',
+                    name: 'Add-new-transport',
+                    absoluteRoute: '/transport/add-new-transport'
                 }
             }
         },
