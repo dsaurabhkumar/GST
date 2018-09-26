@@ -5,12 +5,13 @@ import { GoogleAdsComponent } from './google-ads/google-ads.component';
 import { ButtonComponent } from './button/button.component';
 import { WidgetHeaderWithBtnComponent } from './widget-header-with-btn/widget-header-with-btn.component';
 import { Components } from './';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   exports: [ Components ],
-  declarations: [GstWidgetContainerComponent, GoogleAdsComponent, ButtonComponent, WidgetHeaderWithBtnComponent]
+  declarations: [GstWidgetContainerComponent, GoogleAdsComponent, ButtonComponent, WidgetHeaderWithBtnComponent, ModalComponent]
 })
 export class SharedModule { }
