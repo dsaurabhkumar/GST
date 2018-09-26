@@ -64,6 +64,11 @@ export const ROUTES = {
                     route: 'add-new-transport',
                     name: 'Add-new-transport',
                     absoluteRoute: '/transport/add-new-transport'
+                },
+                addNewTransportCharges: {
+                    route: 'add-new-transport-charges',
+                    name: 'AddNewTransportCharges',
+                    absoluteRoute: '/transport/add-new-transport-charges'
                 }
             }
         },
