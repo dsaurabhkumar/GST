@@ -1,3 +1,47 @@
-<p>
-  edit-user works!
-</p>
+
+<app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Edit User Details'"></app-gst-widget-header>
+<div class="edit-container">
+    <form>
+        <div class="form-group row">
+            <label for="inputUserId" class="col-2 col-form-label">User ID*</label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputUserId" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputFullName" class="col-2 col-form-label">Full Name*</label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputFullName" placeholder="Enter you full name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPhone" class="col-2 col-form-label">Phone* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputPhone" placeholder="Enter you phone number">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-2 col-form-label">Email* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputEmail" disabled>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-2 col-form-label">Password* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputAddress1" placeholder="Enter password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputRepPass" class="col-2 col-form-label">Confirm Password* </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputRepPass" placeholder="Confirm password">
+            </div>
+        </div>
+        <div class="btnContainer">
+            <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+            <app-button [btnText]="'Back'" (click)="backToSettings()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+        </div>
+
+    </form>
+</div>
