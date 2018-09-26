@@ -5,7 +5,7 @@
   </div>
 
   <div class="mb-4">
-    <app-widget-header-with-btn>
+    <app-widget-header-with-btn [iconName]="'th-list'" [contentHeading]="'Transport List'">
       <app-button [btnText]="'Add New'" (click)="addTransportDetails()"
         [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
       <app-button [btnText]="'Import Transports'" [btnIcon]="'download'"

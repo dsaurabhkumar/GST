@@ -4,6 +4,7 @@ import { TransportBaseComponent } from '@app/pages/transport/transport-base/tran
 import { TransportChargesComponent } from '@app/pages/transport/transport-charges/transport-charges.component';
 import { AddNewComponent } from '@app/pages/transport/add-new/add-new.component';
 import { AddNewTransportChargesComponent } from '@app/pages/transport/add-new-transport-charges/add-new-transport-charges.component';
+import { EditTransportListComponent } from '@app/pages/transport/edit-transport-list/edit-transport-list.component';
 
 const routes: Routes = [
   { path: '', component: TransportBaseComponent},
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'add-new-transport-charges',
     component: AddNewTransportChargesComponent
+  },
+  {
+    path: 'edit-transport-list',
+    component: EditTransportListComponent
   }
     
 ];
