@@ -10,11 +10,7 @@ const routes: Routes = [
     path: 'add-new-customer',
     component: AddNewComponent
   }
-  // {
-  //   path: 'import-customers',
-  //   component: ImportCustomersComponent
-  // }
-  
+    
 ];
 
 @NgModule({
