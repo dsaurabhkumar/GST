@@ -19,6 +19,4 @@ export class WidgetHeaderWithBtnComponent implements OnInit {
   addNewCustomer(){
     this._router.navigate([ROUTES.customers.children.customerComp.addNewDetails.absoluteRoute]);
   }
-
-
 }

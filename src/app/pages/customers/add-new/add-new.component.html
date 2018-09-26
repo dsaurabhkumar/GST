@@ -65,9 +65,11 @@
         <div class="col-2 col-form-label">
           <label for="firstname" class="">Country *</label>
         </div>
-        <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Select country">
+        <div class="col-5 col-form-label">
+          <select class="form-control form-control-sm">
+            <option value="">Select Country</option>
+            <option value="country" *ngFor="let country of countries" [selected]="country == 'India'">{{country}}</option>
+          </select>
         </div>
       </div>
 
@@ -75,9 +77,11 @@
         <div class="col-2 col-form-label">
           <label for="firstname" class="">State *</label>
         </div>
-        <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Select state">
+        <div class="col-5 col-form-label">
+          <select class="form-control form-control-sm">
+            <option value="">Select State</option>
+            <option value="state" *ngFor="let state of states">{{state}}</option>
+          </select>
         </div>
       </div>
 
@@ -85,7 +89,7 @@
         <div class="col-2 col-form-label">
           <label for="firstname" class="">City</label>
         </div>
-        <div class="col-5">
+        <div class="col-5 col-form-label">
           <input type="text" class="form-control form-control-sm"
             placeholder="Enter your city">
         </div>
@@ -95,9 +99,11 @@
         <div class="col-2 col-form-label">
           <label for="firstname" class="">Company Type</label>
         </div>
-        <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Select Company type">
+        <div class="col-5 col-form-label">
+          <select class="form-control form-control-sm">
+            <!-- <option value="default"></option> -->
+            <option value="customer" *ngFor="let customer of customers">{{customer}}</option>
+          </select>
         </div>
       </div>
 
@@ -153,7 +159,8 @@
       <div class="btnContainer">
         <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
-        <app-button [btnText]="'Back'" (click)="backToCustomer()" [btnIcon]="'chevron-left'"
+        <app-button [btnText]="'Back'" (click)="backToCustomer()"
+          [btnIcon]="'chevron-left'"
           [btnClass]="'btn-secondary'"></app-button>
       </div>
     </form>

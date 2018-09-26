@@ -22,7 +22,7 @@ export const CoreConstant =  {
         "Others"
     ],
 
-    customer: [
+    customers: [
         'Customer',
         'Vendor',
         'Customer/Vendor',

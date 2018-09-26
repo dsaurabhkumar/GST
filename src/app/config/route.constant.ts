@@ -45,7 +45,12 @@ export const ROUTES = {
                         route: 'add-new-customer',
                         name: 'Add-new-customer',
                         absoluteRoute: '/customers/add-new-customer'
-                    }
+                    },
+                    // importCustomer: {
+                    //     route: 'import-customers',
+                    //     name: 'Import-customer',
+                    //     absoluteRoute: '/customers/import-customers'
+                    // }
                 }
             }
         },
