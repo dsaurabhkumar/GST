@@ -1,0 +1,69 @@
+<div class="add-new-transport-charges">
+  <div class="widget-header">
+    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add
+      Transport Charges'"></app-gst-widget-header>
+  </div>
+  <div class="widget-content">
+    <form>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="firstname" class="">Name*</label>
+        </div>
+        <div class="col-5">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter transport charge name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="firstname" class="">HSN/SAC Code</label>
+        </div>
+        <div class="col-5">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your HSN code">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="firstname" class="">CGST %</label>
+        </div>
+        <div class="col-5">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter cgst">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="firstname" class="">SGST %</label>
+        </div>
+        <div class="col-5">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter sgst">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="firstname" class="">IGST %</label>
+        </div>
+        <div class="col-5">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter igst">
+        </div>
+      </div>
+
+      <div class="btnContainer">
+        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+          btn-primary'"></app-button>
+        <app-button [btnText]="'Back'" (click)="backToTransportCharge()"
+          [btnIcon]="'chevron-left'"
+          [btnClass]="'btn-secondary'"></app-button>
+      </div>
+    </form>
+
+  </div>
+</div>

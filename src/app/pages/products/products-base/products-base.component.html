@@ -1,3 +1,30 @@
-<p>
-  products-base works!
-</p>
+<div class="product-base">
+
+  <div>
+    <app-search-product></app-search-product>
+  </div>
+
+  <div class="mt-4">
+    <app-widget-header-with-btn [iconName]="'th-list'"
+      [contentHeading]="'Product List'">
+      <app-button [btnText]="'Add New'" (click)="addnewProduct()"
+        [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
+      <app-button [btnText]="'Import Products'" [btnIcon]="'download'"
+        [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+    </app-widget-header-with-btn>
+    <app-product-list></app-product-list>
+  </div>
+
+  <app-modal>
+    <app-import-products></app-import-products>
+  </app-modal>
+
+  <div class="row mt-4 m-0 subheading subheading-wrap">
+    <div class="customer-wrap col-12 text-left">
+      <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn btn-secondary btn-align'"></app-button>
+      <app-button [btnText]="'Add New'" (click)="addnewProduct()" [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
+      <app-button [btnText]="'Import Products'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+    </div>
+  </div>
+
+</div>

@@ -64,6 +64,16 @@ export const ROUTES = {
                     route: 'add-new-transport',
                     name: 'Add-new-transport',
                     absoluteRoute: '/transport/add-new-transport'
+                },
+                addNewTransportCharges: {
+                    route: 'add-new-transport-charges',
+                    name: 'AddNewTransportCharges',
+                    absoluteRoute: '/transport/add-new-transport-charges'
+                },
+                editTransportList: {
+                    route:"edit-transport-list",
+                    name:'Edit-transport-list',
+                    absoluteRoute:'/transport/edit-transport-list'
                 }
             }
         },
@@ -77,6 +87,11 @@ export const ROUTES = {
                     route: 'stock',
                     name: 'Stock',
                     absoluteRoute: '/products/stock'
+                },
+                addnewPro: {
+                    route: 'add-new-product',
+                    name: 'Add-new-product',
+                    absoluteRoute: '/products/add-new-product'
                 }
             }
         },

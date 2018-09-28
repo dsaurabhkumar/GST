@@ -1,3 +1,50 @@
-<p>
-  transport-charges works!
-</p>
+<div class="main">
+  <app-gst-widget-header [iconName]="'search'" [headingContent]="'Search
+    Transport
+    Charges'"></app-gst-widget-header>
+  <div class="search-transport-charges mb-4">
+    <div class="widget-content">
+      <div class="control-group-search">
+        <label class="control-label">Search By Transport Charges Name :</label>
+        <input type="text" class="placeHolderWidth" placeholder="Enter search transport charges name">
+      </div>
+      <div class="buttonAlign">
+        <app-button [btnText]="'Search'" [btnIcon]="'search'" [btnClass]="'btn
+          btn-primary'"></app-button>
+      </div>
+      <div class="buttonAlign">
+        <app-button [btnText]="'Show All Data'" [btnIcon]="'list-alt'"
+          [btnClass]="'btn btn-primary'"></app-button>
+      </div>
+    </div>
+  </div>
+
+  <app-widget-header-with-btn [iconName]="'th-list'" [contentHeading]="'Transport Charges List'">
+    <app-button [btnText]="'Add New'" (click)="addTransportCharges()"
+      [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
+  </app-widget-header-with-btn>
+
+  <div class="transport-list mb-4">
+    <div class="row m-0 subheading subheading-wrap">
+      <div class="checkbox col-1 text-center">
+        <input type="checkbox">
+      </div>
+      <div class="col-3">NAME</div>
+      <div class="col-3">HSN CODE</div>
+      <div class="col-3">PRICE</div>
+      <div class="col-2">ACTION</div>
+    </div>
+  </div>
+
+  <div>
+      <div class="row m-0 subheading subheading-wrap">
+        <div class="customer-wrap col-12 text-left">
+          <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
+            btn-secondary btn-align'"></app-button>
+          <app-button [btnText]="'Add New'" (click)="addTransportCharges()" [btnIcon]="'plus'" [btnClass]="'btn
+            btn-primary btn-align'"></app-button>
+        </div>
+      </div>
+    </div>
+
+</div>

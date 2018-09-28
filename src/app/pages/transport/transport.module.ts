@@ -9,6 +9,8 @@ import { SearchTransportComponent } from './search-transport/search-transport.co
 import { TransportListComponent } from './transport-list/transport-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import { ImportTransportsComponent } from './import-transports/import-transports.component';
+import { AddNewTransportChargesComponent } from './add-new-transport-charges/add-new-transport-charges.component';
+import { EditTransportListComponent } from './edit-transport-list/edit-transport-list.component';
 
 @NgModule({
   imports: [
@@ -16,6 +18,6 @@ import { ImportTransportsComponent } from './import-transports/import-transports
     TransportRoutingModule,
     SharedModule
   ],
-  declarations: [TransportBaseComponent, TransportChargesComponent, SearchTransportComponent, TransportListComponent, AddNewComponent, ImportTransportsComponent]
+  declarations: [TransportBaseComponent, TransportChargesComponent, SearchTransportComponent, TransportListComponent, AddNewComponent, ImportTransportsComponent, AddNewTransportChargesComponent, EditTransportListComponent]
 })
 export class TransportModule { }
