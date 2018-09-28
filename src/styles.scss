@@ -4,9 +4,6 @@ $md-screen: 768px;
 $lg-screen: 992px;
 $xl-screen: 1200px;/* You can add global styles to this file, and also import other style files */
 
-// body {
-//     background: #f9f6f1;
-// }
 .nav-item-image {
     width: 15px;
     height: 15px;
@@ -63,17 +60,6 @@ $xl-screen: 1200px;/* You can add global styles to this file, and also import ot
         margin-left: 15px;
         }
     }
-
-// .btn {
-//     box-shadow: inset 0px 1px 0px #ffffff1a, 0px 1px 2px #0000001a;
-//     background: #f6f4f485;
-//     padding: 2px 12px;
-//     border: 1px solid #0000001a;
-//     &:active {
-//         background: #e0dfdf;
-//     }
-// }
-
 
 .btn {
     font-size: 14px;
@@ -133,6 +119,25 @@ $xl-screen: 1200px;/* You can add global styles to this file, and also import ot
     }
 }
 
+.btn-upgrade {
+    width: 80%;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333333;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    height: 50px;
+    transition: background-color 0.2s;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(128, 128, 128, 0.1));
+    background-color: white;
+    &:hover {
+        background-color: #e6e6e6;
+        transition: background-position 0.1s linear;
+    }
+}
 
 .btnContainer {
     background-color: #eeeeee;

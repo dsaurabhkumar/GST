@@ -87,6 +87,11 @@ export const ROUTES = {
                     route: 'stock',
                     name: 'Stock',
                     absoluteRoute: '/products/stock'
+                },
+                addnewPro: {
+                    route: 'add-new-product',
+                    name: 'Add-new-product',
+                    absoluteRoute: '/products/add-new-product'
                 }
             }
         },

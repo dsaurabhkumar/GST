@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from '@app/config/route.constant';
 
 @Component({
   selector: 'app-products-base',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsBaseComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  addnewProduct() {
+    this._router.navigate([ROUTES.products.children.addnewPro.absoluteRoute]);
   }
 
 }
