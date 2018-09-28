@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from '@app/config/route.constant';
 
 @Component({
   selector: 'app-edit-invoice',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditInvoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+  backToSettings(){
+    this._router.navigate([ROUTES.settings.absoluteRoute])
+  }
+
 
 }

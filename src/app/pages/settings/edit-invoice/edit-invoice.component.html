@@ -1,3 +1,420 @@
-<p>
-  edit-invoice works!
-</p>
+
+<app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Edit User Details'"></app-gst-widget-header>
+<div class="edit-container">
+    <form>
+        <div class="form-group row">
+            <label for="inputFile" class="col-2 col-form-label">Logo</label>
+            <div class="col-5">
+                  <input type="file" id="inputFile" class="btn btn-secondary">
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <h3 class="heading"> Bank Detail 1 
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </h3>
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputBankName" class="col-2 col-form-label">Bank Name </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputBankName" placeholder="Enter bank name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputIfsc" class="col-2 col-form-label">Bank IFSC </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputIfsc" placeholder="Enter bank IFSC">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputSwiftCode" class="col-2 col-form-label">Swift Code </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputSwiftCode" placeholder="Enter bank swift code">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputAcNo" class="col-2 col-form-label">Account No </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputAcNo" placeholder="Enter bank account number">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputBranchName" class="col-2 col-form-label">Branch Name </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputBranchName" placeholder="Enter bank branch name">
+            </div>
+        </div>
+
+        <hr>
+        <h3 class="heading"> Bank Detail 2
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </h3>
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputBank2Name" class="col-2 col-form-label">Bank Name </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputBank2Name" placeholder="Enter bank name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="input2Ifsc" class="col-2 col-form-label">Bank IFSC </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="input2Ifsc" placeholder="Enter bank IFSC">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputSwiftCode" class="col-2 col-form-label">Swift Code </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputSwiftCode" placeholder="Enter bank swift code">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputAcNo" class="col-2 col-form-label">Account No </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputAcNo" placeholder="Enter bank account number">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputBranchName" class="col-2 col-form-label">Branch Name </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputBranchName" placeholder="Enter bank branch name">
+            </div>
+        </div>
+
+        <hr>
+        <hr>
+        <h3 class="heading"> Invoice Options
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </h3>
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputInvoiceTitle" class="col-2 col-form-label">Invoice Title </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputInvoiceTitle" placeholder="Enter invoice title">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputInvoicePrefix" class="col-2 col-form-label">Invoice Prefix </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputInvoicePrefix" placeholder="Enter invoice prefix">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputInvoicePostfix" class="col-2 col-form-label">Invoice Postfix </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputInvoicePostfix" placeholder="Enter invoice postfix">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputExportPrefix" class="col-2 col-form-label">Export Prefix </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputExportPrefix" placeholder="Enter export prefix">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputExportPostfix" class="col-2 col-form-label">Export Postfix </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputExportPostfix" placeholder="Enter export postfix">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputCustomerLable" class="col-2 col-form-label"> Customer Lable</label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputCustomerLable" placeholder="Enter customer lable">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputBlackAndWhitePrint" class="col-2 col-form-label"> Black & White Print </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputBlackAndWhitePrint">
+                      Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputCustomHeader" class="col-2 col-form-label"> Custom Header </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputCustomHeader">
+                      No default header in invoice print. (use this option if you want to print invoice on your letterpad)
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputLetterHead" class="col-2 col-form-label">Letterpad Header Size </label>
+            <div class="col-5">
+                <select name="" id="inputLetterHead" class="form-control form-control-sm">
+                  <option value="small"> Small</option>
+                  <option value="medium"> Medium </option>
+                  <option value="large"> Large </option>
+                  <option value="extra large"> Extra Large </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputShowYrPan" class="col-2 col-form-label"> Show Your PAN </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputShowYrPan">
+                      Show Your Number PAN in invoice print.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEnProNote" class="col-2 col-form-label"> Enable Product Note </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputEnProNote">
+                      Enable Note for each product in Invoice. (ex: to write product serial number) 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputShowPgNum" class="col-2 col-form-label"> Show Page Number </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputShowPgNum">
+                      Show page number in invoice. (ex: Page 1 of 1) 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputHideContact" class="col-2 col-form-label"> Hide Contact Detail </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputHideContact">
+                      Check if you want to hide contact detail in Invoice Header. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputEnableRounding" class="col-2 col-form-label"> Enable Rounding </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputEnableRounding">
+                      Enable rounding of Grand Total in Invoice. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inpAllowOversell" class="col-2 col-form-label"> Allow Oversell? </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inpAllowOversell">
+                      Allow to Create Sales Invoice, if stock not available. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDefaultProNote" class="col-2 col-form-label">Default Product Note </label>
+            <div class="col-5">
+                <textarea name="" id="inputDefaultProNote" rows="2" class="form-control form-control-sm"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDefPayType" class="col-2 col-form-label"> Default Payment Type </label>
+            <div class="col-5">
+                <select name="" id="inputDefPayType" class="form-control form-control-sm">
+                  <option value="small"> Credit </option>
+                  <option value="medium"> Cash </option>
+                  <option value="large"> Cheque </option>
+                  <option value="extra large"> Online </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDeclareFontSize" class="col-2 col-form-label"> Declaration Fontsize </label>
+            <div class="col-5">
+                <select name="" id="inputDeclareFontSize" class="form-control form-control-sm">
+                  <option value="small"> Small </option>
+                  <option value="medium"> Medium </option>
+                  <option value="large"> Large </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputSupplyDeclaration" class="col-2 col-form-label"> Bill of supply Declaration </label>
+            <div class="col-5">
+                <textarea name="" id="inputSupplyDeclaration" rows="2" class="form-control form-control-sm">Declaration : Composition Taxable Person Not Eligible To Collect Taxes On Supplies
+                </textarea>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDefaultDueDate" class="col-2 col-form-label"> Default Due Date </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputDefaultDueDate" placeholder="Enter days for invoice due date">
+                <i>Note: Use "" For Without Due Date, Set Numeric value for Days from invoice date. </i>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputHideDueDate" class="col-2 col-form-label"> Hide due Date </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputHideDueDate">
+                      Hide due date in invoice. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputShowExtraText1" class="col-2 col-form-label"> Enable Extra Text 1 </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputShowExtraText1">
+                      Show Extra Text Field in Invoice. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputExtraTextLabel" class="col-2 col-form-label"> Extra Text 1 Label </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputExtraTextLabel" placeholder="Enter extra text label">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputEnableExtraDate" class="col-2 col-form-label"> Enable Extra Date 1 </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputShowExtraText1">
+                      Show Extra Text Field in Invoice. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputExtraDateLabel" class="col-2 col-form-label"> Extra Date 1 Label </label>
+            <div class="col-5">
+                <input type="text" class="form-control form-control-sm" id="inputExtraDateLabel" placeholder="Enter extra date label">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputEnableDiscount" class="col-2 col-form-label"> Enable Discount </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputEnableDiscount">
+                      Show Discount Field in Invoice. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDeclareFontSize" class="col-2 col-form-label"> Discount In ( Rs / % ) </label>
+            <div class="col-5">
+                <select name="" id="inputDeclareFontSize" class="form-control form-control-sm">
+                  <option value="small"> Percentage (%) </option>
+                  <option value="medium"> Rupee (Rs) </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputDiscPerItem" class="col-2 col-form-label"> Disc. Per Item </label>
+            <div class="col-5">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="" id="inputDiscPerItem">
+                      Calculate discount per each Item. 
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+            <label for="inputQuantityDecimalValue" class="col-2 col-form-label"> Quantity Decimal Value </label>
+            <div class="col-5">
+                <select name="" id="inputQuantityDecimalValue" class="form-control form-control-sm">
+                  <option value="0"> 0 </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                </select>
+            </div>
+        </div>
+
+
+
+        <hr>
+
+
+
+
+
+        
+
+
+        <!-- Button section -->
+        <div class="btnContainer">
+            <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+            <app-button [btnText]="'Back'" (click)="backToSettings()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+        </div>
+
+    </form>
+</div>
