@@ -1,0 +1,171 @@
+<div class="invoice-form">
+  <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'INVOICE'"></app-gst-widget-header>
+  <div class="row invoice-form-content">
+    <div class="mt-4 col-5">
+      <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+      <form class="form-begins">
+        <div class="customerInfo text-right">
+          <app-button [btnText]="'Add New Customer'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="m/s" class="">M/S.</label>
+          </div>
+          <div class="col-9">
+            <select class="form-control form-control-sm">
+              <option></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="Address" class="">Address</label>
+          </div>
+          <div class="col-9">
+            <textarea class="form-control form-control-sm">
+            </textarea>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="phoneNo" class="">Phone No</label>
+          </div>
+          <div class="col-9 lineHeight">
+            N/A
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="gstin" class="">GSTIN / PAN</label>
+          </div>
+          <div class="col-9 lineHeight">
+            N/A
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="revCharge" class="">Rev. Charge</label>
+          </div>
+          <div class="col-9">
+            <select class="form-control form-control-sm">
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="checkBox col-3 text-right">
+            <input type="checkbox">
+          </div>
+          <div class="col-9">
+            Same Shipping Address
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipName" class="">SHIP. NAME</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Name">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipAdd" class="">SHIP. ADD.</label>
+          </div>
+          <div class="col-9">
+            <textarea placeholder="Enter Shipping Address" class="form-control form-control-sm"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipPhone" class="">SHIP. PHONE</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Phone">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipState" class="">SHIP. State</label>
+          </div>
+          <div class="col-9">
+            <select name="" id="" class="form-control form-control-sm">
+              <option value="">Select State</option>
+              <option value="" *ngFor="let state of states">{{state}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipGSTIN" class="">SHIP. GSTIN</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping GSTIN">
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="mt-4 col-7">
+      <div>
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Invoice Detail'"></app-gst-widget-header>
+      </div>
+      <form class="invoiceDetail">
+
+        <div class="row">
+          <div class="form-group col-12 col-md-6">
+            <div class="row">
+              <div class="col-12 col-md-4 col-form-label">
+                <label for="invoiceType" class="">Invoice Type</label>
+              </div>
+              <div class="col-12 col-md-8">
+                <select class="form-control form-control-sm">
+                  <option></option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-12 col-md-6">
+              <div class="row">
+                <div class="col-12 col-md-4 col-form-label">
+                  <label for="invoiceNo" class="">Invoice No.</label>
+                </div>
+                <div class="col-12 col-md-8">
+                  <input type="text" class="form-control form-control-sm" value="1">
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-12 col-md-6">
+                <div class="row">
+                  <div class="col-12 col-md-4 col-form-label">
+                    <label for="date" class="">Date</label>
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <input class="datepicker" data-date-format="mm/dd/yy">
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+      </form>
+    </div>
+
+  </div>
+</div>

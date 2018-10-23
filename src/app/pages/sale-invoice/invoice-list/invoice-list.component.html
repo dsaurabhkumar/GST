@@ -1,6 +1,6 @@
 <app-widget-header-with-btn [iconName]="'th-list'"
             [contentHeading]="'Invoice List'">
-            <app-button [btnText]="'Add New'"
+            <app-button [btnText]="'Add New'" (click)="addNewInvoice()"
                 [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
 </app-widget-header-with-btn>
 
