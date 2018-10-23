@@ -1,45 +1,62 @@
-<app-gst-widget-header [iconName]="'search'" [headingContent]="'Search Invoice
-  Bill'"></app-gst-widget-header>
-<div class="row">
-  <div class="form-group">
-    <label class="form-label">Search By Company :</label>
+<app-gst-widget-header [iconName]="'search'" [headingContent]="'Search Invoice Bill'"></app-gst-widget-header>
+<form class="formBegins">
+  <div class="row formContent">
+    <div class="col-2 form-group">
+      <label>Search By Company :</label>
+      <div>
+        <select class="form-control form-control-sm">
+          <option value="">Search Company</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Search By Product :</label>
+      <div>
+        <select class="form-control form-control-sm">
+          <option value="">Search Product</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-2 form-group">
+      <label>Search By Start Date :</label>
+      <div>
+        <input type="text" class="Datepicker form-control form-control-sm" placeholder="Search by start Date">
+      </div>
+    </div>
+    <div class="col-2 form-group">
+      <label>Search By End Date :</label>
+      <div>
+        <input type="text" class="Datepicker form-control form-control-sm" placeholder="Search by end Date">
+      </div>
+    </div>
+    <div class="col-2 form-group">
+      <label>Search By Invoice No :</label>
+      <div>
+        <input type="text" class="form-control form-control-sm" placeholder="Search by invoive no.">
+      </div>
+    </div>
+    <div class="col-2 form-group">
+      <label>Search By Total :</label>
+      <div>
+        <input type="text" class="form-control form-control-sm" placeholder="Search by total">
+      </div>
+    </div>
+  </div>
+  <div class="row form-content">
+  <div class="col-2 form-group mb-0">
+    <label>Search By Type :</label>
     <div>
       <select class="form-control form-control-sm">
-        <option value="">Search Company</option>
+        <option value="">Search Type</option>
       </select>
     </div>
   </div>
-
-  <div class="form-group">
-    <label class="form-label form-control-sm">Search By Product :</label>
-    <div>
-      <select class="">
-        <option value="">Search Product</option>
-      </select>
+  <div class="col-2 text-center align-self-end">
+    <app-button [btnText]="'Search'" [btnIcon]="'search'" [btnClass]="'btn btn-primary'"></app-button>
+  </div>
+  <div class="col-2 text-center align-self-end">
+      <app-button [btnText]="'Show All Data'" [btnIcon]="'list-alt'" [btnClass]="'btn btn-primary'"></app-button>
     </div>
   </div>
-  <div class="form-group">
-    <label class="form-label form-control-sm">Search By Start Date :</label>
-    <div>
-      <input type="text" class="Datepicker" placeholder="Search by start Date">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="form-label form-control-sm">Search By End Date :</label>
-    <div>
-      <input type="text" class="Datepicker" placeholder="Search by end Date">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="form-label form-control-sm">Search By Invoice No :</label>
-    <div>
-      <input type="text" class="" placeholder="Search by invoive no.">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="form-label form-control-sm">Search By Total :</label>
-    <div>
-      <input type="text" class="" placeholder="Search by total">
-    </div>
-  </div>
-</div>
+</form>
