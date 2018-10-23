@@ -8,6 +8,9 @@ import { SharedModule } from '@app/shared/shared.module';
 import { InvoiceSummaryComponent } from './invoice-summary/invoice-summary.component';
 import { InvoiceListComponent } from './invoice-list/invoice-list.component';
 import { AddNewInvoiceListComponent } from './add-new-invoice-list/add-new-invoice-list.component';
+import { CustomerInfoComponent } from './customer-info/customer-info.component';
+import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
+import { ProductItemsComponent } from './product-items/product-items.component';
 
 @NgModule({
   imports: [
@@ -15,6 +18,6 @@ import { AddNewInvoiceListComponent } from './add-new-invoice-list/add-new-invoi
     SaleInvoiceRoutingModule,
     SharedModule
   ],
-  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent]
+  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent]
 })
 export class SaleInvoiceModule { }
