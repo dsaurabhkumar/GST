@@ -99,7 +99,14 @@ export const ROUTES = {
             route: 'saleInvoice',
             name: 'SaleInvoice',
             absoluteRoute: '/saleInvoice',
-            module: '../pages/sale-invoice/sale-invoice.module#SaleInvoiceModule'
+            module: '../pages/sale-invoice/sale-invoice.module#SaleInvoiceModule',
+            children: {
+                addnewInvoiceDetails: {
+                    route: 'add-new-invoice-list',
+                    name: 'Add-new-invoice-list',
+                    absoluteRoute: '/saleInvoice/add-new-invoice-list'
+                }
+            }
         },
         purchaseInvoice: {
             route: 'purchaseInvoice',

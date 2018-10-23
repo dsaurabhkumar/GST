@@ -1,4 +1,4 @@
-<div class="sale-invoice-base">
+<div class="sale-search-invoice-bill">
   <div class="mb-4">
     <app-search-invoice-bill></app-search-invoice-bill>
   </div>
@@ -7,14 +7,27 @@
     <app-google-ads></app-google-ads>
 </div>
 
-<div class="sale-invoice-base">
+<div class="sale-invoice-summary">
   <div class="mb-4">
     <app-invoice-summary></app-invoice-summary>
   </div>
 </div>
 
-<div class="sale-invoice-base">
+<div class="sale-invoice-list">
     <div class="mb-4">
       <app-invoice-list></app-invoice-list>
+    </div>
+  </div>
+
+  <div>
+    <div class="row m-0 subheading subheading-wrap">
+      <div class="customer-wrap col-12 text-left">
+        <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
+          btn-secondary btn-align'"></app-button>
+        <app-button [btnText]="'Add New'" [btnIcon]="'plus'" [btnClass]="'btn
+          btn-primary btn-align'"></app-button>
+        <app-button [btnText]="'Print Invoices'" [btnIcon]="'print'"
+          [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+      </div>
     </div>
   </div>

@@ -7,6 +7,7 @@ import { SearchInvoiceBillComponent } from './search-invoice-bill/search-invoice
 import { SharedModule } from '@app/shared/shared.module';
 import { InvoiceSummaryComponent } from './invoice-summary/invoice-summary.component';
 import { InvoiceListComponent } from './invoice-list/invoice-list.component';
+import { AddNewInvoiceListComponent } from './add-new-invoice-list/add-new-invoice-list.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { InvoiceListComponent } from './invoice-list/invoice-list.component';
     SaleInvoiceRoutingModule,
     SharedModule
   ],
-  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent]
+  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent]
 })
 export class SaleInvoiceModule { }
