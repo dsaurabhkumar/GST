@@ -11,6 +11,7 @@ import { AddNewInvoiceListComponent } from './add-new-invoice-list/add-new-invoi
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 import { ProductItemsComponent } from './product-items/product-items.component';
+import { AddCustSaleInvoiceModalComponent } from './add-cust-sale-invoice-modal/add-cust-sale-invoice-modal.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { ProductItemsComponent } from './product-items/product-items.component';
     SaleInvoiceRoutingModule,
     SharedModule
   ],
-  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent]
+  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent, AddCustSaleInvoiceModalComponent]
 })
 export class SaleInvoiceModule { }

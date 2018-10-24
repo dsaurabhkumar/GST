@@ -44,5 +44,9 @@ export const CoreConstant =  {
 
      stocksList: [
          "0", "1-10", "11-50", "More than 50"
+     ],
+
+     paymentType : [
+         "CREDIT", "CASH", "CHEQUE", "ONLINE"
      ]
 }

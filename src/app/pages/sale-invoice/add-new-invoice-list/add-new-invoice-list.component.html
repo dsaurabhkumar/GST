@@ -7,13 +7,17 @@
     <div class="col-12 col-md-7 app-invoice-details">
       <app-invoice-details></app-invoice-details>
     </div>
-    <div class="mt-4 col-12 app-product-items">
-      <app-product-items></app-product-items>
-      <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Product Items'"></app-gst-widget-header>
-      <div class="row btnAlignment">
-        <app-button [btnText]="'Add New Product'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
-        <app-button [btnText]="'Add New Transport/Packaging Charges'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4 ml-2'"></app-button>
+      <div class="mt-4 col-12 app-product-items">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Product Items'"></app-gst-widget-header>
+        <div class="productItemsBorder">
+        <div class="row btnAlignment">
+          <app-button [btnText]="'Add New Product'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
+          <app-button [btnText]="'Add New Transport/Packaging Charges'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4 ml-2'"></app-button>
+        </div>
+        <div>
+        </div>  
+        <app-product-items></app-product-items>
       </div>
-    </div>
+      </div>
   </div>
 </div>
