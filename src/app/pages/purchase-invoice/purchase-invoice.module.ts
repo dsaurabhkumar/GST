@@ -8,6 +8,9 @@ import { SharedModule } from '@app/shared/shared.module';
 import { PurchaseInvoiceSummaryComponent } from './purchase-invoice-summary/purchase-invoice-summary.component';
 import { PurchaseInvoiceListComponent } from './purchase-invoice-list/purchase-invoice-list.component';
 import { AddNewPurchaseInvoiceDetailsComponent } from './add-new-purchase-invoice-details/add-new-purchase-invoice-details.component';
+import { VendorInformationComponent } from './vendor-information/vendor-information.component';
+import { PurchaseInvoiceDetailComponent } from './purchase-invoice-detail/purchase-invoice-detail.component';
+import { ProductItemsComponent } from './product-items/product-items.component';
 
 @NgModule({
   imports: [
@@ -15,6 +18,6 @@ import { AddNewPurchaseInvoiceDetailsComponent } from './add-new-purchase-invoic
     PurchaseInvoiceRoutingModule,
     SharedModule
   ],
-  declarations: [PurchaseInvoiceBaseComponent, SearchPurchaseInvoiceBillComponent, PurchaseInvoiceSummaryComponent, PurchaseInvoiceListComponent, AddNewPurchaseInvoiceDetailsComponent]
+  declarations: [PurchaseInvoiceBaseComponent, SearchPurchaseInvoiceBillComponent, PurchaseInvoiceSummaryComponent, PurchaseInvoiceListComponent, AddNewPurchaseInvoiceDetailsComponent, VendorInformationComponent, PurchaseInvoiceDetailComponent, ProductItemsComponent]
 })
 export class PurchaseInvoiceModule { }

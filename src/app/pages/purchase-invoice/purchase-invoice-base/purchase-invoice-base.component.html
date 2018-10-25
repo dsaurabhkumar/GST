@@ -29,7 +29,7 @@
     <div class="customer-wrap col-12 text-left">
       <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
                   btn-secondary btn-align'"></app-button>
-      <app-button [btnText]="'Add New'" [btnIcon]="'plus'" [btnClass]="'btn
+      <app-button [btnText]="'Add New'" [btnIcon]="'plus'" (click)="addNewPurchaseInvoice()" [btnClass]="'btn
                   btn-primary btn-align'"></app-button>
     </div>
   </div>
