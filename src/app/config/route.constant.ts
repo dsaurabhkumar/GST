@@ -112,7 +112,14 @@ export const ROUTES = {
             route: 'purchaseInvoice',
             name: 'PurchaseInvoice',
             absoluteRoute: '/purchaseInvoice',
-            module: '../pages/purchase-invoice/purchase-invoice.module#PurchaseInvoiceModule'
+            module: '../pages/purchase-invoice/purchase-invoice.module#PurchaseInvoiceModule',
+            children: {
+                addNewPurchaseInv: {
+                    route: 'add-new-purchase-invoice',
+                    name: 'Add-new-purchase-invoice',
+                    absoluteRoute: '/purchaseInvoice/add-new-purchase-invoice'
+                }
+            }
         },
         dailyExpense: {
             route: 'dailyExpense',
