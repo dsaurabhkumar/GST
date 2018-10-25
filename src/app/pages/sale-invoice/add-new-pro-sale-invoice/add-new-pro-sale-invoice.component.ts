@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoreConstant} from '@app/config/core.constant';
 
 @Component({
   selector: 'app-add-new-pro-sale-invoice',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-new-pro-sale-invoice.component.scss']
 })
 export class AddNewProSaleInvoiceComponent implements OnInit {
+  measurementUnits = CoreConstant.measurementUnits;
 
   constructor() { }
 
