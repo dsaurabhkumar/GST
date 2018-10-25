@@ -8,7 +8,7 @@
     <app-modal>
       <app-add-cust-sale-invoice-modal></app-add-cust-sale-invoice-modal>
     </app-modal>
-    
+
     <div class="form-group row">
       <div class="col-3 col-form-label">
         <label for="m/s" class="">M/S.</label>
@@ -62,58 +62,60 @@
 
     <div class="form-group row">
       <div class="checkBox col-3 text-right">
-        <input type="checkbox">
+        <input type="checkbox" (change)="shipAddCheck($event);">
       </div>
       <div class="col-9">
         Same Shipping Address
       </div>
     </div>
 
-    <div class="form-group row">
-      <div class="col-3 col-form-label">
-        <label for="shipName" class="">SHIP. NAME</label>
+    <div *ngIf="!isSameAsShippingAddress">
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="shipName" class="">SHIP. NAME</label>
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Name">
+        </div>
       </div>
-      <div class="col-9">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Name">
-      </div>
-    </div>
 
-    <div class="form-group row">
-      <div class="col-3 col-form-label">
-        <label for="shipAdd" class="">SHIP. ADD.</label>
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="shipAdd" class="">SHIP. ADD.</label>
+        </div>
+        <div class="col-9">
+          <textarea placeholder="Enter Shipping Address" class="form-control form-control-sm"></textarea>
+        </div>
       </div>
-      <div class="col-9">
-        <textarea placeholder="Enter Shipping Address" class="form-control form-control-sm"></textarea>
-      </div>
-    </div>
 
-    <div class="form-group row">
-      <div class="col-3 col-form-label">
-        <label for="shipPhone" class="">SHIP. PHONE</label>
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="shipPhone" class="">SHIP. PHONE</label>
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Phone">
+        </div>
       </div>
-      <div class="col-9">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Phone">
-      </div>
-    </div>
 
-    <div class="form-group row">
-      <div class="col-3 col-form-label">
-        <label for="shipState" class="">SHIP. State</label>
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="shipState" class="">SHIP. State</label>
+        </div>
+        <div class="col-9">
+          <select name="" id="" class="form-control form-control-sm">
+            <option value="">Select State</option>
+            <option value="" *ngFor="let state of states">{{state}}</option>
+          </select>
+        </div>
       </div>
-      <div class="col-9">
-        <select name="" id="" class="form-control form-control-sm">
-          <option value="">Select State</option>
-          <option value="" *ngFor="let state of states">{{state}}</option>
-        </select>
-      </div>
-    </div>
 
-    <div class="form-group row">
-      <div class="col-3 col-form-label">
-        <label for="shipGSTIN" class="">SHIP. GSTIN</label>
-      </div>
-      <div class="col-9">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping GSTIN">
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="shipGSTIN" class="">SHIP. GSTIN</label>
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping GSTIN">
+        </div>
       </div>
     </div>
   </form>

@@ -6,10 +6,12 @@ $lg-screen: 1199px;
 .nav-container {
     padding: 0 7%;
     font-size: 12px;
-    line-height: 1em;
     color: #b2afaa;
     border-bottom: 1px solid  #d6d6d6;
     border-top: 1px solid  #d6d6d6;
+}
+.nav-item-title {
+    line-height: 1em;
 }
 
 .fa {
@@ -48,7 +50,6 @@ $lg-screen: 1199px;
 .dropdown-menu {
     position: absolute;
     left: auto;
-    top: auto;
     font-size: 12px;
     border-radius: 6px;
 }
@@ -65,6 +66,7 @@ $lg-screen: 1199px;
         border-left: none;
         .dropdown-menu {
             margin: 0;
+            top: auto;
         }
         &:last-child{
             border-right: none;

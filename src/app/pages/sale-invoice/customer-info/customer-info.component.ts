@@ -7,10 +7,16 @@ import { CoreConstant} from '@app/config/core.constant';
 })
 export class CustomerInfoComponent implements OnInit {
   states = CoreConstant.states;
+  isSameAsShippingAddress: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  shipAddCheck(event){
+    console.log(event.target.checked)
+    this.isSameAsShippingAddress = !this.isSameAsShippingAddress;
   }
 
 }
