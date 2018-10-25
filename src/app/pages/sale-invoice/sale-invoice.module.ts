@@ -12,6 +12,9 @@ import { CustomerInfoComponent } from './customer-info/customer-info.component';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
 import { ProductItemsComponent } from './product-items/product-items.component';
 import { AddCustSaleInvoiceModalComponent } from './add-cust-sale-invoice-modal/add-cust-sale-invoice-modal.component';
+import { AddNewTransSaleInvoiceComponent } from './add-new-trans-sale-invoice/add-new-trans-sale-invoice.component';
+import { AddNewProSaleInvoiceComponent } from './add-new-pro-sale-invoice/add-new-pro-sale-invoice.component';
+import { AddPackChargesSaleInvoiceComponent } from './add-pack-charges-sale-invoice/add-pack-charges-sale-invoice.component';
 
 @NgModule({
   imports: [
@@ -19,6 +22,6 @@ import { AddCustSaleInvoiceModalComponent } from './add-cust-sale-invoice-modal/
     SaleInvoiceRoutingModule,
     SharedModule
   ],
-  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent, AddCustSaleInvoiceModalComponent]
+  declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent, AddCustSaleInvoiceModalComponent, AddNewTransSaleInvoiceComponent, AddNewProSaleInvoiceComponent, AddPackChargesSaleInvoiceComponent]
 })
 export class SaleInvoiceModule { }
