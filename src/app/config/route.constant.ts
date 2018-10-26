@@ -125,7 +125,14 @@ export const ROUTES = {
             route: 'dailyExpense',
             name: 'DailyExpense',
             absoluteRoute: '/dailyExpense',
-            module: '../pages/daily-expense/daily-expense.module#DailyExpenseModule'
+            module: '../pages/daily-expense/daily-expense.module#DailyExpenseModule',
+            children: {
+                addNewDailyExp: {
+                    route: 'add-new-daily-expense',
+                    name: 'Add-new-daily-expense',
+                    absoluteRoute: '/dailyExpense/add-new-daily-expense'
+                }
+            }
         },
         otherDocs: {
             route: 'otherDocs',

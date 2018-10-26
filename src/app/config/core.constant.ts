@@ -47,6 +47,10 @@ export const CoreConstant =  {
      ],
 
      paymentType : [
-         "CREDIT", "CASH", "CHEQUE", "ONLINE"
+         "CASH", "CREDIT", "CHEQUE", "ONLINE"
+     ],
+
+     categories : [
+         "Petrol", "Phone Bills", "Stationary"
      ]
 }

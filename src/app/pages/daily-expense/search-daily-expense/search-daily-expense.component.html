@@ -1,0 +1,45 @@
+<app-gst-widget-header [iconName]="'search'" [headingContent]="'Search Daily Expense'"></app-gst-widget-header>
+<form class="formBegins">
+  <div class="row formContent">
+    <div class="col-2 form-group">
+      <label>Search By Title :</label>
+      <div>
+        <div>
+          <input type="text" class="form-control form-control-sm" placeholder="Enter search title">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Search By Category :</label>
+      <div>
+        <select class="form-control form-control-sm">
+          <option value="">Select Category</option>
+          <option value="category" *ngFor="let category of categories">{{category}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Search By From Date :</label>
+      <div>
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by from Date">
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Search By to Date :</label>
+      <div>
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+      </div>
+    </div>
+
+    <div class="col-1 text-center align-self-end">
+      <app-button [btnText]="'Search'" [btnIcon]="'search'" [btnClass]="'btn btn-primary'"></app-button>
+    </div>
+
+    <div class="col-1 text-center align-self-end">
+      <app-button [btnText]="'Show All Data'" [btnIcon]="'list-alt'" [btnClass]="'btn btn-primary'"></app-button>
+    </div>
+  </div>
+</form>
