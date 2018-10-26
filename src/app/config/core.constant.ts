@@ -52,5 +52,10 @@ export const CoreConstant =  {
 
      categories : [
          "Petrol", "Phone Bills", "Stationary"
+     ],
+
+     reportType : [
+         "Sales", "Purchase", "Inward Payment", "Outward Payment", "Compant Ledger", "Daily Expense", "Sales Product Report", 
+         "Purchase Product Report", "Sales Outstanding", "Purchase Outstanding"
      ]
 }

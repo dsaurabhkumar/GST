@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoreConstant} from '@app/config/core.constant';
 
 @Component({
   selector: 'app-report-daily-expense',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./report-daily-expense.component.scss']
 })
 export class ReportDailyExpenseComponent implements OnInit {
+  reportType = CoreConstant.reportType;
 
   constructor() { }
 

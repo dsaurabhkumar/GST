@@ -1,3 +1,55 @@
-<p>
-  sales works!
-</p>
+<app-gst-widget-header [iconName]="'search'" [headingContent]="'Report'"></app-gst-widget-header>
+<form class="formBegins">
+  <div class="row formContent">
+    <div class="col-3 form-group">
+      <label>Report type :</label>
+      <div>
+        <div>
+          <select class="form-control form-control-sm">
+            <option value="">--Select Report type--</option>
+            <option value="reportOption" *ngFor="let reportOption of reportType">{{reportOption}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Customer/Vendor :</label>
+      <div>
+        <select class="form-control form-control-sm">
+          <option value="">--All Customer--</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>Products :</label>
+      <div>
+        <select class="form-control form-control-sm">
+          <option value="">--All Products--</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>From Date :</label>
+      <div>
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+      </div>
+    </div>
+
+    <div class="col-2 form-group">
+      <label>To Date :</label>
+      <div>
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+      </div>
+    </div>
+
+    <div class="col-1 text-center align-self-end">
+      <app-button [btnText]="'Search'" [btnIcon]="'search'" [btnClass]="'btn btn-primary'"></app-button>
+    </div>
+  </div>
+</form>
+<div>
+  <app-google-ads></app-google-ads>
+</div>

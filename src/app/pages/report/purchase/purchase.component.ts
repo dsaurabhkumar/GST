@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoreConstant} from '@app/config/core.constant';
 
 @Component({
   selector: 'app-purchase',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./purchase.component.scss']
 })
 export class PurchaseComponent implements OnInit {
+  reportType = CoreConstant.reportType;
 
   constructor() { }
 

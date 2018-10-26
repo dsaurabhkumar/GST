@@ -225,6 +225,16 @@ export const ROUTES = {
                     route: 'purchase-product-report',
                     name: 'Purchase-product-report',
                     absoluteRoute: '/report/purchase-product-report'
+                },
+                salesOutstandingReport: {
+                    route: 'sales-outstanding-report',
+                    name: 'Sales-outstanding-report',
+                    absoluteRoute: '/report/sales-outstanding-report'
+                },
+                purchaseOutstandingReport: {
+                    route: 'purchase-outstanding-report',
+                    name: 'Purchase-outstanding-report',
+                    absoluteRoute: '/report/purchase-outstanding-report'
                 }
 
             }

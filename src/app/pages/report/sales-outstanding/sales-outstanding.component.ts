@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CoreConstant} from '@app/config/core.constant';
 
 @Component({
-  selector: 'app-company-ledger',
-  templateUrl: './company-ledger.component.html',
-  styleUrls: ['./company-ledger.component.scss']
+  selector: 'app-sales-outstanding',
+  templateUrl: './sales-outstanding.component.html',
+  styleUrls: ['./sales-outstanding.component.scss']
 })
-export class CompanyLedgerComponent implements OnInit {
+export class SalesOutstandingComponent implements OnInit {
   reportType = CoreConstant.reportType;
 
   constructor() { }

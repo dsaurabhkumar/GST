@@ -8,6 +8,8 @@ import { CompanyLedgerComponent } from '@app/pages/report/company-ledger/company
 import { ReportDailyExpenseComponent } from '@app/pages/report/report-daily-expense/report-daily-expense.component';
 import { SalesProductReportComponent } from '@app/pages/report/sales-product-report/sales-product-report.component';
 import { PurchaseProductReportComponent } from '@app/pages/report/purchase-product-report/purchase-product-report.component';
+import { SalesOutstandingComponent } from './sales-outstanding/sales-outstanding.component';
+import { PurchaseOutstandingComponent } from './purchase-outstanding/purchase-outstanding.component';
 
 const routes: Routes = [
   { path: '', component: SalesComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'company-ledger', component: CompanyLedgerComponent},
   { path: 'daily-expense', component: ReportDailyExpenseComponent},
   { path: 'sales-product-report', component: SalesProductReportComponent},
-  { path: 'purchase-product-report', component: PurchaseProductReportComponent}
+  { path: 'purchase-product-report', component: PurchaseProductReportComponent},
+  { path: 'sales-outstanding-report', component: SalesOutstandingComponent },
+  { path: 'purchase-outstanding-report', component: PurchaseOutstandingComponent }
 ];
 
 @NgModule({

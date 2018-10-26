@@ -10,12 +10,16 @@ import { CompanyLedgerComponent } from './company-ledger/company-ledger.componen
 import { ReportDailyExpenseComponent } from './report-daily-expense/report-daily-expense.component';
 import { SalesProductReportComponent } from './sales-product-report/sales-product-report.component';
 import { PurchaseProductReportComponent } from './purchase-product-report/purchase-product-report.component';
+import { SalesOutstandingComponent } from './sales-outstanding/sales-outstanding.component';
+import { PurchaseOutstandingComponent } from './purchase-outstanding/purchase-outstanding.component';
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    ReportRoutingModule
+    ReportRoutingModule,
+    SharedModule
   ],
-  declarations: [SalesComponent, PurchaseComponent, ReportInwardPaymentComponent, ReportOutwardPaymentComponent, CompanyLedgerComponent, ReportDailyExpenseComponent, SalesProductReportComponent, PurchaseProductReportComponent]
+  declarations: [SalesComponent, PurchaseComponent, ReportInwardPaymentComponent, ReportOutwardPaymentComponent, CompanyLedgerComponent, ReportDailyExpenseComponent, SalesProductReportComponent, PurchaseProductReportComponent, SalesOutstandingComponent, PurchaseOutstandingComponent]
 })
 export class ReportModule { }
