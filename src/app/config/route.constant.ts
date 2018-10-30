@@ -180,10 +180,27 @@ export const ROUTES = {
             module: '../pages/gst-return-filing/gst-return-filing.module#GstReturnFilingModule'
         },
         paymentReceipt: {
-            route: 'paymnetReceipt',
-            name: 'PaymnetReceipt',
-            absoluteRoute: '/paymnetReceipt',
-            module: '../pages/payment-receipt/payment-receipt.module#PaymentReceiptModule'
+            route: 'paymentReceipt',
+            name: 'PaymentReceipt',
+            absoluteRoute: '/paymentReceipt',
+            module: '../pages/payment-receipt/payment-receipt.module#PaymentReceiptModule',
+            children : {
+                inwardPaymentReceipt: {
+                    route: 'inward-payment-receipt-sales',
+                    name: 'Inward-payment-receipt-sales',
+                    absoluteRoute: '/paymentReceipt/inward-payment-receipt-sales'
+                },
+                outwardPaymentReceipt: {
+                    route: 'outward-payment-receipt-purcahse',
+                    name: 'Outward-payment-receipt-purcahse',
+                    absoluteRoute: '/paymentReceipt/outward-payment-receipt-purcahse'
+                },
+                addPaymentReceipt : {
+                    route: 'add-new-payment-receipt',
+                    name: 'Add-new-payment-receipt',
+                    absoluteRoute: '/paymentReceipt/add-new-payment-receipt'
+                }
+            }
         },
         report: {
             route: 'report',
