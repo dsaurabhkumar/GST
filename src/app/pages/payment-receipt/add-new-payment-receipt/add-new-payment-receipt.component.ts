@@ -10,6 +10,7 @@ import { ROUTES } from '@app/config/route.constant';
 })
 export class AddNewPaymentReceiptComponent implements OnInit {
   paymentType = CoreConstant.paymentType;
+  showChooseInvNo : boolean = false;
 
   constructor(
     private _router: Router
@@ -18,8 +19,17 @@ export class AddNewPaymentReceiptComponent implements OnInit {
   ngOnInit() {
   }
 
+  chooseInvNo(event) {
+    if(event.target.value == "onInvoice") {
+      this.showChooseInvNo = true;
+    } else {
+      this.showChooseInvNo = false;
+    }
+  }
+
   backToInwardPayment() {
       this._router.navigate([ROUTES.paymentReceipt.absoluteRoute]);
   }
+
 
 }

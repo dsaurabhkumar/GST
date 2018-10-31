@@ -15,7 +15,6 @@ export class CustomerInfoComponent implements OnInit {
   }
 
   shipAddCheck(event){
-    console.log(event.target.checked)
     this.isSameAsShippingAddress = !this.isSameAsShippingAddress;
   }
 

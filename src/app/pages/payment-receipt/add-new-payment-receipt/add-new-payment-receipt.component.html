@@ -31,15 +31,16 @@
         <div class="col-5 align-self-center">
           <div class="row ml-0">
             <label class="radio-inline">
-              <input type="radio" name="optradio" checked>On Account
+              <input type="radio" name="optradio" value="onAccount" checked (change)="chooseInvNo($event);">On Account
             </label>
             <label class="radio-inline radioBtnOpt">
-              <input type="radio" class="" name="optradio">On Invoice
+              <input type="radio" class="" name="optradio" value="onInvoice" (change)="chooseInvNo($event);">On Invoice
             </label>
           </div>
         </div>
       </div>
 
+      <div *ngIf="showChooseInvNo">
       <div class="form-group row">
           <div class="col-2 col-form-label">
             <label for="firstname" class="">Choose Invoice No
@@ -60,6 +61,7 @@
             <ul class="ms_list mb-0"></ul>
           </div>
         </div>
+      </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
