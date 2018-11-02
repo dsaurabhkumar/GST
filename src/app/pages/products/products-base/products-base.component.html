@@ -10,12 +10,12 @@
       <app-button [btnText]="'Add New'" (click)="addnewProduct()"
         [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
       <app-button [btnText]="'Import Products'" [btnIcon]="'download'"
-        [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+        [btnClass]="'btn btn-primary btn-align'" [modalId]="'importProductModal'"></app-button>
     </app-widget-header-with-btn>
     <app-product-list></app-product-list>
   </div>
 
-  <app-modal>
+  <app-modal [modalId]="'importProductModal'">
     <app-import-products></app-import-products>
   </app-modal>
 
@@ -23,7 +23,7 @@
     <div class="customer-wrap col-12 text-left">
       <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn btn-secondary btn-align'"></app-button>
       <app-button [btnText]="'Add New'" (click)="addnewProduct()" [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
-      <app-button [btnText]="'Import Products'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+      <app-button [btnText]="'Import Products'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [modalId]="'importProductModal'"></app-button>
     </div>
   </div>
 

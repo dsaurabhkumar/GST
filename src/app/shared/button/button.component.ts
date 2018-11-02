@@ -10,7 +10,7 @@ export class ButtonComponent implements OnInit {
   @Input() btnText: string;
   @Input() btnIcon: string;
   @Input() btnClass: string="btn-default";
-  @Input() showModal: boolean;
+  @Input() modalId: string;
 
   @ViewChild('btnView') btnView: ElementRef;;
 
@@ -19,8 +19,8 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {  }
 
   ngAfterViewInit() {
-    if(this.showModal){
-      this.btnView.nativeElement.setAttribute("data-target","#openModal");
+    if(this.modalId){
+      this.btnView.nativeElement.setAttribute("data-target","#"+this.modalId);
       this.btnView.nativeElement.setAttribute("data-toggle", "modal");
     }
 

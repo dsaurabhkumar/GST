@@ -13,7 +13,7 @@
             <app-button [btnText]="'Add New'" (click)="addNewCustomer()"
                 [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
             <app-button [btnText]="'Import Customers'" [btnIcon]="'download'"
-                [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+                [btnClass]="'btn btn-primary btn-align'" [modalId]="'importCustModal'"></app-button>
         </app-widget-header-with-btn>
         <app-customer-vendor-list></app-customer-vendor-list>
     </div>
@@ -26,12 +26,10 @@
                 <app-button [btnText]="'Add New'" (click)="addNewCustomer()"
                     [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
                 <app-button [btnText]="'Import Customers'"
-                    [btnIcon]="'download'" [btnClass]="'btn btn-primary
-                    btn-align'"
-                    [showModal]="true"></app-button>
+                    [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [modalId]="'importCustModal'"></app-button>
             </div>
 
-            <app-modal>
+            <app-modal [modalId]="'importCustModal'">
                 <app-import-customers></app-import-customers>
             </app-modal>
 

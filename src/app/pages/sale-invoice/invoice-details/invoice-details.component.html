@@ -102,8 +102,11 @@
         </div>
       </div>
       <div class="customerInfo text-right">
-        <app-button [btnText]="'Add New Transport'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
+        <app-button [btnText]="'Add New Transport'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'" [modalId]="'addNewTranModal'"></app-button>
       </div>
+      <app-modal [modalId]="'addNewTranModal'">
+          <app-add-new-trans-sale-invoice></app-add-new-trans-sale-invoice>
+      </app-modal>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">

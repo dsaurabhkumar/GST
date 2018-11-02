@@ -2,10 +2,9 @@
   <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
   <form class="form-begins">
     <div class="customerInfo text-right">
-      <app-button [btnText]="'Add New Customer'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"
-        [showModal]="true"></app-button>
+      <app-button [btnText]="'Add New Customer'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'" [modalId]="'addCustSaleInvModal'"></app-button>
     </div>
-    <app-modal>
+    <app-modal [modalId]="'addCustSaleInvModal'">
       <app-add-cust-sale-invoice-modal></app-add-cust-sale-invoice-modal>
     </app-modal>
 

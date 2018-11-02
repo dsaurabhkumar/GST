@@ -4,16 +4,16 @@
     <app-search-transport></app-search-transport>
   </div>
 
-  <div class="mb-4">
+  <div class="mb-4"> hi
     <app-widget-header-with-btn [iconName]="'th-list'" [contentHeading]="'Transport List'">
       <app-button [btnText]="'Add New'" (click)="addTransportDetails()"
         [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
       <app-button [btnText]="'Import Transports'" [btnIcon]="'download'"
-        [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+        [btnClass]="'btn btn-primary btn-align'" [modalId]="'importTranportModal'"></app-button>
     </app-widget-header-with-btn>
     <app-transport-list></app-transport-list>
   </div>
-  <app-modal>
+  <app-modal [modalId]="'importTranportModal'">
     <app-import-transports></app-import-transports>
   </app-modal>
 
@@ -26,7 +26,7 @@
         <app-button [btnText]="'Add New'" (click)="addTransportDetails()" [btnIcon]="'plus'" [btnClass]="'btn
           btn-primary btn-align'"></app-button>
         <app-button [btnText]="'Import Transports'" [btnIcon]="'download'"
-          [btnClass]="'btn btn-primary btn-align'" [showModal]="true"></app-button>
+          [btnClass]="'btn btn-primary btn-align'" [modalId]="'importTranportModal'"></app-button>
       </div>
     </div>
   </div>
