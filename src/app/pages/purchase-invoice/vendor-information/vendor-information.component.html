@@ -2,9 +2,9 @@
     <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Vendor Information'"></app-gst-widget-header>
     <form class="form-begins">
       <div class="vendorInfo text-right">
-        <app-button [btnText]="'Add New Vendor'" [modalId]="'addNewVendorModal'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
+        <app-button [btnText]="'Add New Vendor'" [modalId]="'addNewVendorModal'"  [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'"></app-button>
       </div>
-      <app-modal [modalId]="'addNewVendorModal'">
+      <app-modal [modalId]="'addNewVendorModal'" [heading]="'Add Customer / Vendor'" [size]="'md'">
         <app-add-new-vendor-purchase-invoice></app-add-new-vendor-purchase-invoice>
       </app-modal>
   

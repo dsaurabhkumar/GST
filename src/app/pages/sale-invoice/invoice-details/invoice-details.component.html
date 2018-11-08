@@ -104,7 +104,7 @@
       <div class="customerInfo text-right">
         <app-button [btnText]="'Add New Transport'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'" [modalId]="'addNewTranModal'"></app-button>
       </div>
-      <app-modal [modalId]="'addNewTranModal'">
+      <app-modal [modalId]="'addNewTranModal'" [heading]="'Add Transport'" [size]="'md'">
           <app-add-new-trans-sale-invoice></app-add-new-trans-sale-invoice>
       </app-modal>
 

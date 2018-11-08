@@ -1,0 +1,30 @@
+<div class="addNewDeliveryBase">
+  <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Delivery Challan'"></app-gst-widget-header>
+  <div class="mx-4 my-2">
+    <div class="row">
+      <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-customer-info></app-customer-info>
+        </div>
+      </div>
+
+      <div class="challanDetail col-12 col-md-7 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Challan Detail'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-invoice-detail></app-invoice-detail>
+          <app-modal [modalId]="'addNewProDeliveryModal'" [size]="'md'" [heading]="'Add Product'">
+            <app-add-new-pro-delivery></app-add-new-pro-delivery>
+          </app-modal>
+          <app-modal [modalId]="'addNewPackageDeliveryModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+            <app-add-new-pack-delivery></app-add-new-pack-delivery>
+          </app-modal>
+        </div>
+      </div>
+
+    </div>
+
+    <app-product-items></app-product-items>
+
+  </div>
+</div>
