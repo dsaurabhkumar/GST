@@ -7,6 +7,7 @@ import { RootRoutingModule } from './root-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CommonUtilService } from '@app/core/services/common-util.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     RootRoutingModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [CommonUtilService],
   bootstrap: [RootComponent]
 })
 export class RootModule { }

@@ -56,5 +56,10 @@ export const CoreConstant =  {
      reportType : [
          "Sales", "Purchase", "Inward Payment", "Outward Payment", "Compant Ledger", "Daily Expense", "Sales Product Report", 
          "Purchase Product Report", "Sales Outstanding", "Purchase Outstanding"
-     ]
+     ],
+     pattern: {
+        letter: "^[a-zA-Z ]*$",
+        number: "^[0-9]*$",
+        alphaNum: "^[a-zA-Z0-9]*$"
+     }
 }

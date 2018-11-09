@@ -3,6 +3,7 @@ import { CoreConstant} from '@app/config/core.constant';
 import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 import { Validators,FormGroup, FormControl } from '@angular/forms';
+import { CommonUtilService } from '@app/core/services/common-util.service';
 
 @Component({
   selector: 'app-edit-organisation',
@@ -15,31 +16,43 @@ export class EditOrganisationComponent implements OnInit {
   editForm: FormGroup;
 
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _commonUtil: CommonUtilService
   ) { }
 
 
 
   ngOnInit() {
-    this.editForm = new FormGroup({
-      'companyName' : new FormControl('',Validators.required),
-      'companyType' : new FormControl('',Validators.required),
-      'panNumber' : new FormControl(''),
-      'gstNmber' : new FormControl(''),
-      'addressLine1' : new FormControl('',Validators.required),
-      'addressLine2' : new FormControl(),
-      'pinCode' : new FormControl('',Validators.required),
-      'state' : new FormControl('',Validators.required),
-      'city' : new FormControl('',Validators.required)
-    })
+    this.createForm();
   }
 
   backToSettings(){
     this._router.navigate([ROUTES.settings.absoluteRoute])
   }
   onSubmitEditForm(form){
-    console.log(form)
-    debugger
+    this._commonUtil.validateForm(form);
+    if(form.invalid)
+    return;
+  }
+
+  createForm(){
+    this.editForm = new FormGroup({
+      'companyName' : new FormControl('',
+      [Validators.required, Validators.pattern(CoreConstant.pattern.letter)]
+      ),
+      'companyType' : new FormControl('',Validators.required),
+      'panNumber' : new FormControl('', Validators.pattern(CoreConstant.pattern.alphaNum)),
+      'gstNmber' : new FormControl(''),
+      'addressLine1' : new FormControl('',Validators.required),
+      'addressLine2' : new FormControl(),
+      'pinCode' : new FormControl('',
+      [Validators.required, Validators.pattern(CoreConstant.pattern.number)]
+      ),
+      'state' : new FormControl('',Validators.required),
+      'city' : new FormControl('',
+      [Validators.required, Validators.pattern(CoreConstant.pattern.letter)]
+      )
+    })
   }
 
 }

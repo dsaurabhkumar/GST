@@ -13,6 +13,7 @@
 
                 <div *ngIf="editForm.controls.companyName.invalid && (editForm.controls.companyName.touched || editForm.controls.companyName.dirty)">
                     <span *ngIf="editForm.controls.companyName.errors?.required" class="text-danger">Please enter your organisation name</span>
+                    <span *ngIf="editForm.controls.companyName.errors?.pattern" class="text-danger">Please enter valid name</span>
                 </div>
 
             </div>
@@ -21,16 +22,30 @@
         <div class="form-group row">
             <label for="inputCompanyType" class="col-2 col-form-label">Your Company Type </label>
             <div class="col-5">
-                <select name="" id="" formControlName="companyType" class="form-control form-control-sm">
-                    <option value="">Your Company Type</option>
-                    <option value="ct" *ngFor='let ct of companyType'>{{ct}}</option>
-                </select>
+                <span [ngClass]="{
+                    'input-error': editForm.controls.companyType.invalid && (editForm.controls.companyType.touched || editForm.controls.companyType.dirty)
+                }">
+                    <select name="" id="" formControlName="companyType" class="form-control form-control-sm">
+                        <option value="">Your Company Type</option>
+                        <option value="ct" *ngFor='let ct of companyType'>{{ct}}</option>
+                    </select>
+                </span>
+                <div *ngIf="editForm.controls.companyType.invalid && (editForm.controls.companyType.touched || editForm.controls.companyType.dirty)">
+                    <span *ngIf="editForm.controls.companyType.errors?.required" class="text-danger">Company Type is required</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputPan" class="col-2 col-form-label">PAN Number </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" formControlName="panNumber" id="inputPan" placeholder="Enter you PAN number">
+                <span [ngClass]="{
+                    'input-error': editForm.controls.panNumber.invalid && (editForm.controls.panNumber.touched || editForm.controls.panNumber.dirty)
+                }">
+                    <input type="text" class="form-control form-control-sm" formControlName="panNumber" id="inputPan" placeholder="Enter you PAN number">
+                </span>
+                <div *ngIf="editForm.controls.panNumber.invalid && (editForm.controls.panNumber.touched || editForm.controls.panNumber.dirty)">
+                    <span class="text-danger" *ngIf="editForm.controls.panNumber.errors?.pattern"> Please enter valid PAN</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
@@ -42,7 +57,14 @@
         <div class="form-group row">
             <label for="inputAddress1" class="col-2 col-form-label">Address Line 1* </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" formControlName="addressLine1" id="inputAddress1" placeholder="Enter address line 1">
+                <span [ngClass]="{
+                    'input-error': editForm.controls.addressLine1.invalid && (editForm.controls.addressLine1.touched || editForm.controls.addressLine1.dirty)
+                    }">
+                    <input type="text" class="form-control form-control-sm" formControlName="addressLine1" id="inputAddress1" placeholder="Enter address line 1">
+                </span>
+                <div *ngIf="editForm.controls.addressLine1.invalid && (editForm.controls.addressLine1.touched || editForm.controls.addressLine1.dirty)">
+                    <span class="text-danger" *ngIf="editForm.controls.addressLine1.errors?.required">Address is required</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
@@ -54,22 +76,48 @@
         <div class="form-group row">
             <label for="inputPinCode" class="col-2 col-form-label">PinCode* </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" formControlName="pinCode" id="inputPinCode" placeholder="Enter your pincode">
+                <span [ngClass]="{
+                    'input-error': editForm.controls.pinCode.invalid && (editForm.controls.pinCode.touched || editForm.controls.pinCode.dirty)
+                }">
+                    <input type="text" class="form-control form-control-sm" formControlName="pinCode" id="inputPinCode" placeholder="Enter your pincode">
+                </span>
+                <div *ngIf="editForm.controls.pinCode.invalid && (editForm.controls.pinCode.touched || editForm.controls.pinCode.dirty)">
+                    <span class="text-danger" *ngIf="editForm.controls.pinCode.errors?.required">Pincode is required</span>
+                    <span class="text-danger" *ngIf="editForm.controls.pinCode.errors?.pattern">Please enter valid pincode</span>
+                </div>
+                
             </div>
         </div>
         <div class="form-group row">
             <label for="inputState" class="col-2 col-form-label">State </label>
             <div class="col-5">
-                <select name="" id="" formControlName="state" class="form-control form-control-sm">
-                    <option value="">Select State</option>
-                    <option value="" *ngFor="let state of states">{{state}}</option>
-                </select>
+                <span [ngClass]="{
+                    'input-error': editForm.controls.state.invalid && (editForm.controls.state.touched || editForm.controls.state.dirty)
+                }">
+                    <select name="" id="" formControlName="state" class="form-control form-control-sm">
+                        <option value="">Select State</option>
+                        <option value="state" *ngFor="let state of states">{{state}}</option>
+                    </select>
+                </span>
+                
+                <div *ngIf="editForm.controls.state.invalid && (editForm.controls.state.touched || editForm.controls.state.dirty)">
+                    <span class="text-danger" *ngIf="editForm.controls.state.errors?.required"> State is required</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputCity" class="col-2 col-form-label">City* </label>
             <div class="col-5">
+                <span [ngClass]="{
+                    'input-error': editForm.controls.city.invalid && (editForm.controls.city.touched || editForm.controls.city.dirty)
+                }">
                 <input type="text" class="form-control form-control-sm" formControlName="city" id="inputCity" placeholder="Enter your city">
+                </span>
+                
+                <div *ngIf="editForm.controls.city.invalid && (editForm.controls.city.touched || editForm.controls.city.dirty)">
+                    <span class="text-danger" *ngIf="editForm.controls.city.errors?.required">City is required</span>
+                    <span class="text-danger" *ngIf="editForm.controls.city.errors?.pattern">Please enter valid city name</span>
+                </div>
             </div>
         </div>
         <div class="btnContainer">
