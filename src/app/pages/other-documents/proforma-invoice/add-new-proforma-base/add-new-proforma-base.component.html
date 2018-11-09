@@ -1,0 +1,32 @@
+<div class="addNewProformaBase">
+    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Proforma'"></app-gst-widget-header>
+    <div class="mx-4 my-2">
+      <div class="row">
+          <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+              <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+              <div class="sub-container">
+                <app-customer-information-proforma></app-customer-information-proforma>
+              </div>
+            </div>
+
+            <div class="proformaDetail col-12 col-md-7 mt-4 mb-4">
+                <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Proforma Detail'"></app-gst-widget-header>
+                <div class="sub-container">
+                  <app-proforma-detail></app-proforma-detail>
+      
+                  <app-modal [modalId]="'addNewProProformaModal'" [size]="'md'" [heading]="'Add Product'">
+                    <app-add-new-product-proforma></app-add-new-product-proforma>
+                  </app-modal>
+      
+                  <app-modal [modalId]="'addNewPackageProformaModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+                    <app-add-new-packaging-proforma></app-add-new-packaging-proforma>
+                  </app-modal>
+                </div>
+              </div>
+
+      </div>
+      <app-product-items-proforma></app-product-items-proforma>
+
+    </div>
+
+</div>

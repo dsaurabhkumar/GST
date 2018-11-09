@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 
 @Component({
-  selector: 'app-proforma-invoice',
-  templateUrl: './proforma-invoice.component.html',
-  styleUrls: ['./proforma-invoice.component.scss']
+  selector: 'app-proforma-list',
+  templateUrl: './proforma-list.component.html',
+  styleUrls: ['./proforma-list.component.css']
 })
-export class ProformaInvoiceComponent implements OnInit {
+export class ProformaListComponent implements OnInit {
 
   constructor(
     private _router: Router

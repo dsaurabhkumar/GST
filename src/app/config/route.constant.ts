@@ -160,6 +160,11 @@ export const ROUTES = {
                     name: 'Proforma-invoice',
                     absoluteRoute: '/otherDocs/proforma-invoice'
                 },
+                addNewproformaInvoice: {
+                    route: 'proforma-invoice/add-new-proforma-base',
+                    name: 'Add-new-proforma-invoice',
+                    absoluteRoute: '/otherDocs/proforma-invoice/add-new-proforma-base'
+                },
                 purchaseOrder: {
                     route: 'purchase-order',
                     name: 'Purchase-order',

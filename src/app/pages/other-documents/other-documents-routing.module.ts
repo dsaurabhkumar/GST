@@ -8,16 +8,18 @@ import { CreditNoteComponent } from '@app/pages/other-documents/credit-note/cred
 import { DebitNoteComponent } from '@app/pages/other-documents/debit-note/debit-note.component';
 import { AddNewDeliveryBaseComponent } from './delivery-challan/add-new-delivery-base/add-new-delivery-base.component';
 import { AddNewQuotationBaseComponent } from './quotation/add-new-quotation-base/add-new-quotation-base.component';
+import { AddNewProformaBaseComponent } from './proforma-invoice/add-new-proforma-base/add-new-proforma-base.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'delivery-challan', pathMatch: "full"},   
   { path: 'delivery-challan', component: DeliveryChallanComponent}, 
   { path: 'delivery-challan/add-new-delivery-challan', component: AddNewDeliveryBaseComponent },
-  // { path: '', redirectTo: 'quotation', pathMatch: "full"},
+
   { path: 'quotation', component: QuotationComponent}, 
   { path: 'quotation/add-new-quotation-base', component: AddNewQuotationBaseComponent },
 
   { path: 'proforma-invoice', component: ProformaInvoiceComponent}, 
+  { path: 'proforma-invoice/add-new-proforma-base', component: AddNewProformaBaseComponent },
 
   { path: 'purchase-order', component: PurchaseOrderComponent}, 
 

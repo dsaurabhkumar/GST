@@ -30,6 +30,17 @@ import { AddNewPackageQuotationComponent } from './quotation/add-new-package-quo
 import { CustomerInformationComponent } from './quotation/customer-information/customer-information.component';
 import { QuotationDetailComponent } from './quotation/quotation-detail/quotation-detail.component';
 import { ProductItemsQuotationComponent } from './quotation/product-items-quotation/product-items-quotation.component';
+import { SearchProformaBillComponent } from './proforma-invoice/search-proforma-bill/search-proforma-bill.component';
+import { ProformaSummaryComponent } from './proforma-invoice/proforma-summary/proforma-summary.component';
+import { ProformaListComponent } from './proforma-invoice/proforma-list/proforma-list.component';
+import { AddNewProformaBaseComponent } from './proforma-invoice/add-new-proforma-base/add-new-proforma-base.component';
+import { ProformaDetailComponent } from './proforma-invoice/proforma-detail/proforma-detail.component';
+import { ProductItemsProformaComponent } from './proforma-invoice/product-items-proforma/product-items-proforma.component';
+import { AddNewCustomerProformaComponent } from './proforma-invoice/add-new-customer-proforma/add-new-customer-proforma.component';
+import { AddNewTransportProformaComponent } from './proforma-invoice/add-new-transport-proforma/add-new-transport-proforma.component';
+import { AddNewProductProformaComponent } from './proforma-invoice/add-new-product-proforma/add-new-product-proforma.component';
+import { AddNewPackagingProformaComponent } from './proforma-invoice/add-new-packaging-proforma/add-new-packaging-proforma.component';
+import { CustomerInformationProformaComponent } from './proforma-invoice/customer-information-proforma/customer-information-proforma.component';
 
 @NgModule({
   imports: [
@@ -37,6 +48,6 @@ import { ProductItemsQuotationComponent } from './quotation/product-items-quotat
     OtherDocumentsRoutingModule,
     SharedModule
   ],
-  declarations: [DeliveryChallanComponent, QuotationComponent, ProformaInvoiceComponent, PurchaseOrderComponent, CreditNoteComponent, DebitNoteComponent, SearchDeliveryChallanComponent, DeliveryChallanListComponent, AddNewDeliveryBaseComponent, CustomerInfoComponent, InvoiceDetailComponent, AddNewCustDelChallanComponent, AddNewTransDelChallanComponent, ProductItemsComponent, AddNewProDeliveryComponent, AddNewPackDeliveryComponent, SearchQuotationBillComponent, QuotationSummaryComponent, QuotationListComponent, AddNewQuotationBaseComponent, AddNewCustomerQuotationComponent, AddNewTransportQuotationComponent, AddNewProductQuotationComponent, AddNewPackageQuotationComponent, CustomerInformationComponent, QuotationDetailComponent, ProductItemsQuotationComponent]
+  declarations: [DeliveryChallanComponent, QuotationComponent, ProformaInvoiceComponent, PurchaseOrderComponent, CreditNoteComponent, DebitNoteComponent, SearchDeliveryChallanComponent, DeliveryChallanListComponent, AddNewDeliveryBaseComponent, CustomerInfoComponent, InvoiceDetailComponent, AddNewCustDelChallanComponent, AddNewTransDelChallanComponent, ProductItemsComponent, AddNewProDeliveryComponent, AddNewPackDeliveryComponent, SearchQuotationBillComponent, QuotationSummaryComponent, QuotationListComponent, AddNewQuotationBaseComponent, AddNewCustomerQuotationComponent, AddNewTransportQuotationComponent, AddNewProductQuotationComponent, AddNewPackageQuotationComponent, CustomerInformationComponent, QuotationDetailComponent, ProductItemsQuotationComponent, SearchProformaBillComponent, ProformaSummaryComponent, ProformaListComponent, AddNewProformaBaseComponent, ProformaDetailComponent, ProductItemsProformaComponent, AddNewCustomerProformaComponent, AddNewTransportProformaComponent, AddNewProductProformaComponent, AddNewPackagingProformaComponent, CustomerInformationProformaComponent]
 })
 export class OtherDocumentsModule { }
