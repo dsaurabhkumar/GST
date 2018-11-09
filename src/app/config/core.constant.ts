@@ -4,7 +4,6 @@ export const CoreConstant =  {
     ],
 
     companyType: [
-        "Your Company Type",
         "Proprietorship",
         "Partnership",
         "Hindu Undivided Family",
