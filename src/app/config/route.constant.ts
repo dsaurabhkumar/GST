@@ -140,6 +140,11 @@ export const ROUTES = {
             absoluteRoute: '/otherDocs',
             module: '../pages/other-documents/other-documents.module#OtherDocumentsModule',
             children: {
+                addNewDeliveryChallan: {
+                    route: 'delivery-challan/add-new-delivery-challan',
+                    name: 'Add-new-delivery-challan',
+                    absoluteRoute: '/otherDocs/delivery-challan/add-new-delivery-challan'
+                },
                 quotation: {
                     route: 'quotation',
                     name: 'Quotation',

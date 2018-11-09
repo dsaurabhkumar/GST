@@ -1,20 +1,19 @@
 <!-- Modal -->
 <div class="modal fade" [id]="modalId" tabindex="-1" role="dialog" aria-labelledby="openModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-{{size}}" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="openModalLabel"></h5>
+          <h5 class="modal-title" id="openModalLabel">{{heading}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">x</span>
+            <span aria-hidden="true">X</span>
           </button>
         </div>
         <div class="modal-body">
           <ng-content></ng-content>
         </div>
-        <div class="text-center">
+        <div class="text-center" *ngIf="footerContent">
             <p>
-                <i class="fa fa-info-circle"></i>
-                By clicking upgrade now you are agreeing to the Terms and Services.
+                <i class="fa fa-info-circle"> {{ footerContent }}</i>
               </p>
         </div>
       </div>

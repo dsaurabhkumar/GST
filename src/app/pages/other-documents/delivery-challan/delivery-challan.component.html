@@ -1,3 +1,27 @@
-<p>
-  delivery-challan works!
-</p>
+<div class="otherDocuments">
+  <div class="searchDeliveryChallan">
+    <app-search-delivery-challan></app-search-delivery-challan>
+  </div>
+  <div class="google_Ads">
+    <app-google-ads></app-google-ads>
+  </div>
+  <div class="deliveryChallanList">
+    <app-delivery-challan-list></app-delivery-challan-list>
+  </div>
+</div>
+<div class="google_Ads">
+  <app-google-ads></app-google-ads>
+</div>
+
+<div>
+  <div class="row m-0 subheading subheading-wrap">
+    <div class="customer-wrap col-12 text-left">
+      <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
+                    btn-secondary btn-align'"></app-button>
+      <app-button [btnText]="'Add New'" [btnIcon]="'plus'" [btnClass]="'btn
+                    btn-primary btn-align'"></app-button>
+      <app-button [btnText]="'Print Challan Format'" [btnIcon]="'print'" [btnClass]="'btn
+                    btn-primary btn-align'"></app-button>
+    </div>
+  </div>
+</div>

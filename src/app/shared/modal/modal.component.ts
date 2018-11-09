@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ModalComponent implements OnInit {
 
   @Input('modalId') modalId : string;
+  @Input('heading') heading : string;
+  @Input('footerContent') footerContent : string;
+  @Input('size') size:string = 'lg';
 
   constructor() { }
 

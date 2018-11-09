@@ -1,19 +1,18 @@
 <div class="transport-base">
- 
+
   <div class="mb-4">
     <app-search-transport></app-search-transport>
   </div>
 
   <div class="mb-4"> hi
     <app-widget-header-with-btn [iconName]="'th-list'" [contentHeading]="'Transport List'">
-      <app-button [btnText]="'Add New'" (click)="addTransportDetails()"
-        [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
-      <app-button [btnText]="'Import Transports'" [btnIcon]="'download'"
-        [btnClass]="'btn btn-primary btn-align'" [modalId]="'importTranportModal'"></app-button>
+      <app-button [btnText]="'Add New'" (click)="addTransportDetails()" [btnIcon]="'plus'" [btnClass]="'btn btn-primary btn-align'"></app-button>
+      <app-button [btnText]="'Import Transports'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'"
+        [modalId]="'importTranportModal'"></app-button>
     </app-widget-header-with-btn>
     <app-transport-list></app-transport-list>
   </div>
-  <app-modal [modalId]="'importTranportModal'">
+  <app-modal [modalId]="'importTranportModal'" [footerContent]="'By clicking upgrade now you are agreeing to the Terms and Services.'">
     <app-import-transports></app-import-transports>
   </app-modal>
 
@@ -25,8 +24,8 @@
           btn-secondary btn-align'"></app-button>
         <app-button [btnText]="'Add New'" (click)="addTransportDetails()" [btnIcon]="'plus'" [btnClass]="'btn
           btn-primary btn-align'"></app-button>
-        <app-button [btnText]="'Import Transports'" [btnIcon]="'download'"
-          [btnClass]="'btn btn-primary btn-align'" [modalId]="'importTranportModal'"></app-button>
+        <app-button [btnText]="'Import Transports'" [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'"
+          [modalId]="'importTranportModal'"></app-button>
       </div>
     </div>
   </div>

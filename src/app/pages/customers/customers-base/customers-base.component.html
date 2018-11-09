@@ -29,9 +29,8 @@
                     [btnIcon]="'download'" [btnClass]="'btn btn-primary btn-align'" [modalId]="'importCustModal'"></app-button>
             </div>
 
-            <app-modal [modalId]="'importCustModal'">
-                <app-import-customers></app-import-customers>
-            </app-modal>
-
         </div>
+        <app-modal [modalId]="'importCustModal'" [footerContent]="'By clicking upgrade now you are agreeing to the Terms and Services.'">
+            <app-import-customers></app-import-customers>
+        </app-modal>
     </div>
