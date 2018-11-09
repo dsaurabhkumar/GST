@@ -155,3 +155,12 @@ $xl-screen: 1200px;/* You can add global styles to this file, and also import ot
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+.input-error {
+    display: block;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+div .text-danger {
+    font-size: 13px;
+}

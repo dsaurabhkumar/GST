@@ -12,12 +12,19 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
 import { EditOrganisationComponent } from './edit-organisation/edit-organisation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     SettingsRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [SettingsBaseComponent, MembershipDetailsComponent, OrganisationDetailsComponent, InvoiceOptionsComponent, InventoryOptionsComponent, UserDetailsComponent, EditUserComponent, EditInvoiceComponent, EditOrganisationComponent]
 })
