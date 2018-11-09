@@ -147,8 +147,13 @@ export const ROUTES = {
                 },
                 quotation: {
                     route: 'quotation',
-                    name: 'Quotation',
+                    name: 'Quotation-base',
                     absoluteRoute: '/otherDocs/quotation'
+                },
+                addNewQuotation: {
+                    route: 'quotation/add-new-quotation-base',
+                    name: 'Add-new-quotation-base',
+                    absoluteRoute: '/otherDocs/quotation/add-new-quotation-base'
                 },
                 proformaInvoice: {
                     route: 'proforma-invoice',

@@ -1,3 +1,113 @@
-<p>
-  add-new-pro-delivery works!
-</p>
+<div class="add-new-pro-delivery-challan">
+        
+  <div class="widget-content">
+    <form>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="purchasePrice" class="">Purchase Price</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your purchase name">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="hsnCode" class="">HSN/SAC Code</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your HSN code">
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">Unit of Measurement
+          </label>
+        </div>
+        <div class="col-8 col-form-label">
+          <select class="form-control form-control-sm">
+            <option value="{{units}}" *ngFor="let units of measurementUnits">{{units}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">Stock Available</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your stock available">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">CGST %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your CGST">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">SGST %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your SGST">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">IGST %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your IGST">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">CESS %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your CESS">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="firstname" class="">CESS Amount
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your CESS amount">
+        </div>
+      </div>
+
+      <div class="btnContainer">
+        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+          btn-primary'"></app-button>
+        <app-button [btnText]="'Back'" (click)="backToProductBase()"
+          [btnIcon]="'chevron-left'"
+          [btnClass]="'btn-secondary'"></app-button>
+      </div>
+    </form>
+
+  </div>
+</div>

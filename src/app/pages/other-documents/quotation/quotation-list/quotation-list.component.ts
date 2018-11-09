@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 
 @Component({
-  selector: 'app-quotation',
-  templateUrl: './quotation.component.html',
-  styleUrls: ['./quotation.component.scss']
+  selector: 'app-quotation-list',
+  templateUrl: './quotation-list.component.html',
+  styleUrls: ['./quotation-list.component.css']
 })
-export class QuotationComponent implements OnInit {
+export class QuotationListComponent implements OnInit {
 
   constructor(
     private _router: Router
@@ -19,5 +19,4 @@ export class QuotationComponent implements OnInit {
   addNewQuotationBase() {
     this._router.navigate([ROUTES.otherDocs.children.addNewQuotation.absoluteRoute]);
   }
-
 }

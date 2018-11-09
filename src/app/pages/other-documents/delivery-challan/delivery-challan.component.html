@@ -18,7 +18,7 @@
     <div class="customer-wrap col-12 text-left">
       <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
                     btn-secondary btn-align'"></app-button>
-      <app-button [btnText]="'Add New'" [btnIcon]="'plus'" [btnClass]="'btn
+      <app-button [btnText]="'Add New'" (click)="addNewDeliveryBase()" [btnIcon]="'plus'" [btnClass]="'btn
                     btn-primary btn-align'"></app-button>
       <app-button [btnText]="'Print Challan Format'" [btnIcon]="'print'" [btnClass]="'btn
                     btn-primary btn-align'"></app-button>

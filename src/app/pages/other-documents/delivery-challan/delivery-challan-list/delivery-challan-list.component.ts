@@ -17,7 +17,6 @@ export class DeliveryChallanListComponent implements OnInit {
   }
 
   addNewDeliveryBase() {
-    console.log('hi')
     this._router.navigate([ROUTES.otherDocs.children.addNewDeliveryChallan.absoluteRoute]);
   }
 }
