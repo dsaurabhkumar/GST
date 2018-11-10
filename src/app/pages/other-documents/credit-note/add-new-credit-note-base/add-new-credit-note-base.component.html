@@ -15,15 +15,17 @@
           <app-credit-note-detail></app-credit-note-detail>
 
           <app-modal [modalId]="'addNewProCreditNoteModal'" [size]="'md'" [heading]="'Add Product'">
-                    <app-add-new-product-credit></app-add-new-product-credit>
-                  </app-modal>
-      
-                  <app-modal [modalId]="'addNewPackageCreditNoteModal'" [size]="'md'" [heading]="'Add Transport Charges'">
-                    <app-add-new-package-credit></app-add-new-package-credit>
-                  </app-modal>
+            <app-add-new-product-credit></app-add-new-product-credit>
+          </app-modal>
+
+          <app-modal [modalId]="'addNewPackageCreditNoteModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+            <app-add-new-package-credit></app-add-new-package-credit>
+          </app-modal>
         </div>
       </div>
     </div>
-    <app-product-items-credit-note></app-product-items-credit-note>
+    <div class="mb-3">
+      <app-product-items-credit-note></app-product-items-credit-note>
+    </div>
   </div>
 </div>

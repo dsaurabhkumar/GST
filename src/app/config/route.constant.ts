@@ -189,6 +189,11 @@ export const ROUTES = {
                     route: 'debit-note',
                     name: 'Debit-note',
                     absoluteRoute: '/otherDocs/debit-note'
+                },
+                addNewDebitNote: {
+                    route: 'debit-note/add-new-debit-note-base',
+                    name: 'Add-new-debit-note-base',
+                    absoluteRoute: '/otherDocs/debit-note/add-new-debit-note-base'
                 }
             }
         },

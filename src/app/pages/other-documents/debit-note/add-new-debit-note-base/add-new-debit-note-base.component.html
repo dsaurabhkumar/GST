@@ -1,0 +1,31 @@
+<div class="addNewDebitNoteBase">
+  <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Debit Note'"></app-gst-widget-header>
+  <div class="mx-4 my-2">
+    <div class="row">
+      <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-customer-info-debit-note></app-customer-info-debit-note>
+        </div>
+      </div>
+
+      <div class="proformaDetail col-12 col-md-7 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Debit Note Detail'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-debit-note-detail></app-debit-note-detail>
+
+          <app-modal [modalId]="'addNewProDebitNoteModal'" [size]="'md'" [heading]="'Add Product'">
+            <app-add-new-product-debit-note></app-add-new-product-debit-note>
+          </app-modal>
+
+          <app-modal [modalId]="'addNewPackageDebitNoteModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+            <app-add-new-package-debit-note></app-add-new-package-debit-note>
+          </app-modal>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <app-product-items-debit-note></app-product-items-debit-note>
+    </div>
+  </div>
+</div>

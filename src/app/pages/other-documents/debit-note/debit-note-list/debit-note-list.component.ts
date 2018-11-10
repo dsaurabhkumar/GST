@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 
 @Component({
-  selector: 'app-debit-note',
-  templateUrl: './debit-note.component.html',
-  styleUrls: ['./debit-note.component.scss']
+  selector: 'app-debit-note-list',
+  templateUrl: './debit-note-list.component.html',
+  styleUrls: ['./debit-note-list.component.css']
 })
-export class DebitNoteComponent implements OnInit {
+export class DebitNoteListComponent implements OnInit {
 
   constructor(
     private _router: Router
