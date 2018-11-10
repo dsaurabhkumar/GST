@@ -1,0 +1,29 @@
+<div class="addNewCreditNoteBase">
+  <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Credit Note'"></app-gst-widget-header>
+  <div class="mx-4 my-2">
+    <div class="row">
+      <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-customer-info-credit-note></app-customer-info-credit-note>
+        </div>
+      </div>
+
+      <div class="proformaDetail col-12 col-md-7 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Credit Note Detail'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-credit-note-detail></app-credit-note-detail>
+
+          <app-modal [modalId]="'addNewProCreditNoteModal'" [size]="'md'" [heading]="'Add Product'">
+                    <app-add-new-product-credit></app-add-new-product-credit>
+                  </app-modal>
+      
+                  <app-modal [modalId]="'addNewPackageCreditNoteModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+                    <app-add-new-package-credit></app-add-new-package-credit>
+                  </app-modal>
+        </div>
+      </div>
+    </div>
+    <app-product-items-credit-note></app-product-items-credit-note>
+  </div>
+</div>

@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 
 @Component({
-  selector: 'app-credit-note',
-  templateUrl: './credit-note.component.html',
-  styleUrls: ['./credit-note.component.scss']
+  selector: 'app-credit-note-list',
+  templateUrl: './credit-note-list.component.html',
+  styleUrls: ['./credit-note-list.component.css']
 })
-export class CreditNoteComponent implements OnInit {
+export class CreditNoteListComponent implements OnInit {
 
   constructor(
     private _router: Router

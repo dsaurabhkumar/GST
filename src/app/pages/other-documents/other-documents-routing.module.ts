@@ -10,6 +10,7 @@ import { AddNewDeliveryBaseComponent } from './delivery-challan/add-new-delivery
 import { AddNewQuotationBaseComponent } from './quotation/add-new-quotation-base/add-new-quotation-base.component';
 import { AddNewProformaBaseComponent } from './proforma-invoice/add-new-proforma-base/add-new-proforma-base.component';
 import { AddNewPurchaseOrderBaseComponent } from './purchase-order/add-new-purchase-order-base/add-new-purchase-order-base.component';
+import { AddNewCreditNoteBaseComponent } from './credit-note/add-new-credit-note-base/add-new-credit-note-base.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'delivery-challan', pathMatch: "full"},   
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'purchase-order/add-new-purchase-order-base', component: AddNewPurchaseOrderBaseComponent },
 
   { path: 'credit-note', component: CreditNoteComponent}, 
+  { path: 'credit-note/add-new-credit-note-base', component: AddNewCreditNoteBaseComponent },
 
   { path: 'debit-note', component: DebitNoteComponent},
   

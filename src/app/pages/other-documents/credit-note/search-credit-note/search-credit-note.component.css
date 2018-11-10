@@ -1,0 +1,16 @@
+.formBegins {
+    border: 1px solid #D5D5D5;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+label {
+    font-size: 13px;
+    margin-bottom: 0.25rem;
+}
+.formContent {
+    padding: 1% 8% 1% 1%;
+}
+.form-group {
+    margin-bottom: 0;
+}

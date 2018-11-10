@@ -180,6 +180,11 @@ export const ROUTES = {
                     name: 'Credit-note',
                     absoluteRoute: '/otherDocs/credit-note'
                 },
+                addNewCreditNote: {
+                    route: 'credit-note/add-new-credit-note-base',
+                    name: 'Add-new-credit-note-base',
+                    absoluteRoute: '/otherDocs/credit-note/add-new-credit-note-base'
+                },
                 debitNote: {
                     route: 'debit-note',
                     name: 'Debit-note',
