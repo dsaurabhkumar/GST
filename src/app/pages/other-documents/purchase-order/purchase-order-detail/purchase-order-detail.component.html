@@ -1,0 +1,66 @@
+<div>
+    <form class="purchaseOrderDetail">
+      <div class="row">
+        <div class="form-group col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-5 col-form-label">
+              <label for="challanNo" class="">Purchase Order No.</label>
+            </div>
+            <div class="col-12 col-md-7">
+              <input type="text" class="form-control form-control-sm" placeholder="" value="1">
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-4 col-form-label">
+              <label for="date" class="">Date</label>
+            </div>
+            <div class="col-12 col-md-8">
+              <input class="datepicker" data-date-format="mm/dd/yy" placeholder="dd/mm/yy">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="customerInfo text-right">
+        <app-button [btnText]="'Add New Transport'" [modalId]="'addNewTransPurchaseOrderModal'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-3'"></app-button>
+      </div>
+      <app-modal [modalId]="'addNewTransPurchaseOrderModal'" [heading]="'Add Transport'" [size]="'md'">
+        <app-add-new-transport-purchase-order></app-add-new-transport-purchase-order>
+      </app-modal>
+  
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="dispatchThrough" class="">DISPATCH THROUGH</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter transport name">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="form-group col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-4 col-form-label">
+              <label for="transID" class="">TRANS. ID</label>
+            </div>
+            <div class="col-12 col-md-8">
+              <input type="text" disabled class="form-control form-control-sm" placeholder="Transport ID">
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <div class="row">
+            <div class="col-12 col-md-4 col-form-label">
+              <label for="vehicleNo" class="">VEHICLE NO.</label>
+            </div>
+            <div class="col-12 col-md-8">
+              <input class="text" disabled class="form-control form-control-sm" placeholder="Vehicle No">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </form>
+  </div>

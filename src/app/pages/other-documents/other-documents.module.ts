@@ -41,6 +41,17 @@ import { AddNewTransportProformaComponent } from './proforma-invoice/add-new-tra
 import { AddNewProductProformaComponent } from './proforma-invoice/add-new-product-proforma/add-new-product-proforma.component';
 import { AddNewPackagingProformaComponent } from './proforma-invoice/add-new-packaging-proforma/add-new-packaging-proforma.component';
 import { CustomerInformationProformaComponent } from './proforma-invoice/customer-information-proforma/customer-information-proforma.component';
+import { SearchPurchaseOrderBillComponent } from './purchase-order/search-purchase-order-bill/search-purchase-order-bill.component';
+import { PurchaseOrderSummaryComponent } from './purchase-order/purchase-order-summary/purchase-order-summary.component';
+import { PurchaseOrderListComponent } from './purchase-order/purchase-order-list/purchase-order-list.component';
+import { AddNewPurchaseOrderBaseComponent } from './purchase-order/add-new-purchase-order-base/add-new-purchase-order-base.component';
+import { CustomerInfoPurchaseOrderComponent } from './purchase-order/customer-info-purchase-order/customer-info-purchase-order.component';
+import { PurchaseOrderDetailComponent } from './purchase-order/purchase-order-detail/purchase-order-detail.component';
+import { ProductItemsPurchaseOrderComponent } from './purchase-order/product-items-purchase-order/product-items-purchase-order.component';
+import { AddNewCustomerPurchaseOrderComponent } from './purchase-order/add-new-customer-purchase-order/add-new-customer-purchase-order.component';
+import { AddNewTransportPurchaseOrderComponent } from './purchase-order/add-new-transport-purchase-order/add-new-transport-purchase-order.component';
+import { AddNewProductPurchaseOrderComponent } from './purchase-order/add-new-product-purchase-order/add-new-product-purchase-order.component';
+import { AddNewPackagePurchaseOrderComponent } from './purchase-order/add-new-package-purchase-order/add-new-package-purchase-order.component';
 
 @NgModule({
   imports: [
@@ -48,6 +59,6 @@ import { CustomerInformationProformaComponent } from './proforma-invoice/custome
     OtherDocumentsRoutingModule,
     SharedModule
   ],
-  declarations: [DeliveryChallanComponent, QuotationComponent, ProformaInvoiceComponent, PurchaseOrderComponent, CreditNoteComponent, DebitNoteComponent, SearchDeliveryChallanComponent, DeliveryChallanListComponent, AddNewDeliveryBaseComponent, CustomerInfoComponent, InvoiceDetailComponent, AddNewCustDelChallanComponent, AddNewTransDelChallanComponent, ProductItemsComponent, AddNewProDeliveryComponent, AddNewPackDeliveryComponent, SearchQuotationBillComponent, QuotationSummaryComponent, QuotationListComponent, AddNewQuotationBaseComponent, AddNewCustomerQuotationComponent, AddNewTransportQuotationComponent, AddNewProductQuotationComponent, AddNewPackageQuotationComponent, CustomerInformationComponent, QuotationDetailComponent, ProductItemsQuotationComponent, SearchProformaBillComponent, ProformaSummaryComponent, ProformaListComponent, AddNewProformaBaseComponent, ProformaDetailComponent, ProductItemsProformaComponent, AddNewCustomerProformaComponent, AddNewTransportProformaComponent, AddNewProductProformaComponent, AddNewPackagingProformaComponent, CustomerInformationProformaComponent]
+  declarations: [DeliveryChallanComponent, QuotationComponent, ProformaInvoiceComponent, PurchaseOrderComponent, CreditNoteComponent, DebitNoteComponent, SearchDeliveryChallanComponent, DeliveryChallanListComponent, AddNewDeliveryBaseComponent, CustomerInfoComponent, InvoiceDetailComponent, AddNewCustDelChallanComponent, AddNewTransDelChallanComponent, ProductItemsComponent, AddNewProDeliveryComponent, AddNewPackDeliveryComponent, SearchQuotationBillComponent, QuotationSummaryComponent, QuotationListComponent, AddNewQuotationBaseComponent, AddNewCustomerQuotationComponent, AddNewTransportQuotationComponent, AddNewProductQuotationComponent, AddNewPackageQuotationComponent, CustomerInformationComponent, QuotationDetailComponent, ProductItemsQuotationComponent, SearchProformaBillComponent, ProformaSummaryComponent, ProformaListComponent, AddNewProformaBaseComponent, ProformaDetailComponent, ProductItemsProformaComponent, AddNewCustomerProformaComponent, AddNewTransportProformaComponent, AddNewProductProformaComponent, AddNewPackagingProformaComponent, CustomerInformationProformaComponent, SearchPurchaseOrderBillComponent, PurchaseOrderSummaryComponent, PurchaseOrderListComponent, AddNewPurchaseOrderBaseComponent, CustomerInfoPurchaseOrderComponent, PurchaseOrderDetailComponent, ProductItemsPurchaseOrderComponent, AddNewCustomerPurchaseOrderComponent, AddNewTransportPurchaseOrderComponent, AddNewProductPurchaseOrderComponent, AddNewPackagePurchaseOrderComponent]
 })
 export class OtherDocumentsModule { }

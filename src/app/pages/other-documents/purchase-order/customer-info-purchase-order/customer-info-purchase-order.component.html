@@ -1,0 +1,120 @@
+<div class="customerInfoPurchaseOrder">
+    <form class="form-begins">
+      <div class="customerInfo text-right">
+        <app-button [btnText]="'Add New Customer'" [modalId]="'addCustomerInfoPurchaseOrder'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'" [modalId]="'addCustSaleInvModal'"></app-button>
+      </div>
+      <app-modal [modalId]="'addCustomerInfoPurchaseOrder'" [heading]="'Add Customer / Vendor'" [size]="'md'">
+          <app-add-new-customer-purchase-order></app-add-new-customer-purchase-order>
+        </app-modal>
+  
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="m/s" class="">M/S.</label>
+        </div>
+        <div class="col-9">
+          <select class="form-control form-control-sm">
+            <option></option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="Address" class="">Address</label>
+        </div>
+        <div class="col-9">
+          <textarea class="form-control form-control-sm">
+              </textarea>
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="phoneNo" class="">Phone No</label>
+        </div>
+        <div class="col-9 lineHeight">
+          N/A
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="gstin" class="">GSTIN / PAN</label>
+        </div>
+        <div class="col-9 lineHeight">
+          N/A
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <div class="col-3 col-form-label">
+          <label for="revCharge" class="">Rev. Charge</label>
+        </div>
+        <div class="col-9">
+          <select class="form-control form-control-sm">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="form-group shippingAddAlign row">
+        <div class="checkBox col-3 text-right">
+          <input type="checkbox" checked (change)="shipAddCheck($event);">
+        </div>
+        <div class="col-9">
+          Same Shipping Address
+        </div>
+      </div>
+  
+      <div *ngIf="!isSameAsShippingAddress">
+        <div class="form-group row mt-2">
+          <div class="col-3 col-form-label">
+            <label for="shipName" class="">SHIP. NAME</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Name">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipAdd" class="">SHIP. ADD.</label>
+          </div>
+          <div class="col-9">
+            <textarea placeholder="Enter Shipping Address" class="form-control form-control-sm"></textarea>
+          </div>
+        </div>
+  
+        <div class="form-group row mt-2">
+          <div class="col-3 col-form-label">
+            <label for="shipPhone" class="">SHIP. PHONE</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping Phone">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipState" class="">SHIP. State</label>
+          </div>
+          <div class="col-9">
+            <select name="" id="" class="form-control form-control-sm">
+              <option value="">Select State</option>
+              <option value="" *ngFor="let state of states">{{state}}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-3 col-form-label">
+            <label for="shipGSTIN" class="">SHIP. GSTIN</label>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter Shipping GSTIN">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

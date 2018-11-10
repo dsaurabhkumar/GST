@@ -9,6 +9,7 @@ import { DebitNoteComponent } from '@app/pages/other-documents/debit-note/debit-
 import { AddNewDeliveryBaseComponent } from './delivery-challan/add-new-delivery-base/add-new-delivery-base.component';
 import { AddNewQuotationBaseComponent } from './quotation/add-new-quotation-base/add-new-quotation-base.component';
 import { AddNewProformaBaseComponent } from './proforma-invoice/add-new-proforma-base/add-new-proforma-base.component';
+import { AddNewPurchaseOrderBaseComponent } from './purchase-order/add-new-purchase-order-base/add-new-purchase-order-base.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'delivery-challan', pathMatch: "full"},   
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'proforma-invoice/add-new-proforma-base', component: AddNewProformaBaseComponent },
 
   { path: 'purchase-order', component: PurchaseOrderComponent}, 
+  { path: 'purchase-order/add-new-purchase-order-base', component: AddNewPurchaseOrderBaseComponent },
 
   { path: 'credit-note', component: CreditNoteComponent}, 
 

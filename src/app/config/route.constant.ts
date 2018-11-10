@@ -170,6 +170,11 @@ export const ROUTES = {
                     name: 'Purchase-order',
                     absoluteRoute: '/otherDocs/purchase-order'
                 },
+                addNewPurchaseOrder: {
+                    route: 'purchase-order/add-new-purchase-order-base',
+                    name: 'Add-new-purchase-order-base',
+                    absoluteRoute: '/otherDocs/purchase-order/add-new-purchase-order-base'
+                },
                 creditNote: {
                     route: 'credit-note',
                     name: 'Credit-note',
