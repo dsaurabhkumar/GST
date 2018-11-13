@@ -1,72 +1,65 @@
 <div class="add-new-comp">
   <div class="google-ads">
-    
+
   </div>
   <div class="widget-header">
-    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Customer
-      / Vendor'"></app-gst-widget-header>
+    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Customer/ Vendor'"></app-gst-widget-header>
   </div>
   <div class="widget-content">
     <form>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Customer / Vendor Name *</label>
+          <label for="customerVendorName" class="">Customer / Vendor Name *</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your customer / vendor name">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="customerVendorName">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Contact Person</label>
+          <label for="contactPerson" class="">Contact Person</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your contact person">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your contact person" id="contactPerson">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Contact No</label>
+          <label for="contactNo" class="">Contact No</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your contact no">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your contact no" id="contactNo">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Address</label>
+          <label for="address" class="">Address</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your address1">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your address2">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your address1" id="address1">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your address2" id="address2">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">LandMark</label>
+          <label for="landMark" class="">LandMark</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your landMark">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your landMark" id="landMark">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Country *</label>
+          <label for="country" class="">Country *</label>
         </div>
         <div class="col-5 col-form-label">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="country">
             <option value="">Select Country</option>
             <option value="country" *ngFor="let country of countries" [selected]="country == 'India'">{{country}}</option>
           </select>
@@ -75,10 +68,10 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">State *</label>
+          <label for="state" class="">State *</label>
         </div>
         <div class="col-5 col-form-label">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="state">
             <option value="">Select State</option>
             <option value="state" *ngFor="let state of states">{{state}}</option>
           </select>
@@ -87,21 +80,19 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">City</label>
+          <label for="city" class="">City</label>
         </div>
         <div class="col-5 col-form-label">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your city">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your city" id="city">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Company Type</label>
+          <label for="companyType" class="">Company Type</label>
         </div>
         <div class="col-5 col-form-label">
-          <select class="form-control form-control-sm">
-            <!-- <option value="default"></option> -->
+          <select class="form-control form-control-sm" id="companyType">
             <option value="customer" *ngFor="let customer of customers">{{customer}}</option>
           </select>
         </div>
@@ -109,59 +100,52 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Pincode</label>
+          <label for="pinCode" class="">Pincode</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your pincode">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your pincode" id="pinCode">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Fax No</label>
+          <label for="faxNo" class="">Fax No</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your Fax no">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your Fax no" id="faxNo">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Website</label>
+          <label for="website" class="">Website</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="www.ifoxsolutions.com">
+          <input type="text" class="form-control form-control-sm" placeholder="www.ifoxsolutions.com" id="website">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Email</label>
+          <label for="eMail" class="">Email</label>
         </div>
         <div class="col-5">
-          <input type="email" class="form-control form-control-sm"
-            placeholder="emailaddress@domain.com">
+          <input type="email" class="form-control form-control-sm" placeholder="emailaddress@domain.com" id="eMail">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">GSTIN / PAN</label>
+          <label for="gstinPan" class="">GSTIN / PAN</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your GSTIN / PAN">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your GSTIN / PAN" id="gstinPan">
         </div>
       </div>
       <div class="btnContainer">
         <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
-        <app-button [btnText]="'Back'" (click)="backToCustomer()"
-          [btnIcon]="'chevron-left'"
-          [btnClass]="'btn-secondary'"></app-button>
+        <app-button [btnText]="'Back'" (click)="backToCustomer()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
       </div>
     </form>
 

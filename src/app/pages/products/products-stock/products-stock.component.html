@@ -4,13 +4,13 @@
   <div class="search-transport-charges mb-4">
     <div class="widget-content">
       <div class="control-group-search">
-        <label class="control-label">Search By Product Name :</label>
-        <input type="text" class="placeHolderWidth form-control-sm" placeholder="Enter search transport charges name">
+        <label for="searchByProductName" class="control-label">Search By Product Name :</label>
+        <input type="text" class="placeHolderWidth form-control-sm" placeholder="Enter search transport charges name" id="searchByProductName">
       </div>
       <div class="control-group-search selectStockAlign">
-        <label class="control-label">Search By Stock :</label>
+        <label for="searchByStock" class="control-label">Search By Stock :</label>
         <div class="form-label">
-          <select class="form-control-sm">
+          <select class="form-control-sm" id="searchByStock">
             <option>---Select Stock---</option>
             <option value="{{stock}}" *ngFor="let stock of stocksList">{{stock}}</option>
           </select>

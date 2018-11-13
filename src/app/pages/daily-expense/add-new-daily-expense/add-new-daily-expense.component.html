@@ -1,86 +1,82 @@
 <div class="add-new-comp">
-    <div class="widget-header">
-      <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Daily Expense'"></app-gst-widget-header>
-    </div>
-    <div class="widget-content">
-      <form>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Expense Title</label>
-          </div>
-          <div class="col-4">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your expense title">
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Expense Amount</label>
-          </div>
-          <div class="col-4">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your expense amount">
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Expense Category</label>
-          </div>
-          <div class="col-4">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="">
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Available Category</label>
-          </div>
-          <div class="col-4">
-            <div class="btnDesign">Petrol</div>
-            <div class="btnDesign">Phone Bills</div>
-            <div class="btnDesign">Stationary</div>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Expense Date</label>
-          </div>
-          <div class="col-4 col-form-label">
-            <input type="date" class="datepicker">
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Expense Type</label>
-          </div>
-          <div class="col-4">
-              <select class="form-control form-control-sm">
-                  <option value="{{expenseTypes}}" *ngFor="let expenseTypes of paymentType">{{expenseTypes}}</option>
-                </select>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <div class="col-2 col-form-label">
-            <label for="firstname" class="">Description</label>
-          </div>
-          <div class="col-4">
-            <textarea placeholder="Enter your description" class="form-control form-control-sm"></textarea>
-          </div>
-        </div>
-  
-        <div class="btnContainer mt-5">
-          <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
-          <app-button [btnText]="'Back'" (click)="backToDailyExpenseBae()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
-        </div>
-      </form>
-  
-    </div>
+  <div class="widget-header">
+    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Daily Expense'"></app-gst-widget-header>
   </div>
-  
+  <div class="widget-content">
+    <form>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="expenseTitle" class="">Expense Title</label>
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your expense title" id="expenseTitle">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="expenseAmount" class="">Expense Amount</label>
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your expense amount" id="expenseAmount">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="expenseCategory" class="">Expense Category</label>
+        </div>
+        <div class="col-4">
+          <input type="text" class="form-control form-control-sm" placeholder="" id="expenseCategory">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="availableCat" class="">Available Category</label>
+        </div>
+        <div class="col-4" id="availableCat">
+          <div class="btnDesign">Petrol</div>
+          <div class="btnDesign">Phone Bills</div>
+          <div class="btnDesign">Stationary</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="expenseDate" class="">Expense Date</label>
+        </div>
+        <div class="col-4 col-form-label">
+          <input type="date" class="datepicker" id="expenseDate">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="expenseType" class="">Expense Type</label>
+        </div>
+        <div class="col-4">
+          <select class="form-control form-control-sm" id="expenseType">
+            <option value="{{expenseTypes}}" *ngFor="let expenseTypes of paymentType">{{expenseTypes}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-2 col-form-label">
+          <label for="description" class="">Description</label>
+        </div>
+        <div class="col-4">
+          <textarea placeholder="Enter your description" class="form-control form-control-sm" id="description"></textarea>
+        </div>
+      </div>
+
+      <div class="btnContainer mt-5">
+        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+        <app-button [btnText]="'Back'" (click)="backToDailyExpenseBae()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="add-new-pack-delivery-challan">
-        
+
   <div class="widget-content">
     <form>
 
@@ -8,70 +8,62 @@
           <label for="name" class="">Name *</label>
         </div>
         <div class="col-8">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your purchase name">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your purchase name" id="name">
         </div>
       </div>
 
       <div class="form-group row">
-              <div class="col-4 col-form-label">
-                <label for="price" class="">Price</label>
-              </div>
-              <div class="col-8">
-                <input type="text" class="form-control form-control-sm"
-                  placeholder="Enter price">
-              </div>
-            </div>
-
-      <div class="form-group row">
         <div class="col-4 col-form-label">
-          <label for="hsnCode" class="">HSN/SAC Code</label>
+          <label for="price" class="">Price</label>
         </div>
         <div class="col-8">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your HSN code">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter price" id="price">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-4 col-form-label">
-          <label for="firstname" class="">CGST %
+          <label for="hsnSACCode" class="">HSN/SAC Code</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your HSN code" id="hsnSACCode">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="cgst" class="">CGST %
           </label>
         </div>
         <div class="col-8">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter cgst">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter cgst" id="cgst">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-4 col-form-label">
-          <label for="firstname" class="">SGST %
+          <label for="sgst" class="">SGST %
           </label>
         </div>
         <div class="col-8">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter sgst">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter sgst" id="sgst">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-4 col-form-label">
-          <label for="firstname" class="">IGST %
+          <label for="igst" class="">IGST %
           </label>
         </div>
         <div class="col-8">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter igst">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter igst" id="igst">
         </div>
       </div>
-      
+
       <div class="btnContainer">
         <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
-        <app-button [btnText]="'Close'" (click)="backToProductBase()"
-          [btnIcon]="'close'"
-          [btnClass]="'btn-secondary'"></app-button>
+        <app-button [btnText]="'Close'" (click)="backToProductBase()" [btnIcon]="'close'" [btnClass]="'btn-secondary'"></app-button>
       </div>
     </form>
 

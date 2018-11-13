@@ -6,19 +6,19 @@
     <form>
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Receipt No</label>
+          <label for="receiptNo" class="">Receipt No</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm" value="1" placeholder="Enter your product name">
+          <input type="text" class="form-control form-control-sm" value="1" placeholder="Enter your product name" id="receiptNo">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Company Name</label>
+          <label for="companyName" class="">Company Name</label>
         </div>
         <div class="col-5">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="companyName">
             <option></option>
           </select>
         </div>
@@ -26,12 +26,12 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Payment Option</label>
+          <label for="paymentOption" class="">Payment Option</label>
         </div>
         <div class="col-5 align-self-center">
           <div class="row ml-0">
             <label class="radio-inline">
-              <input type="radio" name="optradio" value="onAccount" checked (change)="chooseInvNo($event);">On Account
+              <input type="radio" id="paymentOption" name="optradio" value="onAccount" checked (change)="chooseInvNo($event);">On Account
             </label>
             <label class="radio-inline radioBtnOpt">
               <input type="radio" class="" name="optradio" value="onInvoice" (change)="chooseInvNo($event);">On Invoice
@@ -65,22 +65,22 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Payment Date
+          <label for="paymentDate" class="">Payment Date
           </label>
         </div>
         <div class="col-5">
           <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your payment date">
+            placeholder="Enter your payment date" id="paymentDate">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Payment Type
+          <label for="paymentType" class="">Payment Type
           </label>
         </div>
         <div class="col-5 col-form-label">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="paymentType">
             <option value="{{paymentOptions}}" *ngFor="let paymentOptions of paymentType">{{paymentOptions}}</option>
           </select>
         </div>
@@ -88,22 +88,22 @@
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Amount
+          <label for="amount" class="">Amount
           </label>
         </div>
         <div class="col-5">
           <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your amount">
+            placeholder="Enter your amount" id="amount">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
-          <label for="firstname" class="">Payment Note
+          <label for="paymentNote" class="">Payment Note
           </label>
         </div>
         <div class="col-5">
-            <textarea placeholder="Enter your payment note" class="form-control form-control-sm"></textarea>
+            <textarea placeholder="Enter your payment note" class="form-control form-control-sm" id="paymentNote"></textarea>
         </div>
       </div>
 

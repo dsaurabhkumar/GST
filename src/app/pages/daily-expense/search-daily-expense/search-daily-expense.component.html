@@ -2,18 +2,18 @@
 <form class="formBegins">
   <div class="row formContent">
     <div class="col-2 form-group">
-      <label>Search By Title :</label>
+      <label for="searchByTitle">Search By Title :</label>
       <div>
         <div>
-          <input type="text" class="form-control form-control-sm" placeholder="Enter search title">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter search title" id="searchByTitle">
         </div>
       </div>
     </div>
 
     <div class="col-2 form-group">
-      <label>Search By Category :</label>
+      <label for="searchByCat">Search By Category :</label>
       <div>
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" id="searchByCat">
           <option value="">Select Category</option>
           <option value="category" *ngFor="let category of categories">{{category}}</option>
         </select>
@@ -21,16 +21,16 @@
     </div>
 
     <div class="col-2 form-group">
-      <label>Search By From Date :</label>
+      <label for="searchByFromDate">Search By From Date :</label>
       <div>
-        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by from Date">
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by from Date" id="searchByFromDate">
       </div>
     </div>
 
     <div class="col-2 form-group">
-      <label>Search By to Date :</label>
+      <label for="searchByToDate">Search By to Date :</label>
       <div>
-        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date" id="searchByToDate">
       </div>
     </div>
 

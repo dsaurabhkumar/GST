@@ -1,113 +1,103 @@
 <div class="add-new-product-credit">
-        
-    <div class="widget-content">
-      <form>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="purchasePrice" class="">Purchase Price</label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your purchase name">
-          </div>
+
+  <div class="widget-content">
+    <form>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="purchasePrice" class="">Purchase Price</label>
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="hsnCode" class="">HSN/SAC Code</label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your HSN code">
-          </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your purchase name" id="purchasePrice">
         </div>
-        
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">Unit of Measurement
-            </label>
-          </div>
-          <div class="col-8 col-form-label">
-            <select class="form-control form-control-sm">
-              <option value="{{units}}" *ngFor="let units of measurementUnits">{{units}}</option>
-            </select>
-          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="hsnCode" class="">HSN/SAC Code</label>
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">Stock Available</label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your stock available">
-          </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your HSN code" id="hsnCode">
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">CGST %
-            </label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your CGST">
-          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="unitofMeasure" class="">Unit of Measurement
+          </label>
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">SGST %
-            </label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your SGST">
-          </div>
+        <div class="col-8 col-form-label">
+          <select class="form-control form-control-sm" id="unitofMeasure">
+            <option value="{{units}}" *ngFor="let units of measurementUnits">{{units}}</option>
+          </select>
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">IGST %
-            </label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your IGST">
-          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="stockAvl" class="">Stock Available</label>
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">CESS %
-            </label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your CESS">
-          </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your stock available" id="stockAvl">
         </div>
-  
-        <div class="form-group row">
-          <div class="col-4 col-form-label">
-            <label for="firstname" class="">CESS Amount
-            </label>
-          </div>
-          <div class="col-8">
-            <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your CESS amount">
-          </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="cgst" class="">CGST %
+          </label>
         </div>
-  
-        <div class="btnContainer">
-          <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your CGST" id="cgst">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="sgst" class="">SGST %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your SGST" id="sgst">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="igst" class="">IGST %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your IGST" id="igst">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="cess" class="">CESS %
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your CESS" id="cess">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="cessAmt" class="">CESS Amount
+          </label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your CESS amount" id="cessAmt">
+        </div>
+      </div>
+
+      <div class="btnContainer">
+        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
             btn-primary'"></app-button>
-          <app-button [btnText]="'Back'" (click)="backToProductBase()"
-            [btnIcon]="'chevron-left'"
-            [btnClass]="'btn-secondary'"></app-button>
-        </div>
-      </form>
-  
-    </div>
+        <app-button [btnText]="'Back'" (click)="backToProductBase()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+      </div>
+    </form>
+
   </div>
+</div>
