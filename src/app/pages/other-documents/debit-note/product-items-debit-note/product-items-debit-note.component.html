@@ -1,0 +1,177 @@
+<app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Product Items'"></app-gst-widget-header>
+<div class="sub-container">
+
+  <div class="row btnAlignment">
+    <app-button [btnText]="'Add New Product'" [modalId]="'addNewProDebitNoteModal'" [btnIcon]="'plus'" [btnClass]="'btn
+      btn-primary mb-4 mt-4'"></app-button>
+    <app-button [btnText]="'Add New Transport/Packaging Charges'" [modalId]="'addNewPackageDebitNoteModal'" [btnIcon]="'plus'"
+      [btnClass]="'btn btn-primary mb-4 mt-4 ml-2'"></app-button>
+  </div>
+
+  <div class="product-items">
+    <div class="row productItemsFont">
+      <table class="tableStyle">
+        <thead class="subheading subheading-wrap">
+          <tr class="productItemsHeading">
+            <th>SR.</th>
+            <th>PRODUCT / OTHER CHARGES</th>
+            <th>HSC/SAC CODE</th>
+            <th>QTY.</th>
+            <th>PRICE</th>
+            <th>DISC (%)</th>
+            <th>CGST (%)</th>
+            <th>CGST (RS)</th>
+            <th>SGST (%)</th>
+            <th>SGST (RS)</th>
+            <th>IGST (%)</th>
+            <th>IGST (RS)</th>
+            <th>CESS</th>
+            <th>TOTAL</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr class="productItemsRow">
+            <td class="text-center">1</td>
+            <td>
+              <div><input type="text" maxlength="500" placeholder="Enter Product
+                  name"></div>
+              <div><textarea maxlength="500" placeholder="Item note..."></textarea></div>
+            </td>
+            <td>
+              <div><input type="text" maxlength="20" placeholder="HSC/SAC" name="HSC/SAC"></div>
+            </td>
+            <td>
+              <div><input type="text" maxlength="10" placeholder="QTY." name="QTY."></div>
+            </td>
+            <td>
+              <div><input type="text" placeholder="PRICE" name="PRICE"></div>
+            </td>
+            <td>
+              <div><input type="text" value="0" name="DISC (%)"></div>
+            </td>
+            <td>
+              <div><input type="text" disabled value="%" name="CGST (%)"></div>
+            </td>
+            <td>
+              <div><input type="text" disabled value="0" name="CGST RS"></div>
+            </td>
+            <td>
+              <div><input type="text" disabled value="%" name="SGST (%)"></div>
+            </td>
+            <td>
+              <div><input type="text" disabled value="0" name="SGST RS"></div>
+            </td>
+            <td>
+              <div><input type="text" value="%" name="IGST (%)"></div>
+            </td>
+            <td>
+              <div><input type="text" disabled value="0" name="IGST RS"></div>
+            </td>
+            <td>
+              <div><input type="text" value="%" name="CESS %"></div>
+              <div>+</div>
+              <div><input type="text" value="Rs" name="CESS %"></div>
+            </td>
+            <td>
+              <div><input type="text" placeholder="Total" name="TOTAL"></div>
+            </td>
+            <td>
+              <button type="button" value="" class="btn btn-primary
+                btnadd-product-line btnadd-row-item"><i
+                  class="fa fa-plus"></i></button>
+            </td>
+          </tr>
+          <tr class="totalValueForm">
+            <td colspan="3" class="text-right">
+              Total Inv. Val
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+              0
+            </td>
+            <td class="text-center">
+
+            </td>
+          </tr>
+          <tr class="fontStyle">
+            <td colspan="6">
+
+            </td>
+            <td colspan="7" class="text-right">
+              Total Taxable :
+            </td>
+            <td colspan="2" class="text-center">
+              0
+            </td>
+          </tr>
+          <tr class="fontStyle">
+            <td colspan="6">
+
+            </td>
+            <td colspan="7" class="text-right">
+              Total Tax :
+            </td>
+            <td colspan="2" class="text-center">
+              0
+            </td>
+          </tr>
+          <tr class="fontStyle">
+            <td colspan="6">
+
+            </td>
+            <td colspan="7" class="text-right">
+              Grand Total :
+            </td>
+            <td colspan="2" class="text-center">
+              0
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div class="widget-content mt-4">
+        zero RUPEES ONLY
+      </div>
+    </div>
+
+    <div class="formDetFont">
+      <form>
+        <div class="row">
+          <div class="col-12 text-right mb-3 mt-4">
+            <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

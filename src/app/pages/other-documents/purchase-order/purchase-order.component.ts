@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from '@app/config/route.constant';
 
 @Component({
   selector: 'app-purchase-order',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchaseOrderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+  addNewPurchaseOrderBase() {
+    this._router.navigate([ROUTES.otherDocs.children.addNewPurchaseOrder.absoluteRoute]);
+}
 
 }

@@ -2,10 +2,10 @@
 <form class="formBegins">
   <div class="row formContent">
     <div class="col-3 form-group">
-      <label>Report type :</label>
+      <label for="reportType">Report type :</label>
       <div>
         <div>
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="reportType">
             <option value="">--Select Report type--</option>
             <option value="reportOption" *ngFor="let reportOption of reportType">{{reportOption}}</option>
           </select>
@@ -14,34 +14,34 @@
     </div>
 
     <div class="col-2 form-group">
-      <label>Customer/Vendor :</label>
+      <label for="customerVendor">Customer/Vendor :</label>
       <div>
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" id="customerVendor">
           <option value="">--All Customer--</option>
         </select>
       </div>
     </div>
 
     <div class="col-2 form-group">
-      <label>Products :</label>
+      <label for="products">Products :</label>
       <div>
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" id="products">
           <option value="">--All Products--</option>
         </select>
       </div>
     </div>
 
     <div class="col-2 form-group">
-      <label>From Date :</label>
+      <label for="fromDate">From Date :</label>
       <div>
-        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date" id="fromDate">
       </div>
     </div>
 
     <div class="col-2 form-group">
-      <label>To Date :</label>
+      <label for="toDate">To Date :</label>
       <div>
-        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date">
+        <input type="date" class="Datepicker form-control form-control-sm" placeholder="Search by to Date" id="toDate">
       </div>
     </div>
 

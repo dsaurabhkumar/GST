@@ -1,3 +1,42 @@
-<p>
-  add-new-transport-quotation works!
-</p>
+<div class="add-new-transport-quotation">
+  <div class="widget-content">
+    <form>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="transName" class="">Transport Name</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your transport name" id="transName"> 
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="transportID" class="">Transport ID</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your transport id" id="transportID">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="vehicleNo" class="">Vehicle No</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm"
+            placeholder="Enter your vehicle no" id="vehicleNo">
+        </div>
+      </div>
+
+      <div class="btnContainer">
+        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+        <app-button [btnText]="'Back'" [btnIcon]="'close'" [btnClass]="'btn-secondary'"></app-button>
+      </div>
+    </form>
+
+  </div>
+</div>

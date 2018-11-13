@@ -173,7 +173,7 @@
                 <label for="dueDate" class="">Due Date</label>
               </div>
               <div class="col-12 col-md-5 col-form-label">
-                <input class="datepicker" data-date-format="mm/dd/yy">
+                <input class="datepicker" data-date-format="mm/dd/yy" id="dueDate">
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
                 <label for="bank" class="">Payment Type</label>
               </div>
               <div class="col-12 col-md-5 col-form-label">
-                <select name="" id="" class="form-control form-control-sm">
+                <select name="" id="" class="form-control form-control-sm" id="bank">
                   <option value="" *ngFor="let paymentOption of paymentType">{{paymentOption}}</option>
                 </select>
               </div>
@@ -201,7 +201,7 @@
                 <label for="paymentNote" class="">Payment Note</label>
               </div>
               <div class="col-12 col-md-5 col-form-label">
-                <textarea class="paymentNoteTextArea"></textarea>
+                <textarea class="paymentNoteTextArea" id="paymentNote"></textarea>
               </div>
             </div>
           </div>

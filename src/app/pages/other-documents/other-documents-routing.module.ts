@@ -8,22 +8,30 @@ import { CreditNoteComponent } from '@app/pages/other-documents/credit-note/cred
 import { DebitNoteComponent } from '@app/pages/other-documents/debit-note/debit-note.component';
 import { AddNewDeliveryBaseComponent } from './delivery-challan/add-new-delivery-base/add-new-delivery-base.component';
 import { AddNewQuotationBaseComponent } from './quotation/add-new-quotation-base/add-new-quotation-base.component';
+import { AddNewProformaBaseComponent } from './proforma-invoice/add-new-proforma-base/add-new-proforma-base.component';
+import { AddNewPurchaseOrderBaseComponent } from './purchase-order/add-new-purchase-order-base/add-new-purchase-order-base.component';
+import { AddNewCreditNoteBaseComponent } from './credit-note/add-new-credit-note-base/add-new-credit-note-base.component';
+import { AddNewDebitNoteBaseComponent } from './debit-note/add-new-debit-note-base/add-new-debit-note-base.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'delivery-challan', pathMatch: "full"},   
   { path: 'delivery-challan', component: DeliveryChallanComponent}, 
   { path: 'delivery-challan/add-new-delivery-challan', component: AddNewDeliveryBaseComponent },
-  // { path: '', redirectTo: 'quotation', pathMatch: "full"},
+
   { path: 'quotation', component: QuotationComponent}, 
   { path: 'quotation/add-new-quotation-base', component: AddNewQuotationBaseComponent },
 
   { path: 'proforma-invoice', component: ProformaInvoiceComponent}, 
+  { path: 'proforma-invoice/add-new-proforma-base', component: AddNewProformaBaseComponent },
 
   { path: 'purchase-order', component: PurchaseOrderComponent}, 
+  { path: 'purchase-order/add-new-purchase-order-base', component: AddNewPurchaseOrderBaseComponent },
 
   { path: 'credit-note', component: CreditNoteComponent}, 
+  { path: 'credit-note/add-new-credit-note-base', component: AddNewCreditNoteBaseComponent },
 
   { path: 'debit-note', component: DebitNoteComponent},
+  { path: 'debit-note/add-new-debit-note-base', component: AddNewDebitNoteBaseComponent }
   
 ];
 

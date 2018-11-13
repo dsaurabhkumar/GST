@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTES } from '@app/config/route.constant';
 
 @Component({
   selector: 'app-credit-note',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  addNewCreditNoteBase() {
+    this._router.navigate([ROUTES.otherDocs.children.addNewCreditNote.absoluteRoute]);
   }
 
 }

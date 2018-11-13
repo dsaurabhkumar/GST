@@ -1,0 +1,30 @@
+<div class="addNewPurchaseOrderBase">
+  <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Purchase Order'"></app-gst-widget-header>
+  <div class="mx-4 my-2">
+    <div class="row">
+      <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-customer-info-purchase-order></app-customer-info-purchase-order>
+        </div>
+      </div>
+      <div class="proformaDetail col-12 col-md-7 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Purchase Order Detail'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-purchase-order-detail></app-purchase-order-detail>
+
+          <app-modal [modalId]="'addNewProPurchaseOrderModal'" [size]="'md'" [heading]="'Add Product'">
+            <app-add-new-product-purchase-order></app-add-new-product-purchase-order>
+          </app-modal>
+
+          <app-modal [modalId]="'addNewPackagePurchaseOrderModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+            <app-add-new-package-purchase-order></app-add-new-package-purchase-order>
+          </app-modal>
+        </div>
+      </div>
+    </div>
+    <div class="mb-4">
+      <app-product-items-purchase-order></app-product-items-purchase-order>
+    </div>
+  </div>
+</div>

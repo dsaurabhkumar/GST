@@ -1,3 +1,29 @@
-<p>
-  credit-note works!
-</p>
+<div class="credit-note">
+  <div class="searchCreditNote">
+    <app-search-credit-note></app-search-credit-note>
+  </div>
+  <div class="google-ads">
+    <app-google-ads></app-google-ads>
+  </div>
+  <div class="creditNoteSummary">
+    <app-credit-note-summary></app-credit-note-summary>
+  </div>
+  <div class="creditNoteList">
+    <app-credit-note-list></app-credit-note-list>
+  </div>
+  <div class="google-ads">
+    <app-google-ads></app-google-ads>
+  </div>
+
+  <div>
+    <div class="row m-0 subheading subheading-wrap">
+      <div class="customer-wrap col-12 text-left">
+        <app-button [btnText]="'Delete'" [btnIcon]="'trash-o'" [btnClass]="'btn
+                          btn-secondary btn-align'"></app-button>
+        <app-button [btnText]="'Add New'" (click)="addNewCreditNoteBase()" [btnIcon]="'plus'" [btnClass]="'btn
+                          btn-primary btn-align'"></app-button>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -160,20 +160,40 @@ export const ROUTES = {
                     name: 'Proforma-invoice',
                     absoluteRoute: '/otherDocs/proforma-invoice'
                 },
+                addNewproformaInvoice: {
+                    route: 'proforma-invoice/add-new-proforma-base',
+                    name: 'Add-new-proforma-invoice',
+                    absoluteRoute: '/otherDocs/proforma-invoice/add-new-proforma-base'
+                },
                 purchaseOrder: {
                     route: 'purchase-order',
                     name: 'Purchase-order',
                     absoluteRoute: '/otherDocs/purchase-order'
+                },
+                addNewPurchaseOrder: {
+                    route: 'purchase-order/add-new-purchase-order-base',
+                    name: 'Add-new-purchase-order-base',
+                    absoluteRoute: '/otherDocs/purchase-order/add-new-purchase-order-base'
                 },
                 creditNote: {
                     route: 'credit-note',
                     name: 'Credit-note',
                     absoluteRoute: '/otherDocs/credit-note'
                 },
+                addNewCreditNote: {
+                    route: 'credit-note/add-new-credit-note-base',
+                    name: 'Add-new-credit-note-base',
+                    absoluteRoute: '/otherDocs/credit-note/add-new-credit-note-base'
+                },
                 debitNote: {
                     route: 'debit-note',
                     name: 'Debit-note',
                     absoluteRoute: '/otherDocs/debit-note'
+                },
+                addNewDebitNote: {
+                    route: 'debit-note/add-new-debit-note-base',
+                    name: 'Add-new-debit-note-base',
+                    absoluteRoute: '/otherDocs/debit-note/add-new-debit-note-base'
                 }
             }
         },

@@ -1,0 +1,74 @@
+.productItemsFont {
+    font-size: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+thead, th {
+    border: 1px solid #D5D5D5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+.tableStyle {
+    width: 100%;
+}
+input {
+    width: 100%;
+    padding: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555555;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+textarea {
+    background: #fafad2;
+}
+tbody, td {
+    font: 13px/1.7em 'Open Sans';
+    border: 1px solid #D5D5D5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.totalValueForm {
+    background: #FFFF7C;
+}
+.totalValueForm td {
+    font: 13px/1.7em 'Open Sans';
+    font-weight: bold; 
+}
+.fontStyle td {
+    font: 13px/1.7em 'Open Sans';
+    font-weight: bold; 
+}
+.widget-content {
+    font-size: 13px;
+    padding: 20px 15px 15px;
+    background: #FFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 5px;
+    width: 100%;
+}
+.formDetFont {
+    font-size: 13px;
+    padding: 0% 2%;
+}
+.paymentNoteTextArea {
+    background: #FFF;
+    width: 100%;
+}
+.formDetFont .form-group {
+    margin-bottom: 0px;
+}
+.btnAlignment {
+    padding: 0% 3%;
+}
+.sub-container {
+    border: 1px solid #d6d6d6;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

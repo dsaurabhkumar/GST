@@ -1,32 +1,33 @@
 <div class="addNewQuotationBase">
-    <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Quotation'"></app-gst-widget-header>
-    <div class="mx-4 my-2">
-      <div class="row">
-        <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
-          <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
-          <div class="sub-container">
-            <app-customer-information></app-customer-information>
-          </div>
+  <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Quotation'"></app-gst-widget-header>
+  <div class="mx-4 my-2">
+    <div class="row">
+      <div class="customerInfo col-12 col-md-5 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-customer-information></app-customer-information>
         </div>
-  
-        <div class="quotationDetail col-12 col-md-7 mt-4 mb-4">
-          <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Quotation Detail'"></app-gst-widget-header>
-          <div class="sub-container">
-            <app-quotation-detail></app-quotation-detail>
-
-            <app-modal [modalId]="'addNewProQuotationModal'" [size]="'md'" [heading]="'Add Product'">
-              <app-add-new-product-quotation></app-add-new-product-quotation>
-            </app-modal>
-
-            <app-modal [modalId]="'addNewPackageQuotationModal'" [size]="'md'" [heading]="'Add Transport Charges'">
-              <app-add-new-package-quotation></app-add-new-package-quotation>
-            </app-modal>
-          </div>
-        </div>
-  
       </div>
-  
-      <app-product-items-quotation></app-product-items-quotation>
-  
+
+      <div class="quotationDetail col-12 col-md-7 mt-4 mb-4">
+        <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Quotation Detail'"></app-gst-widget-header>
+        <div class="sub-container">
+          <app-quotation-detail></app-quotation-detail>
+
+          <app-modal [modalId]="'addNewProQuotationModal'" [size]="'md'" [heading]="'Add Product'">
+            <app-add-new-product-quotation></app-add-new-product-quotation>
+          </app-modal>
+
+          <app-modal [modalId]="'addNewPackageQuotationModal'" [size]="'md'" [heading]="'Add Transport Charges'">
+            <app-add-new-package-quotation></app-add-new-package-quotation>
+          </app-modal>
+        </div>
+      </div>
+
     </div>
+    <div class="mb-4">
+      <app-product-items-quotation></app-product-items-quotation>
+    </div>
+
   </div>
+</div>

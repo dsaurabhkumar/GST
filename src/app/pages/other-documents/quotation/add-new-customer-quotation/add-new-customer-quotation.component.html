@@ -1,3 +1,216 @@
-<p>
-  add-new-customer-quotation works!
-</p>
+<div class="add-new-customer-quotation">
+  <form class="formAlignment">
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="customerName" class="">Customer / Vendor Name *</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="customerName">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="contactPerson" class="">Contact Person</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your contact person" id="contactPerson">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="contactNo" class="">Contact No</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your contact no" id="contactNo">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="address" class="">Address</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your address1" id="address">
+        <input type="text" class="form-control form-control-sm mt-2" placeholder="Enter your address2">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="landMark" class="">LandMark</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your landMark" id="landMark">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="country" class="">Country *</label>
+      </div>
+      <div class="col-8 col-form-label">
+        <select class="form-control form-control-sm" id="country">
+          <option value="">Select Country</option>
+          <option value="country" *ngFor="let country of countries" [selected]="country == 'India'">{{country}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="state" class="">State *</label>
+      </div>
+      <div class="col-8 col-form-label">
+        <select class="form-control form-control-sm" id="state">
+          <option value="">Select State</option>
+          <option value="state" *ngFor="let state of states">{{state}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="city" class="">City</label>
+      </div>
+      <div class="col-8 col-form-label">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter city" id="city">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="companyType" class="">Company Type</label>
+      </div>
+      <div class="col-8 col-form-label">
+        <select class="form-control form-control-sm" id="companyType">
+          <option value="customer" *ngFor="let customer of customers">{{customer}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="pinCode" class="">Pincode</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter pincode" id="pinCode">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="faxNo" class="">Fax No</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter Fax no." id="faxNo">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="webSite" class="">Website</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="www.ifoxsolutions.com" id="webSite">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="eMail" class="">Email</label>
+      </div>
+      <div class="col-8">
+        <input type="email" class="form-control form-control-sm" placeholder="emailaddress@domain.com" id="eMail">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="gstinPAN" class="">GSTIN / PAN</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your GSTIN / PAN" id="gstinPAN">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-4 col-form-label">
+        <label for="distanceForEway" class="">Distance for e-way bill (in km)</label>
+      </div>
+      <div class="col-8">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter Distance for e-way bill (in km)" id="distanceForEway">
+      </div>
+    </div>
+    <hr>
+    <div>
+      <h6>Additional Shipping Address <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+    </div>
+    <hr>
+
+    <div class="form-group row">
+        <div class="col-4 col-form-label">
+          <label for="shipName" class="">SHIP. Name</label>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter shipping Name" id="shipName">
+        </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col-4 col-form-label">
+            <label for="shipPhone" class="">SHIP. Phone</label>
+          </div>
+          <div class="col-8">
+            <input type="text" class="form-control form-control-sm" placeholder="Enter shipping phone No" id="shipPhone">
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4 col-form-label">
+              <label for="shipAddress" class="">SHIP. Address</label>
+            </div>
+            <div class="col-8">
+              <textarea placeholder="Enter shipping address" class="form-control form-control-sm" id="shipAddress"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <div class="col-4 col-form-label">
+                <label for="shipState" class="">SHIP. State</label>
+              </div>
+              <div class="col-8 col-form-label">
+                <select class="form-control form-control-sm" id="shipState">
+                  <option value="">Select State</option>
+                  <option value="state" *ngFor="let state of states">{{state}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4 col-form-label">
+                  <label for="shipCountry" class="">SHIP. Country</label>
+                </div>
+                <div class="col-8 col-form-label">
+                    India
+                </div>
+              </div>
+
+              <div class="form-group row">
+                  <div class="col-4 col-form-label">
+                    <label for="shipGSTIN" class="">SHIP. GSTIN / PAN</label>
+                  </div>
+                  <div class="col-8">
+                    <input type="text" class="form-control form-control-sm" placeholder="Enter shipping GSTIN / PAN" id="shipGSTIN">
+                  </div>
+                </div>
+
+                <hr>
+
+    <div class="row">
+      <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+      <app-button [btnText]="'Back'" [btnIcon]="'close'" [btnClass]="'btn btn-secondary'"></app-button>
+    </div>
+  </form>
+</div>
