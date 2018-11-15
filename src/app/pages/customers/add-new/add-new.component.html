@@ -6,14 +6,23 @@
     <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Customer/ Vendor'"></app-gst-widget-header>
   </div>
   <div class="widget-content">
-    <form>
+    <form [formGroup]="addCustomerVendorForm" (ngSubmit)="onSubmitedaddCustomerVendorForm(addCustomerVendorForm)">
 
       <div class="form-group row">
         <div class="col-2 col-form-label">
           <label for="customerVendorName" class="">Customer / Vendor Name *</label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="customerVendorName">
+            <span [ngClass]="{
+              'input-error': addCustomerVendorForm.controls.customerVendorName.invalid && (addCustomerVendorForm.controls.customerVendorName.touched || addCustomerVendorForm.controls.customerVendorName.dirty)
+          }">
+          <input type="text" class="form-control form-control-sm" formControlName="customerVendorName" placeholder="Enter your customer / vendor name" id="customerVendorName">
+          </span>
+          <div *ngIf="addCustomerVendorForm.controls.customerVendorName.invalid && (addCustomerVendorForm.controls.customerVendorName.touched || addCustomerVendorForm.controls.customerVendorName.dirty)">
+              <span *ngIf="addCustomerVendorForm.controls.customerVendorName.errors?.required" class="text-danger">Customer/Vendor name is required</span>
+              <span *ngIf="addCustomerVendorForm.controls.customerVendorName.errors?.pattern" class="text-danger">Please enter
+                  valid Customer/Vendor name</span>
+          </div>
         </div>
       </div>
 
@@ -41,7 +50,7 @@
         </div>
         <div class="col-5">
           <input type="text" class="form-control form-control-sm" placeholder="Enter your address1" id="address1">
-          <input type="text" class="form-control form-control-sm" placeholder="Enter your address2" id="address2">
+          <input type="text" class="form-control form-control-sm mt-2" placeholder="Enter your address2" id="address2">
         </div>
       </div>
 
@@ -71,10 +80,18 @@
           <label for="state" class="">State *</label>
         </div>
         <div class="col-5 col-form-label">
-          <select class="form-control form-control-sm" id="state">
-            <option value="">Select State</option>
-            <option value="state" *ngFor="let state of states">{{state}}</option>
-          </select>
+            <span [ngClass]="{
+              'input-error': addCustomerVendorForm.controls.state.invalid && (addCustomerVendorForm.controls.state.touched || addCustomerVendorForm.controls.state.dirty)
+          }">
+          <select class="form-control form-control-sm" formControlName="state" id="state">
+              <option value="">Select State</option>
+              <option value="state" *ngFor="let state of states">{{state}}</option>
+            </select>
+          </span>
+          
+          <div *ngIf="addCustomerVendorForm.controls.state.invalid && (addCustomerVendorForm.controls.state.touched || addCustomerVendorForm.controls.state.dirty)">
+              <span *ngIf="addCustomerVendorForm.controls.state.errors?.required" class="text-danger">State is required</span>
+          </div>
         </div>
       </div>
 
@@ -143,7 +160,7 @@
         </div>
       </div>
       <div class="btnContainer">
-        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+        <app-button [btnText]="'Save'" (click)="onSubmitedaddCustomerVendorForm(addCustomerVendorForm)" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
         <app-button [btnText]="'Back'" (click)="backToCustomer()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
       </div>

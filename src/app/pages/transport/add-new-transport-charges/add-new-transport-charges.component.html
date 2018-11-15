@@ -4,15 +4,21 @@
       Transport Charges'"></app-gst-widget-header>
   </div>
   <div class="widget-content">
-    <form>
-
+    <form [formGroup]="addTransportChargesForm" (ngSubmit)="onSubmitAddTransportChargesForm(addTransportChargesForm)">
       <div class="form-group row">
         <div class="col-2 col-form-label">
           <label for="name" class="">Name*</label>
         </div>
         <div class="col-5">
+            <span [ngClass]="{
+              'input-error': addTransportChargesForm.controls.name.invalid && (addTransportChargesForm.controls.name.touched || addTransportChargesForm.controls.name.dirty)
+          }">
           <input type="text" class="form-control form-control-sm"
-            placeholder="Enter transport charge name" id="name">
+            placeholder="Enter transport charge name" id="name" formControlName="name">
+            </span>
+            <div *ngIf="addTransportChargesForm.controls.name.invalid && (addTransportChargesForm.controls.name.touched || addTransportChargesForm.controls.name.dirty)">
+                <span *ngIf="addTransportChargesForm.controls.name.errors?.required" class="text-danger">Please enter your transport charge name</span>
+            </div>
         </div>
       </div>
 
@@ -57,7 +63,7 @@
       </div>
 
       <div class="btnContainer">
-        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+        <app-button [btnText]="'Save'" (click)="onSubmitAddTransportChargesForm(addTransportChargesForm)" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
         <app-button [btnText]="'Back'" (click)="backToTransportCharge()"
           [btnIcon]="'chevron-left'"

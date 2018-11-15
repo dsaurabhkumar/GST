@@ -60,6 +60,7 @@ export const CoreConstant =  {
      pattern: {
         letter: "^[a-zA-Z ]*$",
         number: "^[0-9]*$",
-        alphaNum: "^[a-zA-Z0-9]*$"
+        alphaNum: "^[a-zA-Z0-9]*$",
+        password: "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
      }
 }

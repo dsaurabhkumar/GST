@@ -8,12 +8,19 @@ import { CustomerVendorListComponent } from './customer-vendor-list/customer-ven
 import { AddNewComponent } from './add-new/add-new.component';
 import { ImportCustomersComponent } from './import-customers/import-customers.component';
 import { SharedModule } from '@app/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     CustomersRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [CustomersBaseComponent, SearchCustomerVendorComponent, CustomerVendorListComponent, AddNewComponent, ImportCustomersComponent]
 })

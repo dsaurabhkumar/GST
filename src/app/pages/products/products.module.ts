@@ -9,12 +9,19 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { AddNewProComponent } from './add-new-pro/add-new-pro.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { ImportProductsComponent } from './import-products/import-products.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [ProductsBaseComponent, ProductsStockComponent, SearchProductComponent, ProductListComponent, AddNewProComponent, ImportProductsComponent]
 })

@@ -1,7 +1,6 @@
-
 <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Edit User Details'"></app-gst-widget-header>
 <div class="edit-container">
-    <form>
+    <form [formGroup]="editUserForm" (ngSubmit)="onSubmiteditUserForm(editUserForm)">
         <div class="form-group row">
             <label for="inputUserId" class="col-2 col-form-label">User ID*</label>
             <div class="col-5">
@@ -11,13 +10,34 @@
         <div class="form-group row">
             <label for="inputFullName" class="col-2 col-form-label">Full Name*</label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" id="inputFullName" placeholder="Enter you full name">
+                <span [ngClass]="{
+                        'input-error': editUserForm.controls.inputFullName.invalid && (editUserForm.controls.inputFullName.touched || editUserForm.controls.inputFullName.dirty)
+                    }">
+                    <input type="text" class="form-control form-control-sm" formControlName="inputFullName" id="inputFullName"
+                        placeholder="Enter you full name">
+                </span>
+                <div *ngIf="editUserForm.controls.inputFullName.invalid && (editUserForm.controls.inputFullName.touched || editUserForm.controls.inputFullName.dirty)">
+                    <span *ngIf="editUserForm.controls.inputFullName.errors?.required" class="text-danger">Full name is required</span>
+                    <span *ngIf="editUserForm.controls.inputFullName.errors?.pattern" class="text-danger">Please enter
+                        valid name</span>
+                </div>
             </div>
         </div>
+
         <div class="form-group row">
             <label for="inputPhone" class="col-2 col-form-label">Phone* </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" id="inputPhone" placeholder="Enter you phone number">
+                <span [ngClass]="{
+                        'input-error': editUserForm.controls.inputPhone.invalid && (editUserForm.controls.inputPhone.touched || editUserForm.controls.inputPhone.dirty)
+                    }">
+                    <input type="text" class="form-control form-control-sm" formControlName="inputPhone" id="inputPhone"
+                        placeholder="Enter you phone number">
+                </span>
+                <div *ngIf="editUserForm.controls.inputPhone.invalid && (editUserForm.controls.inputPhone.touched || editUserForm.controls.inputPhone.dirty)">
+                    <span *ngIf="editUserForm.controls.inputPhone.errors?.required" class="text-danger">Phone number is required</span>
+                    <span *ngIf="editUserForm.controls.inputPhone.errors?.pattern" class="text-danger">Please enter
+                        valid phone number</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
@@ -29,17 +49,33 @@
         <div class="form-group row">
             <label for="inputPassword" class="col-2 col-form-label">Password* </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" id="inputAddress1" placeholder="Enter password">
+                <span [ngClass]="{
+                        'input-error': editUserForm.controls.inputPassword.invalid && (editUserForm.controls.inputPassword.touched || editUserForm.controls.inputPassword.dirty)
+                    }">
+                    <input type="text" class="form-control form-control-sm" formControlName="inputPassword" id="inputPassword" placeholder="Enter password">
+                </span>
+                <div *ngIf="editUserForm.controls.inputPassword.invalid && (editUserForm.controls.inputPassword.touched || editUserForm.controls.inputPassword.dirty)">
+                    <span *ngIf="editUserForm.controls.inputPassword.errors?.required" class="text-danger">Password is required</span>
+                    <span *ngIf="editUserForm.controls.inputPassword.errors?.pattern" class="text-danger">Please enter
+                        valid password, must contain minimum eight characters, at least one lowercase, upparcase alhphabet, one numeric and one special characte</span>
+                </div>
             </div>
         </div>
         <div class="form-group row">
             <label for="inputRepPass" class="col-2 col-form-label">Confirm Password* </label>
             <div class="col-5">
-                <input type="text" class="form-control form-control-sm" id="inputRepPass" placeholder="Confirm password">
+                    <span [ngClass]="{
+                        'input-error': editUserForm.controls.inputRepPass.invalid && (editUserForm.controls.inputRepPass.touched || editUserForm.controls.inputRepPass.dirty)
+                    }">
+                <input type="text" class="form-control form-control-sm" id="inputRepPass" formControlName="inputRepPass" placeholder="Confirm password">
+                </span>
+                <div *ngIf="editUserForm.controls.inputRepPass.invalid && (editUserForm.controls.inputRepPass.touched || editUserForm.controls.inputRepPass.dirty)">
+                        <span *ngIf="editUserForm.controls.inputRepPass.errors?.required" class="text-danger">Confirm Password is required</span>
+                    </div>
             </div>
         </div>
         <div class="btnContainer">
-            <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+            <app-button [btnText]="'Save'" (click)="onSubmiteditUserForm(editUserForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
             <app-button [btnText]="'Back'" (click)="backToSettings()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
         </div>
 

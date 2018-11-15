@@ -11,12 +11,19 @@ import { AddNewComponent } from './add-new/add-new.component';
 import { ImportTransportsComponent } from './import-transports/import-transports.component';
 import { AddNewTransportChargesComponent } from './add-new-transport-charges/add-new-transport-charges.component';
 import { EditTransportListComponent } from './edit-transport-list/edit-transport-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     TransportRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [TransportBaseComponent, TransportChargesComponent, SearchTransportComponent, TransportListComponent, AddNewComponent, ImportTransportsComponent, AddNewTransportChargesComponent, EditTransportListComponent]
 })
