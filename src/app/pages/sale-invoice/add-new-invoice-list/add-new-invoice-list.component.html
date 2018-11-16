@@ -1,8 +1,9 @@
 <div class="invoice-form">
   <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'INVOICE'"></app-gst-widget-header>
+  <form [formGroup]="addInvoiceForm" (ngSubmit)="onSubmitInvoiceForm(addInvoiceForm)">
   <div class="row invoice-form-content app-customer-info">
     <div class="col-12 col-md-5">
-      <app-customer-info></app-customer-info>
+      <app-customer-info [addInvoiceForm]="addInvoiceForm"></app-customer-info>
     </div>
     <div class="col-12 col-md-7 app-invoice-details">
       <app-invoice-details></app-invoice-details>
@@ -20,7 +21,11 @@
         <app-product-items></app-product-items>
       </div>
     </div>
+    <div class="col-12 text-right mt-4">
+      <app-button [btnText]="'Save'" (click)="onSubmitInvoiceForm(addInvoiceForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
   </div>
+  </div>
+</form>
 </div>
 
 <app-modal [modalId]="'addNewProModal'" [heading]="'Add Transport'" [size]="'md'">

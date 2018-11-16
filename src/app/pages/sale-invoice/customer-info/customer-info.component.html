@@ -1,6 +1,6 @@
-<div class="mt-4">
+<div class="mt-4" [formGroup]="addInvoiceForm">
   <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Customer Information'"></app-gst-widget-header>
-  <form class="form-begins">
+  <div class="form-begins">
     <div class="customerInfo text-right">
       <app-button [btnText]="'Add New Customer'" [btnIcon]="'plus'" [btnClass]="'btn btn-primary mb-4 mt-4'" [modalId]="'addCustSaleInvModal'"></app-button>
     </div>
@@ -10,16 +10,23 @@
 
     <div class="form-group row">
       <div class="col-3 col-form-label">
-        <label for="m/s" class="">M/S.</label>
+        <label for="inputinputMS" class="">M/S.</label>
       </div>
       <div class="col-9">
-        <select class="form-control form-control-sm" id="m/s">
+          <span [ngClass]="{
+            'input-error': addInvoiceForm.controls.inputMS.invalid && (addInvoiceForm.controls.inputMS.touched || addInvoiceForm.controls.inputMS.dirty)
+        }">
+        <select class="form-control form-control-sm" id="inputMS" formControlName="inputMS">
           <option></option>
         </select>
+        </span>
+        <div *ngIf="addInvoiceForm.controls.inputMS.invalid && (addInvoiceForm.controls.inputMS.touched || addInvoiceForm.controls.inputMS.dirty)">
+            <span *ngIf="addInvoiceForm.controls.inputMS.errors?.required" class="text-danger">This field is required</span>
+        </div>
       </div>
     </div>
 
-    <div class="form-group row">
+    <div class="form-group row mt-2">
       <div class="col-3 col-form-label">
         <label for="address" class="">Address</label>
       </div>
@@ -117,5 +124,5 @@
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </div>
