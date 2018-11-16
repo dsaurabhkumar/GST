@@ -9,7 +9,7 @@ import { CommonUtilService } from '@app/core/services/common-util.service';
 })
 export class CustomerInfoComponent implements OnInit {
   states = CoreConstant.states;
-  isSameAsShippingAddress: boolean = false;
+  isSameAsShippingAddress: boolean = true;
   @Input() addInvoiceForm : FormGroup;
 
   constructor(
