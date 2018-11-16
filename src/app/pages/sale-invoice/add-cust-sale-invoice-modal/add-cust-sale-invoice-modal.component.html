@@ -1,11 +1,19 @@
 <div>
-  <form class="formAlignment">
+  <form class="formAlignment" [formGroup]="addCustomerVendorForm" (ngSubmit)="onSubmitAddCustomerVendorForm(addCustomerVendorForm)">
     <div class="form-group row">
       <div class="col-4 col-form-label">
         <label for="customerName" class="">Customer / Vendor Name *</label>
       </div>
       <div class="col-8">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="customerName">
+        <span [ngClass]="{
+            'input-error': addCustomerVendorForm.controls.customerName.invalid && (addCustomerVendorForm.controls.customerName.touched || addCustomerVendorForm.controls.customerName.dirty)
+        }">
+          <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="customerName" formControlName="customerName">
+        </span>
+        <div *ngIf="addCustomerVendorForm.controls.customerName.invalid && (addCustomerVendorForm.controls.customerName.touched || addCustomerVendorForm.controls.customerName.dirty)">
+          <span *ngIf="addCustomerVendorForm.controls.customerName.errors?.required" class="text-danger">Please enter
+            customer / vendor name</span>
+        </div>
       </div>
     </div>
 
@@ -63,10 +71,17 @@
         <label for="state" class="">State *</label>
       </div>
       <div class="col-8 col-form-label">
-        <select class="form-control form-control-sm" id="state">
+          <span [ngClass]="{
+            'input-error': addCustomerVendorForm.controls.state.invalid && (addCustomerVendorForm.controls.state.touched || addCustomerVendorForm.controls.state.dirty)
+        }">
+        <select class="form-control form-control-sm" id="state" formControlName="state">
           <option value="">Select State</option>
           <option value="state" *ngFor="let state of states">{{state}}</option>
         </select>
+        </span>
+        <div *ngIf="addCustomerVendorForm.controls.state.invalid && (addCustomerVendorForm.controls.state.touched || addCustomerVendorForm.controls.state.dirty)">
+            <span *ngIf="addCustomerVendorForm.controls.state.errors?.required" class="text-danger">State is required</span>
+        </div>
       </div>
     </div>
 
@@ -207,7 +222,8 @@
     </div>
     <hr>
     <div class="row">
-      <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+      <app-button [btnText]="'Save'" (click)="onSubmitAddCustomerVendorForm(addCustomerVendorForm)" [btnIcon]="'save'"
+        [btnClass]="'btn btn-primary'"></app-button>
       <app-button [btnText]="'Back'" [btnIcon]="'close'" [btnClass]="'btn btn-secondary'"></app-button>
     </div>
   </form>

@@ -1,14 +1,20 @@
 <div class="add-new-transSaleInvoice">
     <div class="widget-content">
-      <form>
-  
+      <form [formGroup]="addTransForm" (ngSubmit)="onSubmitAddTransForm(addTransForm)">
         <div class="form-group row">
           <div class="col-4 col-form-label">
             <label for="transName" class="">Transport Name</label>
           </div>
           <div class="col-8">
+              <span [ngClass]="{
+                'input-error': addTransForm.controls.transName.invalid && (addTransForm.controls.transName.touched || addTransForm.controls.transName.dirty)
+            }">
             <input type="text" class="form-control form-control-sm"
-              placeholder="Enter your transport name" id="transName">
+              placeholder="Enter your transport name" id="transName" formControlName="transName">
+              </span>
+              <div *ngIf="addTransForm.controls.transName.invalid && (addTransForm.controls.transName.touched || addTransForm.controls.transName.dirty)">
+                  <span *ngIf="addTransForm.controls.transName.errors?.required" class="text-danger">Please enter your transport name</span>
+              </div>
           </div>
         </div>
   
@@ -33,7 +39,7 @@
         </div>
 
         <div class="btnContainer"> 
-          <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+          <app-button [btnText]="'Save'" (click)="onSubmitAddTransForm(addTransForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
           <app-button [btnText]="'Back'" [btnIcon]="'close'" [btnClass]="'btn-secondary'"></app-button>
         </div>
       </form>
