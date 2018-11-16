@@ -1,0 +1,35 @@
+.contentContainer {
+    border: 1px solid #D5D5D5;
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    > .row {
+        border-bottom: 1px solid #D5D5D5;
+        // align-items: center;
+        &:nth-child(odd){
+            background: #f9f9f9;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background: #f9f9f9;
+        }
+        > div {
+            padding: 6px 10px;
+            &:last-child {
+            border-left: 1px solid #D5D5D5;
+            }
+        }
+        .btn-contain {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type='date'] {
+            border: 1px solid #D5D5D5;
+        }
+    }
+}
+
