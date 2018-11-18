@@ -1,8 +1,8 @@
-<div class="mt-4">
+<div class="mt-4" [formGroup]="addPurchaseInvForm">
     <div>
       <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Purchase Invoice Detail'"></app-gst-widget-header>
     </div>
-    <form class="purchaseInvoiceDetail">
+    <div class="purchaseInvoiceDetail">
       <div class="row">
         <div class="form-group col-12 col-md-6">
           <div class="row">
@@ -10,7 +10,14 @@
               <label for="invoiceNo" class="">Invoice No.</label>
             </div>
             <div class="col-12 col-md-8">
-              <input type="text" class="form-control form-control-sm" placeholder="Invoice No." id="invoiceNo">
+                <span [ngClass]="{
+                  'input-error': addPurchaseInvForm.controls.invoiceNo.invalid && (addPurchaseInvForm.controls.invoiceNo.touched || addPurchaseInvForm.controls.invoiceNo.dirty)
+              }">
+              <input type="text" class="form-control form-control-sm" placeholder="Invoice No." id="invoiceNo" formControlName="invoiceNo">
+              </span>
+              <div *ngIf="addPurchaseInvForm.controls.invoiceNo.invalid && (addPurchaseInvForm.controls.invoiceNo.touched || addPurchaseInvForm.controls.invoiceNo.dirty)">
+                  <span *ngIf="addPurchaseInvForm.controls.invoiceNo.errors?.required" class="text-danger">This field is required</span>
+              </div>
             </div>
           </div>
         </div>
@@ -123,5 +130,5 @@
           </div>
         </div>
 
-    </form>
+      </div>
   </div>

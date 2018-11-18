@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Validators,FormGroup, FormControl } from '@angular/forms';
+import { CommonUtilService } from '@app/core/services/common-util.service';
 
 @Component({
   selector: 'app-vendor-information',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vendor-information.component.scss']
 })
 export class VendorInformationComponent implements OnInit {
+  @Input() addPurchaseInvForm : FormGroup;
 
-  constructor() { }
+  constructor(
+    private _commonUtil: CommonUtilService
+  ) { }
 
   ngOnInit() {
   }

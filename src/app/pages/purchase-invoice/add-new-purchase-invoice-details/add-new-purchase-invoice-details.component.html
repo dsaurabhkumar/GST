@@ -1,11 +1,12 @@
 <div class="purchase-invoice-form">
   <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'PURCHASE INVOICE'"></app-gst-widget-header>
+  <form [formGroup]="addPurchaseInvForm" (ngSubmit)="onSubmitPurchaseInvForm(addPurchaseInvForm)">
   <div class="row purchase-invoice-form-content">
     <div class="col-12 col-md-5">
-      <app-vendor-information></app-vendor-information>
+      <app-vendor-information [addPurchaseInvForm]="addPurchaseInvForm"></app-vendor-information>
     </div>
     <div class="col-12 col-md-7 purchase-invoice-detail">
-      <app-purchase-invoice-detail></app-purchase-invoice-detail>
+      <app-purchase-invoice-detail [addPurchaseInvForm]="addPurchaseInvForm"></app-purchase-invoice-detail>
     </div>
     <div class="mt-4 col-12 app-product-items">
       <app-gst-widget-header [iconName]="'th-list'" [headingContent]="'Product Items'"></app-gst-widget-header>
@@ -20,7 +21,12 @@
         <app-product-items></app-product-items>
       </div>
     </div>
+    <div class="col-12 text-right mt-4">
+        <app-button [btnText]="'Save'" (click)="onSubmitPurchaseInvForm(addPurchaseInvForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+      </div>
   </div>
+</form>
+</div>
 
   <app-modal [modalId]="'addNewProPurchaseModal'" [heading]="'Add Product'" [size]="'md'">
     <app-add-new-prod-purchase-invoice></app-add-new-prod-purchase-invoice>
