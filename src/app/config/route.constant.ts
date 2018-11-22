@@ -229,6 +229,11 @@ export const ROUTES = {
                     route: 'add-new-payment-receipt',
                     name: 'Add-new-payment-receipt',
                     absoluteRoute: '/paymentReceipt/add-new-payment-receipt'
+                },
+                addOutwardPaymentReceipt : {
+                    route: 'add-new-out-payment-receipt',
+                    name: 'Add-new-out-payment-receipt',
+                    absoluteRoute: '/paymentReceipt/add-new-out-payment-receipt'
                 }
             }
         },

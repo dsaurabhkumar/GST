@@ -15,12 +15,19 @@ import { AddCustSaleInvoiceModalComponent } from './add-cust-sale-invoice-modal/
 import { AddNewTransSaleInvoiceComponent } from './add-new-trans-sale-invoice/add-new-trans-sale-invoice.component';
 import { AddNewProSaleInvoiceComponent } from './add-new-pro-sale-invoice/add-new-pro-sale-invoice.component';
 import { AddPackChargesSaleInvoiceComponent } from './add-pack-charges-sale-invoice/add-pack-charges-sale-invoice.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     SaleInvoiceRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [SaleInvoiceBaseComponent, SearchInvoiceBillComponent, InvoiceSummaryComponent, InvoiceListComponent, AddNewInvoiceListComponent, CustomerInfoComponent, InvoiceDetailsComponent, ProductItemsComponent, AddCustSaleInvoiceModalComponent, AddNewTransSaleInvoiceComponent, AddNewProSaleInvoiceComponent, AddPackChargesSaleInvoiceComponent]
 })

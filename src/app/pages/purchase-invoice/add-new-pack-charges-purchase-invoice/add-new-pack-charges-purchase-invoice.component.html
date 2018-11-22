@@ -1,15 +1,23 @@
 <div class="add-new-pack-charges-purchase-invoice">
         
   <div class="widget-content">
-    <form>
+    <form [formGroup]="addNewChargeForm" (ngSubmit)="onSubmitChargeForm(addNewChargeForm)">
 
       <div class="form-group row">
         <div class="col-4 col-form-label">
-          <label for="name" class="">Name *</label>
+          <label for="transChargeName" class="">Name *</label>
         </div>
         <div class="col-8">
+            <span [ngClass]="{
+              'input-error': addNewChargeForm.controls.transChargeName.invalid && (addNewChargeForm.controls.transChargeName.touched || addNewChargeForm.controls.transChargeName.dirty)
+          }">
           <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your purchase name" id="name">
+            placeholder="Enter your purchase name" id="transChargeName" formControlName="transChargeName">
+            </span>
+            <div *ngIf="addNewChargeForm.controls.transChargeName.invalid && (addNewChargeForm.controls.transChargeName.touched || addNewChargeForm.controls.transChargeName.dirty)">
+                <span *ngIf="addNewChargeForm.controls.transChargeName.errors?.required" class="text-danger">Please enter transport charge name
+                  </span>
+              </div>
         </div>
       </div>
 
@@ -67,7 +75,7 @@
       </div>
       
       <div class="btnContainer">
-        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn
+        <app-button [btnText]="'Save'" (click)="onSubmitChargeForm(addNewChargeForm)" [btnIcon]="'save'" [btnClass]="'btn
           btn-primary'"></app-button>
         <app-button [btnText]="'Close'" (click)="backToProductBase()"
           [btnIcon]="'close'"

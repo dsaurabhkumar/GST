@@ -8,12 +8,19 @@ import { DailyExpenseSummaryComponent } from './daily-expense-summary/daily-expe
 import { DailyExpenseListComponent } from './daily-expense-list/daily-expense-list.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { AddNewDailyExpenseComponent } from './add-new-daily-expense/add-new-daily-expense.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     DailyExpenseRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [DailyExpenseBaseComponent, SearchDailyExpenseComponent, DailyExpenseSummaryComponent, DailyExpenseListComponent, AddNewDailyExpenseComponent]
 })

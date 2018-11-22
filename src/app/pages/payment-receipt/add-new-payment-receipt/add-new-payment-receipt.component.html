@@ -3,7 +3,7 @@
     <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Payment Receipt'"></app-gst-widget-header>
   </div>
   <div class="widget-content">
-    <form>
+    <form [formGroup]="addInwardReceiptForm" (ngSubmit)="OnSubmitInwardReceiptForm(addInwardReceiptForm)">
       <div class="form-group row">
         <div class="col-2 col-form-label">
           <label for="receiptNo" class="">Receipt No</label>
@@ -18,9 +18,16 @@
           <label for="companyName" class="">Company Name</label>
         </div>
         <div class="col-5">
-          <select class="form-control form-control-sm" id="companyName">
+            <span [ngClass]="{
+              'input-error': addInwardReceiptForm.controls.companyName.invalid && (addInwardReceiptForm.controls.companyName.touched || addInwardReceiptForm.controls.companyName.dirty)
+          }">
+          <select class="form-control form-control-sm" id="companyName" formControlName="companyName">
             <option></option>
           </select>
+          </span>
+          <div *ngIf="addInwardReceiptForm.controls.companyName.invalid && (addInwardReceiptForm.controls.companyName.touched || addInwardReceiptForm.controls.companyName.dirty)">
+              <span *ngIf="addInwardReceiptForm.controls.companyName.errors?.required" class="text-danger">Please choose company name</span>
+          </div>
         </div>
       </div>
 
@@ -69,8 +76,15 @@
           </label>
         </div>
         <div class="col-5">
-          <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your payment date" id="paymentDate">
+            <span [ngClass]="{
+              'input-error': addInwardReceiptForm.controls.paymentDate.invalid && (addInwardReceiptForm.controls.paymentDate.touched || addInwardReceiptForm.controls.paymentDate.dirty)
+          }">
+          <input type="date" class="form-control form-control-sm"
+            placeholder="Enter your payment date" id="paymentDate" formControlName="paymentDate">
+            </span>
+            <div *ngIf="addInwardReceiptForm.controls.paymentDate.invalid && (addInwardReceiptForm.controls.paymentDate.touched || addInwardReceiptForm.controls.paymentDate.dirty)">
+                <span *ngIf="addInwardReceiptForm.controls.paymentDate.errors?.required" class="text-danger">Please choose your payment date</span>
+            </div>
         </div>
       </div>
 
@@ -92,8 +106,17 @@
           </label>
         </div>
         <div class="col-5">
+            <span [ngClass]="{
+              'input-error': addInwardReceiptForm.controls.amount.invalid && (addInwardReceiptForm.controls.amount.touched || addInwardReceiptForm.controls.amount.dirty)
+          }">
           <input type="text" class="form-control form-control-sm"
-            placeholder="Enter your amount" id="amount">
+            placeholder="Enter your amount" id="amount" formControlName="amount">
+            </span>
+            <div *ngIf="addInwardReceiptForm.controls.amount.invalid && (addInwardReceiptForm.controls.amount.touched || addInwardReceiptForm.controls.amount.dirty)">
+                <span *ngIf="addInwardReceiptForm.controls.amount.errors?.required" class="text-danger">Please enter amount</span>
+                <span *ngIf="addInwardReceiptForm.controls.amount.errors?.pattern" class="text-danger">Please enter
+                    valid amount</span>
+            </div>
         </div>
       </div>
 
@@ -108,7 +131,7 @@
       </div>
 
       <div class="btnContainer mt-4">
-        <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+        <app-button [btnText]="'Save'" (click)="OnSubmitInwardReceiptForm(addInwardReceiptForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
         <app-button [btnText]="'Back'" (click)="backToInwardPayment()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
       </div>
     </form>

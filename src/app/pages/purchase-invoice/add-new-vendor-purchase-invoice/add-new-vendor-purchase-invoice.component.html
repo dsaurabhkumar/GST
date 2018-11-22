@@ -1,11 +1,18 @@
 <div>
-  <form class="formAlignment">
+  <form class="formAlignment" [formGroup]="addnewVendorForm" (ngSubmit)="onSubmitVendorForm(addnewVendorForm)">
     <div class="form-group row">
       <div class="col-4 col-form-label">
-        <label for="VenName" class="">Customer / Vendor Name *</label>
+        <label for="VendorName" class="">Customer / Vendor Name *</label>
       </div>
       <div class="col-8">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="VenName">
+          <span [ngClass]="{
+            'input-error': addnewVendorForm.controls.VendorName.invalid && (addnewVendorForm.controls.VendorName.touched || addnewVendorForm.controls.VendorName.dirty)
+        }">
+        <input type="text" class="form-control form-control-sm" placeholder="Enter your customer / vendor name" id="VendorName" formControlName="VendorName">
+        </span>
+        <div *ngIf="addnewVendorForm.controls.VendorName.invalid && (addnewVendorForm.controls.VendorName.touched || addnewVendorForm.controls.VendorName.dirty)">
+            <span *ngIf="addnewVendorForm.controls.VendorName.errors?.required" class="text-danger">Please enter customer / vendor name</span>
+        </div>
       </div>
     </div>
 
@@ -33,7 +40,7 @@
       </div>
       <div class="col-8">
         <input type="text" class="form-control form-control-sm" placeholder="Enter your address1" id="address">
-        <input type="text" class="form-control form-control-sm" placeholder="Enter your address2">
+        <input type="text" class="form-control form-control-sm mt-2" placeholder="Enter your address2">
       </div>
     </div>
 
@@ -63,10 +70,17 @@
         <label for="state" class="">State *</label>
       </div>
       <div class="col-8 col-form-label">
-        <select class="form-control form-control-sm" id="state">
+          <span [ngClass]="{
+            'input-error': addnewVendorForm.controls.state.invalid && (addnewVendorForm.controls.state.touched || addnewVendorForm.controls.state.dirty)
+        }">
+        <select class="form-control form-control-sm" id="state" formControlName="state">
           <option value="">Select State</option>
           <option value="state" *ngFor="let state of states">{{state}}</option>
         </select>
+        </span>
+        <div *ngIf="addnewVendorForm.controls.state.invalid && (addnewVendorForm.controls.state.touched || addnewVendorForm.controls.state.dirty)">
+            <span *ngIf="addnewVendorForm.controls.state.errors?.required" class="text-danger">Please enter state name</span>
+        </div>
       </div>
     </div>
 
@@ -145,7 +159,7 @@
     </div>
     <hr>
     <div>
-      <h5>Additional Shipping Address <i class="fa fa-caret-down" aria-hidden="true"></i></h5>
+      <h6>Additional Shipping Address <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
     </div>
     <hr>
 
@@ -209,7 +223,7 @@
                 <hr>
 
     <div class="row">
-      <app-button [btnText]="'Save'" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+      <app-button [btnText]="'Save'" (click)="onSubmitVendorForm(addnewVendorForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
       <app-button [btnText]="'Back'" [btnIcon]="'close'" [btnClass]="'btn btn-secondary'"></app-button>
     </div>
   </form>

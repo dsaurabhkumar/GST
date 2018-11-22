@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CoreConstant} from '@app/config/core.constant';
+import { Validators,FormGroup, FormControl } from '@angular/forms';
+import { CommonUtilService } from '@app/core/services/common-util.service';
 @Component({
   selector: 'app-customer-info',
   templateUrl: './customer-info.component.html',
@@ -7,9 +9,12 @@ import { CoreConstant} from '@app/config/core.constant';
 })
 export class CustomerInfoComponent implements OnInit {
   states = CoreConstant.states;
-  isSameAsShippingAddress: boolean = false;
+  isSameAsShippingAddress: boolean = true;
+  @Input() addInvoiceForm : FormGroup;
 
-  constructor() { }
+  constructor(
+    private _commonUtil: CommonUtilService
+  ) { }
 
   ngOnInit() {
   }

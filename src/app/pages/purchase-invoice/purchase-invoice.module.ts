@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PurchaseInvoiceRoutingModule } from './purchase-invoice-routing.module';
 import { PurchaseInvoiceBaseComponent } from './purchase-invoice-base/purchase-invoice-base.component';
@@ -20,7 +21,13 @@ import { AddNewPackChargesPurchaseInvoiceComponent } from './add-new-pack-charge
   imports: [
     CommonModule,
     PurchaseInvoiceRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [PurchaseInvoiceBaseComponent, SearchPurchaseInvoiceBillComponent, PurchaseInvoiceSummaryComponent, PurchaseInvoiceListComponent, AddNewPurchaseInvoiceDetailsComponent, VendorInformationComponent, PurchaseInvoiceDetailComponent, ProductItemsComponent, AddNewVendorPurchaseInvoiceComponent, AddNewTransPurchaseInvoiceComponent, AddNewProdPurchaseInvoiceComponent, AddNewPackChargesPurchaseInvoiceComponent]
 })
