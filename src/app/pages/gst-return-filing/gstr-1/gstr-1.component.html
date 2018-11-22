@@ -1,3 +1,33 @@
-<p>
-  gstr-1 works!
-</p>
+<app-gst-widget-header [headingContent]="'Tax Period'" [iconName]="'search'"></app-gst-widget-header>
+<div class="widget-content">
+  <form>
+    <div class="row">
+      <div class="col-2">
+        <span>
+          Search By Start Date :
+        </span>
+        <input type="date">
+      </div>
+      <div class="col-2">
+        <span>
+            Search By End Date :
+        </span>
+        <input type="date">
+      </div>
+      <div class="col-2">
+        <div class="widget-btn">
+          <app-button [btnIcon]="'search'" [btnText]="'Search'" [btnClass]="'btn btn-primary'"></app-button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<app-google-ads></app-google-ads>
+
+<app-gst-widget-header [headingContent]="'GSTR-1'" [iconName]="'list'"></app-gst-widget-header>
+<div class="widget-content">
+  <gst-nav></gst-nav>
+</div>
+
+<app-google-ads></app-google-ads>

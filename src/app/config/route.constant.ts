@@ -204,10 +204,10 @@ export const ROUTES = {
             module: '../pages/exports/exports.module#ExportsModule'
         },
         gstReturn: {
-            route: 'gstReturn',
+            route: 'gst-return',
             name: 'GstReturn',
-            absoluteRoute: '/gstReturn',
-            module: '../pages/gst-return-filing/gst-return-filing.module#GstReturnFilingModule'
+            absoluteRoute: '/gst-return',
+            module: '../pages/gst-return-filing/gst-return-filing.module#GstReturnFilingModule',
         },
         paymentReceipt: {
             route: 'paymentReceipt',

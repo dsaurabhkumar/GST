@@ -1,0 +1,28 @@
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #d5d5d5;
+    li {
+      display: inline-block;
+      border-radius: 5px 5px 0 0;
+      color: #19bc9c;
+      a {
+        color: #19bc9c;
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 14px;
+      }
+      &.active {
+        border: 1px solid #d5d5d5;
+        border-bottom: 1px solid #fff;
+        margin-bottom: -1px;
+        pointer-events: none;
+      }
+      &:hover:not(.active) {
+        background: #eeeeee;
+        cursor: pointer;
+      }
+    }
+  }
+}
