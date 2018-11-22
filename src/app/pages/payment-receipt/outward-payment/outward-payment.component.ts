@@ -17,7 +17,7 @@ export class OutwardPaymentComponent implements OnInit {
   }
   
   addNewPaymentReceiptOut() {
-    this._router.navigate([ROUTES.paymentReceipt.children.addPaymentReceipt.absoluteRoute]);
+    this._router.navigate([ROUTES.paymentReceipt.children.addOutwardPaymentReceipt.absoluteRoute]);
   }
 
 }

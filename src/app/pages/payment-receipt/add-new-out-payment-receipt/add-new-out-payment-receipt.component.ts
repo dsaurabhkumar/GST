@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { CoreConstant } from "@app/config/core.constant";
 import { Router } from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
-import { Validators,FormGroup, FormControl } from '@angular/forms';
+import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { CommonUtilService } from '@app/core/services/common-util.service';
 
 @Component({
-  selector: 'app-add-new-payment-receipt',
-  templateUrl: './add-new-payment-receipt.component.html',
-  styleUrls: ['./add-new-payment-receipt.component.scss']
+  selector: 'app-add-new-out-payment-receipt',
+  templateUrl: './add-new-out-payment-receipt.component.html',
+  styleUrls: ['./add-new-out-payment-receipt.component.css']
 })
-export class AddNewPaymentReceiptComponent implements OnInit {
-  addInwardReceiptForm: FormGroup
+export class AddNewOutPaymentReceiptComponent implements OnInit {
+  addOutwardReceiptForm: FormGroup
   paymentType = CoreConstant.paymentType;
-  showChooseInvNo : boolean = false;
+  showChooseInvNo: boolean = false;
 
   constructor(
     private _router: Router,
@@ -23,9 +23,8 @@ export class AddNewPaymentReceiptComponent implements OnInit {
   ngOnInit() {
     this.createForm();
   }
-
   chooseInvNo(event) {
-    if(event.target.value == "onInvoice") {
+    if (event.target.value == "onInvoice") {
       this.showChooseInvNo = true;
     } else {
       this.showChooseInvNo = false;
@@ -33,20 +32,21 @@ export class AddNewPaymentReceiptComponent implements OnInit {
   }
 
   backToInwardPayment() {
-      this._router.navigate([ROUTES.paymentReceipt.absoluteRoute]);
+    this._router.navigate([ROUTES.paymentReceipt.absoluteRoute]);
   }
 
-  OnSubmitInwardReceiptForm(form){
+  OnSubmitOutwardReceiptForm(form) {
     this._commonUtil.validateForm(form);
-    if(form.invalid)
-    return;
+    if (form.invalid)
+      return;
   }
 
-  createForm(){
-    this.addInwardReceiptForm = new FormGroup({
+  createForm() {
+    this.addOutwardReceiptForm = new FormGroup({
       'companyName': new FormControl('', Validators.required),
       'paymentDate': new FormControl('', Validators.required),
       'amount': new FormControl('', [Validators.required, Validators.pattern(CoreConstant.pattern.float)])
     })
   }
+
 }

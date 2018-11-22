@@ -1,0 +1,141 @@
+<div class="add-new-out-payment-receipt">
+    <div class="widget-header">
+      <app-gst-widget-header [iconName]="'pencil'" [headingContent]="'Add Payment Receipt'"></app-gst-widget-header>
+    </div>
+    <div class="widget-content">
+      <form [formGroup]="addOutwardReceiptForm" (ngSubmit)="OnSubmitOutwardReceiptForm(addOutwardReceiptForm)">
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="receiptNo" class="">Receipt No</label>
+          </div>
+          <div class="col-5">
+            <input type="text" class="form-control form-control-sm" value="1" placeholder="Enter your product name" id="receiptNo">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="companyName" class="">Company Name</label>
+          </div>
+          <div class="col-5">
+              <span [ngClass]="{
+                'input-error': addOutwardReceiptForm.controls.companyName.invalid && (addOutwardReceiptForm.controls.companyName.touched || addOutwardReceiptForm.controls.companyName.dirty)
+            }">
+            <select class="form-control form-control-sm" id="companyName" formControlName="companyName">
+              <option></option>
+            </select>
+            </span>
+            <div *ngIf="addOutwardReceiptForm.controls.companyName.invalid && (addOutwardReceiptForm.controls.companyName.touched || addOutwardReceiptForm.controls.companyName.dirty)">
+                <span *ngIf="addOutwardReceiptForm.controls.companyName.errors?.required" class="text-danger">Please choose company name</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="paymentOption" class="">Payment Option</label>
+          </div>
+          <div class="col-5 align-self-center">
+            <div class="row ml-0">
+              <label class="radio-inline">
+                <input type="radio" id="paymentOption" name="optradio" value="onAccount" checked (change)="chooseInvNo($event);">On Account
+              </label>
+              <label class="radio-inline radioBtnOpt">
+                <input type="radio" class="" name="optradio" value="onInvoice" (change)="chooseInvNo($event);">On Invoice
+              </label>
+            </div>
+          </div>
+        </div>
+  
+        <div *ngIf="showChooseInvNo">
+        <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <label for="firstname" class="">Choose Invoice No
+              </label>
+            </div>
+            <div class="col-5 note">
+                Note : (Inv No.) - Remaining Amount
+            </div>
+          </div>
+          <div class="row row_align ml-0">
+            <div class="col-2"></div>
+            <div class="col-2 text-center deselectedInv mr-4 p-0">
+                Deselected Inv No.
+              <ul class="ms_list mb-0"></ul>
+              </div>
+            <div class="col-2 text-center selectedInv p-0">
+              Selected Inv No.
+              <ul class="ms_list mb-0"></ul>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="paymentDate" class="">Payment Date
+            </label>
+          </div>
+          <div class="col-5">
+              <span [ngClass]="{
+                'input-error': addOutwardReceiptForm.controls.paymentDate.invalid && (addOutwardReceiptForm.controls.paymentDate.touched || addOutwardReceiptForm.controls.paymentDate.dirty)
+            }">
+            <input type="date" class="form-control form-control-sm"
+              placeholder="Enter your payment date" id="paymentDate" formControlName="paymentDate">
+              </span>
+              <div *ngIf="addOutwardReceiptForm.controls.paymentDate.invalid && (addOutwardReceiptForm.controls.paymentDate.touched || addOutwardReceiptForm.controls.paymentDate.dirty)">
+                  <span *ngIf="addOutwardReceiptForm.controls.paymentDate.errors?.required" class="text-danger">Please choose your payment date</span>
+              </div>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="paymentType" class="">Payment Type
+            </label>
+          </div>
+          <div class="col-5 col-form-label">
+            <select class="form-control form-control-sm" id="paymentType">
+              <option value="{{paymentOptions}}" *ngFor="let paymentOptions of paymentType">{{paymentOptions}}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="amount" class="">Amount
+            </label>
+          </div>
+          <div class="col-5">
+              <span [ngClass]="{
+                'input-error': addOutwardReceiptForm.controls.amount.invalid && (addOutwardReceiptForm.controls.amount.touched || addOutwardReceiptForm.controls.amount.dirty)
+            }">
+            <input type="text" class="form-control form-control-sm"
+              placeholder="Enter your amount" id="amount" formControlName="amount">
+              </span>
+              <div *ngIf="addOutwardReceiptForm.controls.amount.invalid && (addOutwardReceiptForm.controls.amount.touched || addOutwardReceiptForm.controls.amount.dirty)">
+                  <span *ngIf="addOutwardReceiptForm.controls.amount.errors?.required" class="text-danger">Please enter amount</span>
+                  <span *ngIf="addOutwardReceiptForm.controls.amount.errors?.pattern" class="text-danger">Please enter
+                      valid amount</span>
+              </div>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <div class="col-2 col-form-label">
+            <label for="paymentNote" class="">Payment Note
+            </label>
+          </div>
+          <div class="col-5">
+              <textarea placeholder="Enter your payment note" class="form-control form-control-sm" id="paymentNote"></textarea>
+          </div>
+        </div>
+  
+        <div class="btnContainer mt-4">
+          <app-button [btnText]="'Save'" (click)="OnSubmitOutwardReceiptForm(addOutwardReceiptForm)" [btnIcon]="'save'" [btnClass]="'btn btn-primary'"></app-button>
+          <app-button [btnText]="'Back'" (click)="backToInwardPayment()" [btnIcon]="'chevron-left'" [btnClass]="'btn-secondary'"></app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
