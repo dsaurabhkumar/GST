@@ -3,14 +3,14 @@
     <div class="">
         <div class="row m-0 subheading subheading-wrap">
             <div class="col-10">NAME</div>
-            <div class="col-2">ACTION</div>
+            <div class="col-2 text-center">ACTION</div>
         </div>
     </div>
 </header>
 
 <section class="contentContainer">
     <div class="row m-0">
-        <div class="col-10">All Customers Details</div>
+        <div class="col-10 exportsNameText">All Customers Details</div>
         <div class="col-2">
             <div class="btn-contain">
                 <app-button [btnText]="'Export Customers'" [btnClass]="'btn btn-primary btn-align'"></app-button>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">All Products Details</div>
+        <div class="col-10 exportsNameText">All Products Details</div>
         <div class="col-2">
             <div class="btn-contain">
                 <app-button [btnText]="'Export Products'" [btnClass]="'btn btn-primary btn-align'"></app-button>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">All Transport Details</div>
+        <div class="col-10 exportsNameText">All Transport Details</div>
         <div class="col-2">
             <div class="btn-contain">
                 <app-button [btnText]="'Export Transport'" [btnClass]="'btn btn-primary btn-align'"></app-button>
@@ -34,13 +34,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Sale Invoice
             <br> <br>
             <div>
-                <label for="inputSaleInvDateFrom"> Date From </label>
+                <label for="inputSaleInvDateFrom"> Date From: </label>
                 <input type="date" id="inputSaleInvDateFrom">
-                <label for="DateTo" id="inputSaleInvDateTo"> Date To </label>
+                <label for="DateTo" id="inputSaleInvDateTo"> Date To: </label>
                 <input type="date" id="inputSaleInvDateTo">
             </div>
             <div>
@@ -56,13 +56,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Purchase Invoice
             <br><br>
             <div>
-                <label for="inputPurchaseInvDateFrom"> Date From </label>
+                <label for="inputPurchaseInvDateFrom"> Date From: </label>
                 <input type="date" id="inputPurchaseInvDateFrom">
-                <label for="DateTo" id="inputPurchaseInvDateTo"> Date To </label>
+                <label for="DateTo" id="inputPurchaseInvDateTo"> Date To: </label>
                 <input type="date" id="inputPurchaseInvDateTo">
             </div>
             <div>
@@ -78,12 +78,12 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Delivery Challan
             <div>
-                <label for="inputDelChallanDateFrom"> Date From </label>
+                <label for="inputDelChallanDateFrom"> Date From: </label>
                 <input type="date" id="inputDelChallanDateFrom">
-                <label for="DateTo" id="inputDelChallanDateTo"> Date To </label>
+                <label for="DateTo" id="inputDelChallanDateTo"> Date To: </label>
                 <input type="date" id="inputDelChallanDateTo">
             </div>
         </div>
@@ -94,13 +94,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Quotation
             <br><br>
             <div>
-                <label for="inputQuotationDateFrom"> Date From </label>
+                <label for="inputQuotationDateFrom"> Date From: </label>
                 <input type="date" id="inputQuotationDateFrom">
-                <label for="DateTo" id="inputQuotationDateTo"> Date To </label>
+                <label for="DateTo" id="inputQuotationDateTo"> Date To: </label>
                 <input type="date" id="inputQuotationDateTo">
             </div>
         </div>
@@ -111,13 +111,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Proforma Invoice
             <br> <br>
             <div>
-                <label for="inputProformaInvFrom"> Date From </label>
+                <label for="inputProformaInvFrom"> Date From: </label>
                 <input type="date" id="inputProformaInvDateFrom">
-                <label for="DateTo" id="inputProformaInvDateTo"> Date To </label>
+                <label for="DateTo" id="inputProformaInvDateTo"> Date To: </label>
                 <input type="date" id="inputProformaInvDateTo">
             </div>
         </div>
@@ -128,13 +128,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Purchase Order
             <br><br>
             <div>
-                <label for="inputPurchaseOrderFrom"> Date From </label>
+                <label for="inputPurchaseOrderFrom"> Date From: </label>
                 <input type="date" id="inputPurchaseOrderDateFrom">
-                <label for="DateTo" id="inputPurchaseOrderDateTo"> Date To </label>
+                <label for="DateTo" id="inputPurchaseOrderDateTo"> Date To: </label>
                 <input type="date" id="inputPurchaseOrderDateTo">
             </div>
         </div>
@@ -145,13 +145,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Daily Expense
             <br><br>
             <div>
-                <label for="inputDailyExpFrom"> Date From </label>
+                <label for="inputDailyExpFrom"> Date From: </label>
                 <input type="date" id="inputDailyExpDateFrom">
-                <label for="DateTo" id="inputDailyExpDateTo"> Date To </label>
+                <label for="DateTo" id="inputDailyExpDateTo"> Date To: </label>
                 <input type="date" id="inputDailyExpDateTo">
             </div>
         </div>
@@ -162,13 +162,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Credit Note
             <br><br>
             <div>
-                <label for="inputCreditNoteFrom"> Date From </label>
+                <label for="inputCreditNoteFrom"> Date From: </label>
                 <input type="date" id="inputCreditNoteDateFrom">
-                <label for="DateTo" id="inputCreditNoteDateTo"> Date To </label>
+                <label for="DateTo" id="inputCreditNoteDateTo"> Date To: </label>
                 <input type="date" id="inputCreditNoteDateTo">
             </div>
         </div>
@@ -179,13 +179,13 @@
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-10">
+        <div class="col-10 exportsNameText">
             Debit Note
             <br><br>
             <div>
-                <label for="inputDebitNoteFrom"> Date From </label>
+                <label for="inputDebitNoteFrom"> Date From: </label>
                 <input type="date" id="inputDebitNoteDateFrom">
-                <label for="DateTo" id="inputDebitNoteDateTo"> Date To </label>
+                <label for="DateTo" id="inputDebitNoteDateTo"> Date To: </label>
                 <input type="date" id="inputDebitNoteDateTo">
             </div>
         </div>
