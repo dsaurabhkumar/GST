@@ -3,6 +3,19 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { ROUTES } from '@app/config/route.constant';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DashboardModule } from '@app/pages/dashboard/dashboard.module';
+import { SettingsModule } from '@app/pages/settings/settings.module';
+import { CustomersModule } from '@app/pages/customers/customers.module';
+import { TransportModule } from '@app/pages/transport/transport.module';
+import { ProductsModule } from '@app/pages/products/products.module';
+import { SaleInvoiceModule } from '@app/pages/sale-invoice/sale-invoice.module';
+import { PurchaseInvoiceModule } from '@app/pages/purchase-invoice/purchase-invoice.module';
+import { DailyExpenseModule } from '@app/pages/daily-expense/daily-expense.module';
+import { OtherDocumentsModule } from '@app/pages/other-documents/other-documents.module';
+import { ExportsModule } from '@app/pages/exports/exports.module';
+import { GstReturnFilingModule } from '@app/pages/gst-return-filing/gst-return-filing.module';
+import { PaymentReceiptModule } from '@app/pages/payment-receipt/payment-receipt.module';
+import { ReportModule } from '@app/pages/report/report.module';
 
 
 const routes: Routes = [
@@ -11,55 +24,55 @@ const routes: Routes = [
   }, 
   {
     path: ROUTES.dashboard.route,
-    loadChildren: ROUTES.dashboard.module
+    loadChildren: () => DashboardModule
   },
   {
     path: ROUTES.settings.route,
-    loadChildren: ROUTES.settings.module
+    loadChildren: () => SettingsModule
   },
   {
     path: ROUTES.customers.route,
-    loadChildren: ROUTES.customers.module
+    loadChildren: () => CustomersModule
   },
   {
     path: ROUTES.transport.route,
-    loadChildren: ROUTES.transport.module
+    loadChildren: () => TransportModule
   },
   {
     path: ROUTES.products.route,
-    loadChildren: ROUTES.products.module
+    loadChildren: () => ProductsModule
   },
   {
     path: ROUTES.saleInvoice.route,
-    loadChildren: ROUTES.saleInvoice.module
+    loadChildren: () => SaleInvoiceModule
   },
   {
     path: ROUTES.purchaseInvoice.route,
-    loadChildren: ROUTES.purchaseInvoice.module
+    loadChildren: () => PurchaseInvoiceModule
   },
   {
     path: ROUTES.dailyExpense.route,
-    loadChildren: ROUTES.dailyExpense.module
+    loadChildren: () => DailyExpenseModule
   },
   {
     path: ROUTES.otherDocs.route,
-    loadChildren: ROUTES.otherDocs.module
+    loadChildren: () => OtherDocumentsModule
   },
   {
     path: ROUTES.exports.route,
-    loadChildren: ROUTES.exports.module
+    loadChildren: () => ExportsModule
   },
   {
     path: ROUTES.gstReturn.route,
-    loadChildren: ROUTES.gstReturn.module
+    loadChildren: () => GstReturnFilingModule
   },
   {
     path: ROUTES.paymentReceipt.route,
-    loadChildren: ROUTES.paymentReceipt.module
+    loadChildren: () => PaymentReceiptModule
   },
   {
     path: ROUTES.report.route,
-    loadChildren: ROUTES.report.module
+    loadChildren: () => ReportModule
   },
   {
     path : '**',

@@ -12,7 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input() btnClass: string="btn-default";
   @Input() modalId: string;
 
-  @ViewChild('btnView') btnView: ElementRef;;
+  @ViewChild('btnView', {static: false}) btnView: ElementRef;;
 
   constructor() { }
 

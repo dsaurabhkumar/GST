@@ -3,13 +3,13 @@ export const ROUTES = {
             route: 'dashboard',
             name: 'Dashboard',
             absoluteRoute:'/dashboard',
-            module: '../pages/dashboard/dashboard.module#DashboardModule'
+            loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
         },
         settings : {
             route: 'settings',
             name: 'Settings',
             absoluteRoute: '/settings',
-            module: '../pages/settings/settings.module#SettingsModule',
+            loadChildren: '../pages/settings/settings.module#SettingsModule',
             children : {
                 organisation: {
                     editOrganisation: {
@@ -38,7 +38,7 @@ export const ROUTES = {
             route: 'customers',
             name: 'Customers',
             absoluteRoute: '/customers',
-            module: '../pages/customers/customers.module#CustomersModule',
+            loadChildren: '../pages/customers/customers.module#CustomersModule',
             children : {
                 customerComp: {
                     addNewDetails: {
@@ -53,7 +53,7 @@ export const ROUTES = {
             route: 'transport',
             name: 'Transport',
             absoluteRoute: '/transport',
-            module: '../pages/transport/transport.module#TransportModule',
+            loadChildren: '../pages/transport/transport.module#TransportModule',
             children: {
                 transportCharges: {
                     route: 'transportCharges',
@@ -81,7 +81,7 @@ export const ROUTES = {
             route: 'products',
             name: 'Products',
             absoluteRoute: '/products',
-            module: '../pages/products/products.module#ProductsModule',
+            loadChildren: '../pages/products/products.module#ProductsModule',
             children: {
                 stock: {
                     route: 'stock',
@@ -99,7 +99,7 @@ export const ROUTES = {
             route: 'saleInvoice',
             name: 'SaleInvoice',
             absoluteRoute: '/saleInvoice',
-            module: '../pages/sale-invoice/sale-invoice.module#SaleInvoiceModule',
+            loadChildren: '../pages/sale-invoice/sale-invoice.module#SaleInvoiceModule',
             children: {
                 addnewInvoiceDetails: {
                     route: 'add-new-invoice-list',
@@ -112,7 +112,7 @@ export const ROUTES = {
             route: 'purchaseInvoice',
             name: 'PurchaseInvoice',
             absoluteRoute: '/purchaseInvoice',
-            module: '../pages/purchase-invoice/purchase-invoice.module#PurchaseInvoiceModule',
+            loadChildren: '../pages/purchase-invoice/purchase-invoice.module#PurchaseInvoiceModule',
             children: {
                 addNewPurchaseInv: {
                     route: 'add-new-purchase-invoice',
@@ -125,7 +125,7 @@ export const ROUTES = {
             route: 'dailyExpense',
             name: 'DailyExpense',
             absoluteRoute: '/dailyExpense',
-            module: '../pages/daily-expense/daily-expense.module#DailyExpenseModule',
+            loadChildren: '../pages/daily-expense/daily-expense.module#DailyExpenseModule',
             children: {
                 addNewDailyExp: {
                     route: 'add-new-daily-expense',
@@ -138,7 +138,7 @@ export const ROUTES = {
             route: 'otherDocs',
             name: 'OtherDocs',
             absoluteRoute: '/otherDocs',
-            module: '../pages/other-documents/other-documents.module#OtherDocumentsModule',
+            loadChildren: '../pages/other-documents/other-documents.module#OtherDocumentsModule',
             children: {
                 addNewDeliveryChallan: {
                     route: 'delivery-challan/add-new-delivery-challan',
@@ -201,19 +201,19 @@ export const ROUTES = {
             route: 'exports',
             name: 'Exports',
             absoluteRoute: '/exports',
-            module: '../pages/exports/exports.module#ExportsModule'
+            loadChildren: '../pages/exports/exports.module#ExportsModule'
         },
         gstReturn: {
             route: 'gst-return',
             name: 'GstReturn',
             absoluteRoute: '/gst-return',
-            module: '../pages/gst-return-filing/gst-return-filing.module#GstReturnFilingModule',
+            loadChildren: '../pages/gst-return-filing/gst-return-filing.module#GstReturnFilingModule',
         },
         paymentReceipt: {
             route: 'paymentReceipt',
             name: 'PaymentReceipt',
             absoluteRoute: '/paymentReceipt',
-            module: '../pages/payment-receipt/payment-receipt.module#PaymentReceiptModule',
+            loadChildren: '../pages/payment-receipt/payment-receipt.module#PaymentReceiptModule',
             children : {
                 inwardPaymentReceipt: {
                     route: 'inward-payment-receipt-sales',
@@ -241,7 +241,7 @@ export const ROUTES = {
             route: 'report',
             name: 'Report',
             absoluteRoute: '/report',
-            module: '../pages/report/report.module#ReportModule',
+            loadChildren: '../pages/report/report.module#ReportModule',
             children: {
                 purchase: {
                     route: 'purchase',
