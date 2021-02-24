@@ -34,3 +34,24 @@
 </div>
 
 
+
+<div class="mt-5">
+    <span class="pr-3">Was this status information useful?</span>
+        <app-like-dislike-buttons 
+            class="like-unlike-btn-style" 
+            (click)="likeBtnClicked()" 
+            [likeBtnText]="'Like'" 
+            [likeBtnIcon]="'thumbs-o-up'">
+        </app-like-dislike-buttons>
+
+        <app-like-dislike-buttons 
+            class="like-unlike-btn-style" 
+            (click)="unlikeBtnClicked()" 
+            [unlikeBtnText]="'Dislike'" 
+            [unlikeBtnIcon]="'thumbs-o-down'">
+        </app-like-dislike-buttons>
+</div>
+
+
+
+

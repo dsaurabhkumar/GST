@@ -12,4 +12,12 @@ export class DashboardBaseComponent implements OnInit {
   ngOnInit() {
   }
 
+  likeBtnClicked() {
+    console.log("Like Button Clicked");
+  }
+
+  unlikeBtnClicked() {
+    console.log("Unlike Button Clicked");
+  }
+
 }
