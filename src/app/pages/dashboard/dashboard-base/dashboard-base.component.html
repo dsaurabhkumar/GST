@@ -35,22 +35,21 @@
 
 
 
-<div class="mt-5">
-    <span class="pr-3">Was this status information useful?</span>
+<div class="mt-5 like-unlike-container">
+    <span class="pr-5 mt-2">Was this status information useful?</span>
         <app-like-dislike-buttons 
-            class="like-unlike-btn-style" 
+            class="like-unlike-btn-style"
             (click)="likeBtnClicked()" 
-            [likeBtnText]="'Like'" 
-            [likeBtnIcon]="'thumbs-o-up'">
+            [likeBtnIcon]="'like-1'">
         </app-like-dislike-buttons>
 
         <app-like-dislike-buttons 
             class="like-unlike-btn-style" 
             (click)="unlikeBtnClicked()" 
-            [unlikeBtnText]="'Dislike'" 
-            [unlikeBtnIcon]="'thumbs-o-down'">
+            [unlikeBtnIcon]="'dislike'">
         </app-like-dislike-buttons>
 </div>
+
 
 
 

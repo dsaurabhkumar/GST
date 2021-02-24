@@ -7,8 +7,8 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class LikeDislikeButtonsComponent implements OnInit {
 
-  @Input() likeBtnText: string;
-  @Input() unlikeBtnText: string;
+  // @Input() likeBtnText: string;
+  // @Input() unlikeBtnText: string;
   @Input() likeBtnIcon: string;
   @Input() unlikeBtnIcon: string;
 

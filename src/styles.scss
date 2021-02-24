@@ -278,3 +278,29 @@ tbody, td {
 .like-unlike-btn-style {
     cursor: pointer;
 }
+
+.like-unlike-container {
+    height: 36px;
+    display: inline-flex;
+}
+
+.ic__like-1 {
+    width: 29.3px;
+    height: 29.3px;
+    flex-grow: 0;
+    object-fit: contain;
+    background: url('../src/assets/ic__like-1.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+  .ic__dislike {
+    width: 29.3px;
+    height: 29.3px;
+    flex-grow: 0;
+    margin: 3px 0 3.7px 59px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background: url('../src/assets/ic__dislike.svg');
+    position: absolute;
+  }
